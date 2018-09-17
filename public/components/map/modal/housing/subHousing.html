@@ -1,0 +1,314 @@
+<!--<div class="back-to-housing pcolor" ng-click="backToHousing()">
+    <span class="glyphicon glyphicon-arrow-left"></span> &nbsp; &nbsp; Back to housing
+</div>
+<div class="text-center">
+    <span class="pcolor dorm-name"> {{template.domName}} </span>
+    <br>
+    <span class="dorm-sub"> {{template.location}} </span>
+    <div id="sliderShow" style="width: 100%;" ng-if="showSubHousingSlick" next-arrow=".right-arrow" prev-arrow=".left-arrow" >
+        <slick class="dorm-slider"  settings="slickSubHousingSetting" data="itemImages">
+            <div class='dorm-img' ng-repeat=" itemImage in  itemImages ">
+                <a title="A random caption goes here .... "  rel="dorm-carousel" href="{{itemImage.imgSrc}}" fancyboxable class="subHousingImage">
+                    <img ng-src="{{ itemImage.imgSrc }}"   class="img-responsive"/>
+                </a>
+            </div>
+        </slick>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="modal-home-info dorm-info">
+        <span class="subtext">A co-ed two storied building with 50 rooms.<br>500 meters away from the campus (about 5 minutes walking) and the gym.</span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/amenities-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> Dorm
+                <br>Amenities :
+            </div>
+            <div class="col-sm-9 text-left">
+                <img src="images/dorm/amenities.png" height='60px' />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/bed-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> 2 Types of rooms
+                <br>available :
+            </div>
+            <div class="col-sm-9 text-left dorm-rooms">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading collapsed" role="tab" id="headingOne" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <div class="left-num">
+                                1
+                            </div>
+                            <div class="panel-title">
+                                Premium Double Room
+                            </div>
+                            <div class="right-drop">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <span class="pcolor">Double Room</span>
+                                <div class="float-right">
+                                    Price : <span class="pcolor">2,000$</span> / semester<br>
+                                    Size : <span class="pcolor">13m<sup>2</sup></span>
+                                </div>
+                                <br><br><br>
+                                Dorm Amenities : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/dorm/amenities.png" height="40px"/>
+                                <br><br>
+                                <br>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="tab" id="headingTwo">
+                            <div class="left-num">
+                                2
+                            </div>
+                            <div class="panel-title">
+                                Single Room One
+                            </div>
+                            <div class="right-drop">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <span class="pcolor">Single Room</span>
+                                <div class="float-right">
+                                    Price : <span class="pcolor">1,000$</span> / semester<br>
+                                    Size : <span class="pcolor">8m<sup>2</sup></span>
+                                </div>
+                                <br><br><br>
+                                Dorm Amenities : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/dorm/amenities.png" height="40px"/>
+                                <br><br>
+                                <br>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/suitcase-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> What to
+                <br>bring :
+            </div>
+            <div class="col-sm-9 text-left what-to-bring">
+                Bed Linens, Towels, Personal, Pillow, Blankets
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>-->
+
+<div class="back-to-housing pcolor" ng-click="backToHousing()">
+    <span class="glyphicon glyphicon-arrow-left"></span> &nbsp; &nbsp; Back to housing
+</div>
+<div class="text-center">
+    <span class="pcolor dorm-name"> {{housing.name}} </span>
+    <br>
+    <span class="dorm-sub"> {{housing.address.address_name}} </span>
+    <div id="sliderShow" style="width: 100%;" ng-if="showSubHousingSlick" next-arrow=".right-arrow" prev-arrow=".left-arrow" >
+        <slick class="dorm-slider" settings="slickSubHousingSetting" data="housing.campusDormPictures" init-onload="true">
+            <div class='dorm-img' ng-repeat=" picture in  housing.campusDormPictures ">
+                <a title="A random caption goes here .... "  rel="dorm-carousel" href="uploads/campuses/{{picture.link}}" fancyboxable class="subHousingImage">
+                    <img ng-src="uploads/campuses/{{picture.link}}"  class="img-responsive"/>
+                </a>
+            </div>
+        </slick>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="modal-home-info dorm-info">
+        <span class="subtext">A co-ed two storied building with 50 rooms.<br>500 meters away from the campus (about 5 minutes walking) and the gym.</span>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/amenities-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> Dorm
+                <br>Amenities :
+            </div>
+            <div class="col-sm-9 text-left">
+                <img src="images/dorm/amenities.png" height='60px' />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/bed-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> {{housing.roomObj.length}} Types of rooms
+                <br>available :
+            </div>
+            <div class="col-sm-9 text-left dorm-rooms" ng-if="housing.roomObj">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                	<div class="panel panel-default" ng-repeat="roomObj in housing.roomObj">
+                        <div class="panel-heading collapsed" role="tab" id="room-heading-{{$index}}" data-toggle="collapse" href="#room-collapse-{{$index}}" aria-expanded="false" aria-controls="room-collapse-{{$index}}">
+                            <div class="left-num">
+                                {{$index + 1}}
+                            </div>
+                            <div class="panel-title">
+                                {{roomObj.type}}
+                            </div>
+                            <div class="right-drop">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div id="room-collapse-{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="room-heading-{{$index}}">
+                            <div class="panel-body">
+                                <span class="pcolor">{{roomObj.type}}</span>
+                                <div class="float-right">
+                                    Price : <span class="pcolor">{{roomObj.price}}$</span> / semester<br>
+                                    Size : <span class="pcolor">{{roomObj.size}}m<sup>2</sup></span>
+                                </div>
+                                <br><br><br>
+                                Dorm Amenities : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/dorm/amenities.png" height="40px"/>
+                                <br><br>
+                                <br>
+                                
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable ng-repeat="picture in roomObj.campusRoomTypePictures"><img ng-src="uploads/campuses/{{picture.link}}" height="150px" width="150px"> </a>
+                                
+                                <!--<a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"></a>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="panel panel-default">
+                        <div class="panel-heading collapsed" role="tab" id="room-heading-1" data-toggle="collapse" href="#room-collapse-1" aria-expanded="false" aria-controls="room-collapse-1">
+                            <div class="left-num">
+                                1
+                            </div>
+                            <div class="panel-title">
+                                Premium Double Room
+                            </div>
+                            <div class="right-drop">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div id="room-collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="room-heading-1">
+                            <div class="panel-body">
+                                <span class="pcolor">Double Room</span>
+                                <div class="float-right">
+                                    Price : <span class="pcolor">2,000$</span> / semester<br>
+                                    Size : <span class="pcolor">13m<sup>2</sup></span>
+                                </div>
+                                <br><br><br>
+                                Dorm Amenities : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/dorm/amenities.png" height="40px"/>
+                                <br><br>
+                                <br>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxDoubleRoom" rel="room1" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading collapsed" data-toggle="collapse" href="#room-collapse-2" aria-expanded="false" aria-controls="room-collapse-2" role="tab" id="room-heading-2">
+                            <div class="left-num">
+                                2
+                            </div>
+                            <div class="panel-title">
+                                Single Room One
+                            </div>
+                            <div class="right-drop">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </div>
+                        </div>
+                        <div id="room-collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="room-heading-2">
+                            <div class="panel-body">
+                                <span class="pcolor">Single Room</span>
+                                <div class="float-right">
+                                    Price : <span class="pcolor">1,000$</span> / semester<br>
+                                    Size : <span class="pcolor">8m<sup>2</sup></span>
+                                </div>
+                                <br><br><br>
+                                Dorm Amenities : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/dorm/amenities.png" height="40px"/>
+                                <br><br>
+                                <br>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"> </a>
+                                <a title="A random caption goes here .... " class="fancyboxSingleRoom" rel="room2" href="images/dorm/dorm.jpg" fancyboxable><img src="images/dorm/dorm.jpg" height="60px"></a>
+                            </div>
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="dorm-info-item">
+            <div class="col-sm-1 dorm-icons"><img src="images/dorm/suitcase-icon.png" height="60px" />
+            </div>
+            <div class="col-sm-2 dorm-subtitles">
+                <br> What to
+                <br>bring :
+            </div>
+            <div class="col-sm-9 text-left what-to-bring">
+                <!--Bed Linens, Towels, Personal, Pillow, Blankets-->
+                <span ng-repeat="dormItem in housing.campusDormItems">
+                 {{dormItem.name}}{{(housing.campusDormItems.length - 1) > $index ? ',' : ''}}
+                </span>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>

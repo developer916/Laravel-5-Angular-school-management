@@ -1,0 +1,709 @@
+<!--<div class="container margin-top-20" >-->
+
+<ui-view></ui-view>
+
+<div class="profile-main animated fadeIn">
+	<div class="profile-userbox-main">
+		<div class="container">
+			<div class="profile-box">
+				<div class="profile-img">
+					<span class="btn btn-file">
+						<input type="hidden" name="profileimage"  ng-model-options="{ getterSetter: true }" ng-model="userData.img_profile_link = uploadPicture">
+						<img ng-src="uploads/{{userData.img_profile_link}}" ng-show="userData.img_profile_link" height="221" width="221"/>
+						<img ng-src="image/profile-user.png" ng-show="!userData.img_profile_link" height="221" width="221">	
+						
+						<p>Change Profile Picture</p> 
+						<input data-upload-picture="" model="uploadPicture" name="file" class="ng-isolate-scope" type="file">
+					</span>
+				</div>
+				<div class="profile-con-top">
+					<h1>{{userData.name}}</h1>
+					<p>Student</p>
+					<p><img src="image/pin.svg">{{studentData.address}} {{studentData.refCountry.ref_cntry_name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="profile-content-main">
+			<div class="row">
+				<div class="col-md-8 col-sm-8">
+					<div class="profile-content-left">
+						<div class="profile-content-box">
+							<h4>Education <a href="" data-toggle="modal" data-target="#addEducation"><i class="fa fa-plus" aria-hidden="true"></i> Add Item</a></h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>School</th>
+										<th>Country</th>
+										<th>Program</th>
+										<th>Period</th>
+										<th>Graduated</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="education in educations">
+										<td>{{education.school}}</td>
+										<td>{{education.refCountry.ref_cntry_name}}</td>
+										<td>{{education.program}}</td>
+										<!--<td>{{education.period}}</td>-->
+										<td>From: {{education.period.fromMonth}}/{{education.period.fromYear}}<br>To: {{education.period.toMonth}}/{{education.period.toYear}} </td>
+										<td>{{education.graduated}}</td>
+										<td style="width: 1%;"><a href="" ng-click="studentProfileC.updateEducation(education.id);"><img src="image/edit-icon.png"></a></td>
+										<!--<td><a href="" ng-click="studentProfileC.deleteEducation(education.id);"><img src="images/orange-close.png" width="25" height="25"></a></td>-->
+										<td style="width: 1%;"><button ng-click="deleteEducation(education.id);" class="delete-icon close" type="button"> <span aria-hidden="true">×</span> </button></td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						<div class="profile-content-box">
+							<h4>Experience <a href="" data-toggle="modal" data-target="#addExperience"><i class="fa fa-plus" aria-hidden="true"></i> Add Item</a></h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Company/Organization</th>
+										<th>Place</th>
+										<th>Period</th>
+										<th>Type of Experience</th>
+										<th>Position</th>
+										<th>Description</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="experience in experiences">
+										<td>{{experience.name}}</td>
+										<td>{{experience.place}}</td>
+										<td>{{experience.period}}</td>
+										<td>{{experience.type}}</td>
+										<td>{{experience.position}}</td>
+										<td>{{experience.description}}</td>
+										<td style="width: 1%;"><a ng-click="studentProfileC.updateExperience(experience.id);"><img src="image/edit-icon.png"></a></td>
+										<td style="width: 1%;"><button ng-click="deleteExperience(experience.id);" class="delete-icon close" type="button"> <span aria-hidden="true">×</span> </button></td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						
+						<div class="profile-content-box">
+							<h4>Languages <a href="" data-toggle="modal" data-target="#addLanguage"><i class="fa fa-plus" aria-hidden="true"></i> Add Item</a></h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Proficiency</th>
+										<th>Accreditation</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="language in languages">
+										<td>{{language.name}}</td>
+										<td>{{language.proficiency}}</td>
+										<td>{{language.accreditation}}</td>
+										<td style="width: 1%;"><a ng-click="studentProfileC.updateLanguage(language.id);"><img src="image/edit-icon.png"></a></td>
+										<td style="width: 1%;"><button ng-click="deleteLanguage(language.id);" class="delete-icon close" type="button"> <span aria-hidden="true">×</span> </button></td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="profile-content-right">
+						<h4>Contact</h4>
+						<ul>
+							<li class="email-icon">lucasvanroekel@gmail.com</li>
+							<li class="phone-icon">+1 830-234-345</li>
+							<li class="site-icon">Lucasweb-art.com</li>
+							<li class="date-icon">01 September 1998</li>
+						</ul>
+					</div>
+					<div class="profile-content-right">
+						<h4>Documents <a href="#">See All</a></h4>
+						<div class="photos-profile">
+							<div class="photo-img">
+								<label for="videoDocument">
+									<img src="image/document/video.png">
+									<input data-video-file="" model="documents" type="file" name="video" id="videoDocument" class="hidden" accept="video/*" />
+								</label>
+								<a ng-click="viewDocuments('Video')">View Videos</a>
+							</div>
+							<div class="photo-img">
+								<label for="audioDocument">
+									<img src="image/document/music.png">
+									<input data-audio-file="" model="documents" type="file" name="audio" id="audioDocument" class="hidden" accept="audio/*" />
+								</label>
+								<a ng-click="viewDocuments('Music')">View Musics</a>
+							</div>
+							<div class="photo-img">
+								<label for="cameraDocument">
+									<img src="image/document/camera.png">
+									<input data-image-file="" model="documents" type="file" name="camera" id="cameraDocument" class="hidden" accept="image/*" />
+								</label>
+								<!--{{documents}}-->
+								<a ng-click="viewDocuments('Picture')">View Pictures</a>
+								<!--<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li ng-if="document.document_type = 'Picture'" ng-repeat="document in documents"><a ng-href="uploads/documents/{{document.link}}">{{document.link}}</a><span><i class="fa fa-close" style="color:red"></i></span></li>
+									</ul>
+								</div>-->
+							</div>
+							<div class="photo-img">
+								<label for="frameDocument">
+									<img src="image/document/frame.png">
+									<input data-certificate-file="" model="documents" type="file" name="frame" id="frameDocument" class="hidden" />
+								</label>
+								<a ng-click="viewDocuments('Certificate')">View Certificates</a>
+							</div>
+							<div class="photo-img">
+								<label for="educationDocument">
+									<img src="image/document/education.png">
+									<input data-education-file="" model="documents" type="file" name="education" id="educationDocument" class="hidden" />
+								</label>
+								<a ng-click="viewDocuments('Education')">View Educations</a>
+							</div>
+							<div class="photo-img">
+								<label for="bookDocument">
+									<img src="image/document/book.png">
+									<input data-book-file="" model="documents" type="file" name="book" id="bookDocument" class="hidden" />
+								</label>
+								<a ng-click="viewDocuments('Book')">View Books</a>
+							</div>
+							<!--<div class="photo-img">
+								<img src="image/profile-user.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/profile-user.png">
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--<div class="default-modal modal fade" id="addApplying" tabindex="-1" role="dialog" aria-labelledby="addApplyingLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addApplyingLabel">Add Applying for</h4>
+			  </div>
+			<div class="modal-body add-item">
+				<form class="search-inner-form">
+					<div class="form-group">
+						<label>University</label>
+						<input type="text" class="form-control" placeholder="University">
+					</div>
+					<div class="form-group">
+						<label>Program</label>
+						<input type="text" class="form-control" placeholder="Program">
+					</div>
+					<div class="form-group">
+						<label>Term</label>
+						<input type="text" class="form-control" placeholder="Term">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+<div class="default-modal modal fade" id="addEducation" tabindex="-1" role="dialog" aria-labelledby="addEducationLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addEducationLabel">Add Education</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="eductionFrom">
+					<div class="form-group">
+						<label for="school">School</label>
+						<input type="text" id="school" class="form-control" placeholder="School" ng-model="eductionFrom.school">
+					</div>
+					<div class="form-group">
+						<label for="refcountry">Country</label>
+						<select id="refcountry" class="form-control" ng-model="eductionFrom.ref_country_id">
+							<option value="">Country</option>
+							<option ng-repeat="country in refCountry" value="{{country.id}}">{{country.ref_cntry_name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="eduProgram">Program</label>
+						<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-11" type="radio" value="General Education" ng-model="eductionFrom.programOption">
+								<label for="radio-11" class="radio-label">General Education</label>
+							</div>
+							<div class="radio">
+								<input id="radio-12" type="radio" value="Other" ng-model="eductionFrom.programOption">
+								<label for="radio-12" class="radio-label">Other</label>
+							</div>
+						</div>
+						<br>	
+						<input type="text" ng-if="eductionFrom.programOption == 'Other'" id="eduProgram" class="form-control" placeholder="Other Program" ng-model="eductionFrom.program">
+					</div>
+					<div class="form-group">
+						<label for="eduPeriod">Period</label>
+						<!--<select id="eduPeriod" class="form-control" ng-model="eductionFrom.period">
+							<option value="">Month</option>
+							<option>2010</option>
+							<option>2011</option>
+							<option>2012</option>
+							<option>2013</option>
+							<option>2014</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+							<option>2019</option>
+							<option>2020</option>
+							<option>2021</option>
+							<option>2022</option>
+						</select>-->
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+								<p>From</p>
+								<select class="form-control" ng-model="eductionFrom.period['fromMonth']" ng-change="checkDate(eductionFrom)">
+									<option value="">Month</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<select class="form-control" ng-model="eductionFrom.period['fromYear']" style="margin-top: 20px;" ng-change="checkDate(eductionFrom)">
+									<option value="">Year</option>
+									<option>2010</option>
+									<option>2011</option>
+									<option>2012</option>
+									<option>2013</option>
+									<option>2014</option>
+									<option>2015</option>
+									<option>2016</option>
+									<option>2017</option>
+									<option>2018</option>
+									<option>2019</option>
+									<option>2020</option>
+									<option>2021</option>
+									<option>2022</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<p>To</p>
+								<select class="form-control" ng-model="eductionFrom.period['toMonth']" ng-change="checkDate()">
+									<option value="">Month</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<select class="form-control" ng-model="eductionFrom.period['toYear']" style="margin-top: 20px;" ng-change="checkDate(eductionFrom)">
+									<option value="">Year</option>
+									<option>2010</option>
+									<option>2011</option>
+									<option>2012</option>
+									<option>2013</option>
+									<option>2014</option>
+									<option>2015</option>
+									<option>2016</option>
+									<option>2017</option>
+									<option>2018</option>
+									<option>2019</option>
+									<option>2020</option>
+									<option>2021</option>
+									<option>2022</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="graduated">Graduated</label>
+						<!--<input type="text" id="graduated" class="form-control" placeholder="Graduated" ng-model="eductionFrom.graduated">-->
+						<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-20" type="radio" value="Yes" ng-model="eductionFrom.graduated">
+								<label for="radio-20" class="radio-label">Yes</label>
+							</div>
+							<div class="radio">
+								<input id="radio-21" type="radio" value="No" ng-model="eductionFrom.graduated">
+								<label for="radio-21" class="radio-label">No</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox-btn" ng-if="eductionFrom.graduated == 'No'">
+								<label for="check-10" class="checkbox">Expected date of graduation ({{eductionFrom.period.toMonth}}/{{eductionFrom.period.toYear}})
+									<input id="check-10" type="checkbox" ng-model="eductionFrom.confirm">
+								  	<span class="checkmark"></span>
+								</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveEducation(eductionFrom)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="editEducation" tabindex="-1" role="dialog" aria-labelledby="editEducationLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="editEducationLabel">Edit Education</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="eductionFrom1">
+					<input type="hidden" ng-model="eductionFrom1.id" ng-value="education.id" />
+					<div class="form-group">
+						<label for="school">School</label>
+						<input type="text" id="school" class="form-control" placeholder="School" ng-model="eductionFrom1.school" ng-value="education.school">
+					</div>
+					<div class="form-group">
+						<label for="refcountry">Country</label>
+						<select id="refcountry" class="form-control" ng-model="eductionFrom1.ref_country_id">
+							<option value="">Country</option>
+							<option ng-repeat="country in refCountry" value="{{country.id}}" ng-selected="country.id == education.ref_country_id">{{country.ref_cntry_name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="eduProgram">Program</label>
+						<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-13" type="radio" value="General Education" ng-model="eductionFrom1.programOption" ng-checked="eductionFrom1.programOption == 'General Education'">
+								<label for="radio-13" class="radio-label">General Education</label>
+							</div>
+							<div class="radio">
+								<input id="radio-14" type="radio" value="Other" ng-model="eductionFrom1.programOption" ng-checked="eductionFrom1.programOption == 'Other'">
+								<label for="radio-14" class="radio-label">Other</label>
+							</div>
+						</div>
+						<br>	
+						<input type="text" ng-if="eductionFrom1.programOption == 'Other'" id="eduProgram" class="form-control" placeholder="Program" ng-model="eductionFrom1.program" ng-value="education.program">
+					</div>
+					<div class="form-group">
+						<label for="eduPeriod">Period</label>
+						<!--<select id="eduPeriod" class="form-control" ng-model="eductionFrom1.period" ng-selected="education.period">
+							<option value="">Period</option>
+							<option ng-selected="education.period == 2010">2010</option>
+							<option ng-selected="education.period == 2011">2011</option>
+							<option ng-selected="education.period == 2012">2012</option>
+							<option ng-selected="education.period == 2013">2013</option>
+							<option ng-selected="education.period == 2014">2014</option>
+							<option ng-selected="education.period == 2015">2015</option>
+							<option ng-selected="education.period == 2016">2016</option>
+							<option ng-selected="education.period == 2017">2017</option>
+							<option ng-selected="education.period == 2018">2018</option>
+							<option ng-selected="education.period == 2019">2019</option>
+							<option ng-selected="education.period == 2020">2020</option>
+							<option ng-selected="education.period == 2021">2021</option>
+							<option ng-selected="education.period == 2022">2022</option>
+						</select>-->
+						
+						<div class="row">
+							<div class="col-md-3 col-sm-3">
+								<p>From</p>
+								<select class="form-control" ng-model="eductionFrom1.period['fromMonth']" ng-change="checkDate(eductionFrom1)">
+									<option value="">Month</option>
+									<option ng-selected="education.period.fromMonth == 01">01</option>
+									<option ng-selected="education.period.fromMonth == 02">02</option>
+									<option ng-selected="education.period.fromMonth == 03">03</option>
+									<option ng-selected="education.period.fromMonth == 04">04</option>
+									<option ng-selected="education.period.fromMonth == 05">05</option>
+									<option ng-selected="education.period.fromMonth == 06">06</option>
+									<option ng-selected="education.period.fromMonth == 07">07</option>
+									<option ng-selected="education.period.fromMonth == 08">08</option>
+									<option ng-selected="education.period.fromMonth == 09">09</option>
+									<option ng-selected="education.period.fromMonth == 10">10</option>
+									<option ng-selected="education.period.fromMonth == 11">11</option>
+									<option ng-selected="education.period.fromMonth == 12">12</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<select class="form-control" ng-model="eductionFrom1.period['fromYear']" style="margin-top: 20px;" ng-change="checkDate(eductionFrom1)">
+									<option value="">Year</option>
+									<option ng-selected="education.period.fromYear == 2010">2010</option>
+									<option ng-selected="education.period.fromYear == 2011">2011</option>
+									<option ng-selected="education.period.fromYear == 2012">2012</option>
+									<option ng-selected="education.period.fromYear == 2013">2013</option>
+									<option ng-selected="education.period.fromYear == 2014">2014</option>
+									<option ng-selected="education.period.fromYear == 2015">2015</option>
+									<option ng-selected="education.period.fromYear == 2016">2016</option>
+									<option ng-selected="education.period.fromYear == 2017">2017</option>
+									<option ng-selected="education.period.fromYear == 2018">2018</option>
+									<option ng-selected="education.period.fromYear == 2019">2019</option>
+									<option ng-selected="education.period.fromYear == 2020">2020</option>
+									<option ng-selected="education.period.fromYear == 2021">2021</option>
+									<option ng-selected="education.period.fromYear == 2022">2022</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<p>To</p>
+								<select class="form-control" ng-model="eductionFrom1.period['toMonth']" ng-change="checkDate(eductionFrom1)">
+									<option value="">Month</option>
+									<option ng-selected="education.period.toMonth == 01">01</option>
+									<option ng-selected="education.period.toMonth == 02">02</option>
+									<option ng-selected="education.period.toMonth == 03">03</option>
+									<option ng-selected="education.period.toMonth == 04">04</option>
+									<option ng-selected="education.period.toMonth == 05">05</option>
+									<option ng-selected="education.period.toMonth == 06">06</option>
+									<option ng-selected="education.period.toMonth == 07">07</option>
+									<option ng-selected="education.period.toMonth == 08">08</option>
+									<option ng-selected="education.period.toMonth == 09">09</option>
+									<option ng-selected="education.period.toMonth == 10">10</option>
+									<option ng-selected="education.period.toMonth == 11">11</option>
+									<option ng-selected="education.period.toMonth == 12">12</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3">
+								<select class="form-control" ng-model="eductionFrom1.period['toYear']" style="margin-top: 20px;" ng-change="checkDate(eductionFrom1)">
+									<option value="">Year</option>
+									<option ng-selected="education.period.toYear == 2010">2010</option>
+									<option ng-selected="education.period.toYear == 2011">2011</option>
+									<option ng-selected="education.period.toYear == 2012">2012</option>
+									<option ng-selected="education.period.toYear == 2013">2013</option>
+									<option ng-selected="education.period.toYear == 2014">2014</option>
+									<option ng-selected="education.period.toYear == 2015">2015</option>
+									<option ng-selected="education.period.toYear == 2016">2016</option>
+									<option ng-selected="education.period.toYear == 2017">2017</option>
+									<option ng-selected="education.period.toYear == 2018">2018</option>
+									<option ng-selected="education.period.toYear == 2019">2019</option>
+									<option ng-selected="education.period.toYear == 2020">2020</option>
+									<option ng-selected="education.period.toYear == 2021">2021</option>
+									<option ng-selected="education.period.toYear == 2022">2022</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="graduated">Graduated</label>
+						<!--<input type="text" id="graduated" class="form-control" placeholder="Graduated" ng-model="eductionFrom1.graduated" ng-value="education.graduated">-->
+						<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-22" type="radio" value="Yes" ng-model="eductionFrom1.graduated">
+								<label for="radio-22" class="radio-label">Yes</label>
+							</div>
+							<div class="radio">
+								<input id="radio-23" type="radio" value="No" ng-model="eductionFrom1.graduated">
+								<label for="radio-23" class="radio-label">No</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox-btn" ng-if="eductionFrom1.graduated == 'No'">
+							<label for="check-11" class="checkbox">Expected date of graduation ({{eductionFrom1.period.toMonth}}/{{eductionFrom1.period.toYear}})
+								<input id="check-11" type="checkbox" ng-model="eductionFrom1.confirm">
+							  	<span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveEducation(eductionFrom1)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="addExperience" tabindex="-1" role="dialog" aria-labelledby="addExperienceLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addExperienceLabel">Add Experience</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="experienceForm">
+					<div class="form-group">
+						<label for="exp_name">Company/Organization</label>
+						<input type="text" id="exp_name" class="form-control" placeholder="Company/Organization" ng-model="experienceForm.name">
+					</div>
+					<div class="form-group">
+						<label for="place">Place</label>
+						<input type="text" id="place" class="form-control" placeholder="Place" ng-model="experienceForm.place">
+					</div>
+					<div class="form-group">
+						<label for="exp_period">Period</label>
+						<select id="exp_period" class="form-control" ng-model="experienceForm.period">
+							<option value="">Period</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exp_type">Type of Experience</label>
+						<input id="exp_type" type="text" class="form-control" placeholder="Type of Experience" ng-model="experienceForm.type">
+					</div>
+					<div class="form-group">
+						<label for="position">Position</label>
+						<input id="position" type="text" class="form-control" placeholder="Position" ng-model="experienceForm.position">
+					</div>
+					<div class="form-group">
+						<label for="exp_description">Description</label>
+						<textarea id="exp_description" class="form-control description" rows="1" placeholder="Description" ng-model="experienceForm.description"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveExperience(experienceForm)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="editExperience" tabindex="-1" role="dialog" aria-labelledby="editExperienceLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="editExperienceLabel">Edit Experience</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="experienceForm1">
+					<input type="hidden" ng-model="experienceForm1.id" ng-value="experienceForm1.id" />
+					<div class="form-group">
+						<label for="exp_name">Company/Organization</label>
+						<input type="text" id="exp_name" class="form-control" placeholder="Company/Organization" ng-model="experienceForm1.name" ng-value="experience.name">
+					</div>
+					<div class="form-group">
+						<label for="place">Place</label>
+						<input type="text" id="place" class="form-control" placeholder="Place" ng-model="experienceForm1.place" ng-value="experience.place">
+					</div>
+					<div class="form-group">
+						<label for="exp_period">Period</label>
+						<select id="exp_period" class="form-control" ng-model="experienceForm1.period">
+							<option value="">Period</option>
+							<option ng-selected="experience.period == 2015">2015</option>
+							<option ng-selected="experience.period == 2016">2016</option>
+							<option ng-selected="experience.period == 2017">2017</option>
+							<option ng-selected="experience.period == 2018">2018</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exp_type">Type of Experience</label>
+						<input id="exp_type" type="text" class="form-control" placeholder="Type of Experience" ng-model="experienceForm1.type" ng-value="experience.type">
+					</div>
+					<div class="form-group">
+						<label for="position">Position</label>
+						<input id="position" type="text" class="form-control" placeholder="Position" ng-model="experienceForm1.position" ng-value="experience.position">
+					</div>
+					<div class="form-group">
+						<label for="exp_description">Description</label>
+						<textarea id="exp_description" class="form-control description" rows="1" placeholder="Description" ng-model="experienceForm1.description" ng-value="experience.description">{{experience.description}}</textarea>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveExperience(experienceForm1)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="addLanguage" tabindex="-1" role="dialog" aria-labelledby="addLanguagesLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addLanguagesLabel">Add Languages</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="languageForm">
+					<div class="form-group">
+						<label for="lan_name">Name</label>
+						<input id="lan_name" type="text" class="form-control" placeholder="Name" ng-model="languageForm.name">
+					</div>
+					<div class="form-group">
+						<label for="proficiency">Proficiency</label>
+						<input id="proficiency" type="text" class="form-control" placeholder="Proficiency" ng-model="languageForm.proficiency">
+					</div>
+					<div class="form-group">
+						<label for="accreditation">Accreditation</label>
+						<input id="accreditation" type="text" class="form-control" placeholder="Accreditation" ng-model="languageForm.accreditation">
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveLanguage(languageForm)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="editLanguage" tabindex="-1" role="dialog" aria-labelledby="editLanguagesLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="editLanguagesLabel">Edit Languages</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form" name="languageForm1">
+					<input type="hidden" ng-model="languageForm1.id" ng-value="languageForm1.id" />
+					<div class="form-group">
+						<label for="lan_name">Name</label>
+						<input id="lan_name" type="text" class="form-control" placeholder="Name" ng-model="languageForm1.name" ng-value="language.name">
+					</div>
+					<div class="form-group">
+						<label for="proficiency">Proficiency</label>
+						<input id="proficiency" type="text" class="form-control" placeholder="Proficiency" ng-model="languageForm1.proficiency" ng-value="language.proficiency">
+					</div>
+					<div class="form-group">
+						<label for="accreditation">Accreditation</label>
+						<input id="accreditation" type="text" class="form-control" placeholder="Accreditation" ng-model="languageForm1.accreditation" ng-value="language.accreditation">
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="studentProfileC.saveLanguage(languageForm1)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="viewDocuments" tabindex="-1" role="dialog" aria-labelledby="viewDocumentsLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="viewDocumentsLabel">View Documents</h4>
+			</div>
+			<div class="modal-body modal-document">
+				<ul>
+					<li ng-if="document.document_type.name == viewDocumentsType" ng-repeat="document in documents"> <a ng-href="uploads/documents/{{document.link}}" target="_blank">{{document.link}}</a> <span ng-click="deleteBasicDocument(document.id);"><i class="fa fa-close" style="color:red"></i></span>
+					</li>
+					<li ng-if="documentFound == false">{{viewDocumentsType}} documents not found. </li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div>

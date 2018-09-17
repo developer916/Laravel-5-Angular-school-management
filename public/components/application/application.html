@@ -1,0 +1,357 @@
+<ui-view></ui-view>
+
+<div class="track-main">
+	<div class="container">
+		<div class="row">
+			<div class="track-form">
+				<form>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label for="trackKeyword">Keyword</label>
+							<input id="trackKeyword" type="text" class="form-control" ng-model="trackKeyword" ng-change="searchTrackKeyword(trackKeyword)" placeholder="Keyword">
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label for="sortByPerPage">Application</label>
+							<select id="sortByPerPage" class="form-control" ng-model="perPageApp" ng-change="sortByPerPage(perPageApp)">
+								<option value="">All</option>
+								<option value="2">2</option>
+								<option value="5">5</option>
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="20">20</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="export-main">
+							<a href="#" class="btn btn-primary"><i class="fa fa-share-square-o" aria-hidden="true"></i> Export</a>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-6 col-sm-6">
+						<label for="exampleInputPassword1">Update status</label>
+						<!--<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-11" name="radio" type="radio">
+								<label  for="radio-11" class="radio-label">Open</label>
+							  </div>
+							<div class="radio">
+								<input id="radio-12" name="radio" type="radio">
+								<label  for="radio-12" class="radio-label">Pending</label>
+							  </div>
+							<div class="Accepted-main-box">
+								<div class="radio">
+									<input id="radio-13" name="radio" type="radio">
+									<label  for="radio-13" class="radio-label">Accepted</label>
+								  </div>
+								<div class="radio">
+									<input id="radio-14" name="radio" type="radio">
+									<label  for="radio-14" class="radio-label">Rejected</label>
+								  </div>
+							</div>
+						</div>-->
+						<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-11" name="inlineRadioOptions" type="radio" value="Open" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Open'">
+								<label for="radio-11" class="radio-label">Open</label>
+							</div>
+							<div class="radio">
+								<input id="radio-12" name="inlineRadioOptions" type="radio" value="Pending" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Pending'">
+								<label for="radio-12" class="radio-label">Pending</label>
+							</div>
+							<div class="Accepted-main-box">
+								<div class="radio">
+									<input id="radio-13" name="inlineRadioOptions" type="radio" value="Accepted" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Accepted'">
+									<label for="radio-13" class="radio-label">Accepted</label>
+								</div>
+								<div class="radio">
+									<input id="radio-14" name="inlineRadioOptions" type="radio" value="Rejected" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Rejected'">
+									<label for="radio-14" class="radio-label">Rejected</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="select-all-main">
+							<label class="radio-inline"><a href="" ng-click="deleteApplications()"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></label>
+							<div class="radio">
+								<!--<input id="radio-1" name="selectAll" type="checkbox" ng-model="selectAll" value="true" ng-click="checkAll()">-->
+									<input id="radio-1" name="selectAll" type="checkbox" ng-model="selectAll" ng-click="checkAll()">	
+								<label for="radio-1" class="radio-label">Select All</label>
+							  </div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="track-list">
+			<!--{{applications}}-->
+			<div class="track-box" ng-if="$index < perPage" ng-repeat="application in applications">
+				<div class="col-xs-12 col-md-1" ng-click="viewStudentProfile(application.id, application.student_id);">
+					<a href="" class="thumbnail">
+						<img ng-src="image/default-user.png" ng-hide="application.student.img_profile_link" alt="..." height="60" width="61">
+						<img ng-src="uploads/{{application.student.img_profile_link}}" ng-show="application.student.img_profile_link" alt="..." height="60" width="61">
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-3" ng-click="viewStudentProfile(application.id, application.student_id);">
+					<label>Name</label>
+					<p>{{application.student.name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>{{application.student.address}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>{{application.student.BdateAge}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>{{application.diplomas.name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<!--<input id="radio-{{$index}}" name="appDelete" ng-model="application.select" value="true" type="checkbox">-->
+									<input id="radio-{{$index}}" name="appDelete" ng-model="selectedApp[application.id]" type="checkbox">
+							<label for="radio-{{$index}}" class="radio-label"></label>
+						  </div>
+						<a href="" class="dott-btn" data-toggle="modal" ng-click="trackStatus(application.id, application.application_statuses.name, application.student_id )" ><img src="image/3dott-icon.png"></a>
+					</div>
+				</div>
+			</div>
+			
+			<!--<div class="track-box">
+				<div class="col-xs-12 col-md-1" ng-click="viewStudentProfile();">
+					<a href="" class="thumbnail">
+					  <img src="image/default-user.png" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-3" ng-click="viewStudentProfile();">
+					<label>Name</label>
+					<p>Marco Mellandri</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>Surabaya, Indonesia</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>21 years old</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<input id="radio-2" name="radio" type="radio">
+							<label  for="radio-2" class="radio-label"></label>
+						  </div>
+						<a href="" class="dott-btn" data-toggle="modal" data-target="#trackStatus"><img src="image/3dott-icon.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1" ng-click="viewStudentProfile();">
+					<a href="" class="thumbnail">
+					  <img src="image/default-user.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3" ng-click="viewStudentProfile();">
+					<label>Name</label>
+					<p>Marco Mellandri</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>Surabaya, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>21 years old</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<input id="radio-3" name="radio" type="radio">
+							<label  for="radio-3" class="radio-label"></label>
+						  </div>
+						<a href="#" class="dott-btn"><img src="image/3dott-icon.png"></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1" ng-click="viewStudentProfile();">
+					<a href="" class="thumbnail">
+					  <img src="image/default-user.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3" ng-click="viewStudentProfile();">
+					<label>Name</label>
+					<p>Marco Mellandri</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>Surabaya, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>21 years old</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<input id="radio-4" name="radio" type="radio">
+							<label  for="radio-4" class="radio-label"></label>
+						  </div>
+						<a href="#" class="dott-btn"><img src="image/3dott-icon.png"></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1" ng-click="viewStudentProfile();">
+					<a href="" class="thumbnail">
+					  <img src="image/default-user.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3" ng-click="viewStudentProfile();">
+					<label>Name</label>
+					<p>Marco Mellandri</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>Surabaya, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>21 years old</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<input id="radio-5" name="radio" type="radio">
+							<label  for="radio-5" class="radio-label"></label>
+						  </div>
+						<a href="#" class="dott-btn"><img src="image/3dott-icon.png"></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/default-user.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>Name</label>
+					<p>Marco Mellandri</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Location</label>
+					<p>Surabaya, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Age</label>
+					<p>21 years old</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<div class="radio">
+							<input id="radio-6" name="radio" type="radio">
+							<label  for="radio-6" class="radio-label"></label>
+						  </div>
+						<a href="#" class="dott-btn"><img src="image/3dott-icon.png"></a>
+					</div>
+				  </div>
+			</div>-->
+		</div>
+		<div class="see-more" ng-hide="numOfPage < perPage" ng-click="loadMore();">
+			<a href="">See More</a>
+	    </div>
+	</div>
+</div>
+
+<!--Update status modal-->
+<div class="default-modal modal fade" id="trackStatus" tabindex="-1" role="dialog" aria-labelledby="trackStatusLabel">
+	<div class="modal-dialog modal-sm student-modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="student-img">
+					<img src="image/default-user.png">
+				</div>
+				<div class="student-con">
+					<h4>{{applicationData.student.name}}</h4>
+					<p><i class="fa fa-file-text-o" aria-hidden="true"></i> Application</p>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="radio">
+					<input id="radio-7" name="radio" type="radio" value="Complete" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Complete'">
+					<label for="radio-7" class="radio-label">Complete</label>
+				</div>
+				<div class="radio">
+					<input id="radio-8" name="radio" type="radio" value="Incomplete" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Incomplete'">
+					<label for="radio-8" class="radio-label">Incomplete</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="required-document" ng-show="updateStatus[applicationData.id] == 'Incomplete' || applicationData.application_statuses.name == 'Incomplete'" >
+					<div ng-repeat="requirements in applicationData.diplomas.diplomaRequirements">
+						<input id="check-{{$index}}" ng-model="diplomaRequirements[requirements.id]" ng-change="updateApplicationStatus('Incomplete', diplomaRequirements)" type="checkbox"> <label for="check-{{$index}}" >{{requirements.name}}</label>
+					</div>
+					<!--<div>
+						<input id="check-1" name="incomplete[]" type="checkbox" value=""> <label for="check-1">Sketch Book</label>
+					</div>
+					<div>
+						<input id="check-2" name="incomplete[]" type="checkbox" value=""> <label for="check-2">Music Chart</label>
+					</div>
+					<div>
+						<input id="check-3" name="incomplete[]" type="checkbox" value=""> <label for="check-3">Letter and Motivation</label>
+					</div>-->
+				</div>
+				<hr>
+				<div class="Accepted-main-box">
+					<div class="radio">
+						<input id="radio-9" name="radio" type="radio" value="Accepted" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Accepted'">
+						<label  for="radio-9" class="radio-label">Accepted</label>
+					</div>
+					<div class="radio">
+						<input id="radio-10" name="radio" type="radio" value="Rejected" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Rejected'">
+						<label  for="radio-10" class="radio-label">Rejected</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

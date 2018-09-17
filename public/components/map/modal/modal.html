@@ -1,0 +1,38 @@
+<modal id="custom-modal-1">
+    <div class="modal" id="myModal" style="display: block">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span  ui-sref="app.map" aria-hidden="true">×</span></button>
+                    <div class="modal-logo">
+                        <img src="images/universities/{{mmod.university.logo_url}}" width="50">
+                    </div>
+                    <h4 class="modal-title" id="myModalLabel">{{mmod.university.name}}</h4>
+                    <span class="modal-sub-title">{{mmod.university.address.city}}, {{mmod.university.address.country}}</span>
+                    <div class="modal-links">
+                        <div class="modal-link" ui-sref="app.map.modal.home" ui-sref-active="active">Home</div>
+                        <div class="modal-link" ui-sref="app.map.modal.diploma" ui-sref-active="active">Diploma</div>
+                        <div class="modal-link" ui-sref="app.map.modal.housing" ui-sref-active="active">Housing</div>
+                        <div class="modal-link" id="link-4">Wall</div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <!--<ui-view></ui-view>-->
+                </div>
+                <div class="modal-footer">
+                    <div class="row footer-inner">
+                        <div class="col-xs-3 footer-btn" id="link-contact" ui-sref="app.map.modal.message"><span
+                                class="glyphicon glyphicon-envelope"></span>
+                        </div>
+                        <div class="col-xs-3 footer-btn" ng-click="mmod.university.isFavorite = !mmod.university.isFavorite">
+                            <span ng-class="mmod.university.isFavorite ? 'glyphicon-star' : 'glyphicon-star-empty'" class="icon-fav glyphicon"></span>
+                        </div>
+                        <div class="col-xs-6 footer-btn" id="link-apply" ui-sref="app.map.modal.application">
+                            <img class="apply-btn" src="images/apply-btn.png" height='35'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</modal>

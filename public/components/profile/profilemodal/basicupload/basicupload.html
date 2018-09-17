@@ -1,0 +1,33 @@
+<!--<div class="edit-profile-form">
+	<div class="edit-profile-title">
+		<h3><img src="images/profilemodal/info_blue.png" height="35px" /> Basic Introduction</h3>
+	</div>
+	<div class="edit-tab-link">
+		<ul>
+			<li><a class="edit-tab1" href="#"></a></li>
+			<li><a class="edit-tab2" href="#"></a></li>
+			<li><a class="edit-tab3" href="#"></a></li>
+		</ul>
+	</div>-->
+	<div class="edit-tab-content animated fadeInRight">
+		<div class="basic-introduction">
+				<div class="upload-main">
+					<h4>UPLOAD YOUR SCHOOL LOGO HERE</h4>
+					<div class="upload-btn animatedup fadeInUp">
+						<span class="btn btn-default btn-file">
+							<img src="images/profilemodal/plush-icon.png">
+							<p>Upload file maximum 200 KB</p> 
+							<input data-upload-Directive model="uploadImage" type="file" name="file" >
+						</span>
+					</div>
+				</div>
+				<div class="upload-image">
+					<!--<input type="hidden" name="profileimage"  ng-model-options="{ getterSetter: true }" ng-model="schoolProfile.profileimage = uploadImage">
+					<img src="uploads/{{uploadImage}}" ng-show="uploadImage" height="150" width="150"/>-->
+					<input type="hidden" name="profileimage"  ng-model-options="{ getterSetter: true }" ng-model="schoolProfile.profileimage = uploadImage">
+					<img src="uploads/{{uploadImage}}" ng-show="uploadImage" height="150" width="150"/>
+					<img src="uploads/{{schoolProfile.logo_link}}" ng-show="!uploadImage && schoolProfile.logo_link" height="150" width="150"/>
+				</div>		
+		</div>
+	</div>
+<!--</div>-->

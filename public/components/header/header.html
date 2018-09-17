@@ -1,0 +1,1002 @@
+<div id="overlay" ng-click="hdr.closeSearch()"></div>
+
+<!-- Main Header bar (without login user ) -->
+<nav class="navbar navbar-default navbar-inverse" role="navigation" ng-hide="authenticated">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-responsive" aria-expanded="false" aria-controls="navbar-responsive">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+	    <a class="filter-btn" href="">
+		  <img class="filter-show" src="img/filter-show.png">
+		  <img class="filter-hide" style="display:none;" src="img/filter-hide.png">
+	    </a>
+            <a class="navbar-brand" href="#"><img src="image/logo.png"/> </a>
+        </div>
+	
+	
+	
+        <div id="navbar-responsive" class="navbar-collapse collapse">
+            
+	    <!--<div class="nav-right">-->
+		
+		<div class="header-link navbar-right">
+	                <ul ng-hide="authenticated">
+	                	<li><a href="#/signin" data-toggle="modal" data-target="#signinModal">Sign In</a></li>
+	                	<li><a href="#/signup" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+	                </ul>
+	                <ul ng-show="authenticated">
+	                	<li id="logout"><a href="#/logout" ng-click="hdr.logout();">Logout</a></li>
+	                </ul>
+	        </div>
+		
+                <!--<div class="search-btn" data-toggle="modal" data-target="#searchModal" ng-click="closeMainModal('custom-modal-1')">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </div>-->
+                <div class="profile-btn navbar-right" data-toggle="modal" data-target="#adModal" ng-click="closeMainModal('custom-modal-1')">
+                    <div class="profile-btn-text">
+                        <div class="profile-clickme" style="background-image: none; font-size: 22px;">
+                            <img src="images/click.gif" height="70"/> &nbsp; &nbsp; Click me
+                        </div>
+                    </div>
+                </div>
+                
+		<ul class="nav navbar-nav navbar-right left-menu">
+		    <li><a class="nav-search" href="" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+		    <li>
+			<a class="nav-list" href="#" ng-hide="icon_map_list || !landingShow" ng-click="icon_map_list = true"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+			<a class="nav-list" href="#" ng-show="icon_map_list || !landingShow" ng-click="icon_map_list = false"><img src="image/world.svg"></a>
+		    </li>
+		</ul>
+		
+            <!--</div>-->
+	    
+        </div>
+    </div>
+</nav>
+
+<!-- Student Header bar -->
+<nav class="navbar navbar-default" role="navigation" ng-show="authenticated && userType == 'student'">
+    <div class="container">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#student-navbar-collapse" aria-expanded="false">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+	    </button>
+	    <a class="filter-btn" href="">
+		  <img class="filter-show" src="img/filter-show.png">
+		  <img class="filter-hide" style="display:none;" src="img/filter-hide.png">
+	    </a>
+	    <!--<a class="filter-btn" href="" ng-show="icon_filter || !landingShow" ng-click="icon_filter = false"><img class="filter-show" src="img/filter-show.png"></a>
+	    <a class="filter-btn" href="" ng-hide="icon_filter || !landingShow" ng-click="icon_filter = true"><img class="filter-hide" src="img/filter-hide.png"></a>-->
+	    
+	    <a class="navbar-brand" href="#"><img src="image/logo.png"></a>
+	  </div>
+  
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="student-navbar-collapse">
+	    <ul class="nav navbar-nav navbar-right user-menu">
+		  <li class="dropdown">
+		    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<img src="image/student-img.png" ng-hide="userData.img_profile_link" height="52" width="52">
+			<img ng-src="uploads/{{userData.img_profile_link}}" ng-show="userData.img_profile_link" height="52" width="52">
+			<p>{{userData.firstname}} {{userData.lastname}}<br><span>Student</span></p>
+			<i class="fa fa-angle-down" aria-hidden="true"></i>
+		    </a>
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			<li><a href="#!/studentProfile"><img src="image/user.svg"> My Profile</a></li>
+			<li><a href="#!/studentSetting"><img src="image/settings.svg"> Account Setting</a></li>
+			<li><a href="#/logout" ng-click="hdr.logout();"><img src="image/logout.svg"> Log Out</a></li>
+		    </ul>
+		  </li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right left-menu">
+		<li><a class="nav-search" href="" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+		<li>
+		    <a class="nav-list" href="#" ng-hide="icon_map_list || !landingShow" ng-click="icon_map_list = true"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+		    <a class="nav-list" href="#" ng-show="icon_map_list || !landingShow" ng-click="icon_map_list = false"><img src="image/world.svg"></a>
+		</li>
+		<li class="dropdown">
+		    <!--{{lastUpdateStautsTrackNotification}}-->
+		    <a class="nav-noti dropdown-toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<img src="image/line-graph.svg"><span></span>
+		    </a>
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			<li ng-repeat="notification in lastUpdateStautsTrackNotification">
+			    <a ng-click="trackModal(notification.application_id)">
+				<div class="user-message">
+				    <div class="user-img-msg">
+						<!--<img src="image/eye-icon.png" ng-show="notification.name == 'Review'">
+						<img src="image/doc-icon.png" ng-show="notification.name != 'Review'">-->
+						<img ng-src="uploads/{{notification.university.logo_link}}" >
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>{{notification.university.name | limitTo: 23}}{{notification.university.name.length > 23 ? '...' : ''}}</label></h4>
+					<p><label>{{notification.message | limitTo: 18}}{{notification.message.length > 18 ? '...' : ''}}</label> <!--<span>{{notification.date_maj}}</span>--></p>
+					<p><label>{{notification.name}}</label> <span>{{notification.date_maj}}</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<li><a class="see-all" href="#!/studentTrack">See All</a></li>
+		    </ul>
+		</li>
+		<li class="dropdown">
+		    <a class="nav-msg dropdown-toggle" href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span></span></a>
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			
+			<li ng-repeat="message in lastSendUserMessages">
+			    <a ng-click="selectChatUser(message.user_sender_id)">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<!--<img src="image/msg-user.png">-->
+					<img ng-src="image/msg-user.png" ng-hide="message.user.img_profile_link" alt="..." height="40" width="40">
+					<img ng-src="uploads/{{message.user.img_profile_link}}" ng-show="message.user.img_profile_link" alt="..." height="40" width="40">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>
+					{{message.user.name}}</label> <span ng-show="message.unread">{{message.unread}}</span></h4>
+					<p><label>{{message.text | limitTo: 18}}{{message.text.length > 18 ? '...' : ''}}</label> <span>{{message.created_at | moment: 'format': 'DD-MM-YY hh:mm A' }}</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<!--<li>
+				<a href="#">
+					<div class="user-message">
+						<div class="user-img-msg">
+							<img src="image/msg-user.png">
+						</div>
+						<div class="user-con-msg">
+							<h4><label>Michael Lawren</label> <span>1</span></h4>
+							<p><label>Hello, how are you?</label> <span>09:00 PM</span></p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="user-message">
+						<div class="user-img-msg">
+							<img src="image/msg-user.png">
+						</div>
+						<div class="user-con-msg">
+							<h4><label>Michael Lawren</label></h4>
+							<p><label>Hello, how are you?</label> <span>08:00 PM</span></p>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="user-message">
+						<div class="user-img-msg">
+							<img src="image/msg-user.png">
+						</div>
+						<div class="user-con-msg">
+							<h4><label>Michael Lawren</label></h4>
+							<p><label>Hello, how are you?</label> <span>06:30 PM</span></p>
+						</div>
+					</div>
+				</a>
+			</li>-->
+		      <li><a class="see-all" href="#!/chat/">See All</a></li>
+		    </ul>
+		  </li>
+	    </ul>
+	  </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- School Header bar -->
+<nav class="navbar navbar-default" ng-show="authenticated && userType == 'school'">
+    <div class="container">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#school-navbar-collapse" aria-expanded="false">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+	    </button>
+	    <a class="filter-btn" href="">
+		  <img class="filter-show" src="img/filter-show.png">
+		  <img class="filter-hide" style="display:none;" src="img/filter-hide.png">
+	    </a>
+	    <a class="navbar-brand" href="#"><img src="image/logo.png"></a>
+	</div>
+  
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="school-navbar-collapse">
+	    <ul class="nav navbar-nav navbar-right user-menu">
+		<li class="dropdown"><!--{{universityData}}-->
+		    <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<img ng-src="image/student-img.png" ng-hide="universityData.logo_link" height="52" width="52">
+			<img ng-src="uploads/{{universityData.logo_link}}" ng-show="universityData.logo_link" height="52" width="52">
+			<p ng-hide="universityData.name">University...<br><span>School</span></p>
+			<p ng-show="universityData.name">{{universityData.name | limitTo: 17}}{{universityData.name.length > 17 ? '...' : ''}}<br><span>School</span></p>
+			<i class="fa fa-angle-down" aria-hidden="true"></i>
+		    </a>
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			<li><a href="#!/schoolFrontpage"><img src="image/user.svg"> My Profile</a></li>
+			<li><a href="#"><img src="image/settings.svg"> Account Setting</a></li>
+			<li><a href="#/logout" ng-click="hdr.logout();"><img src="image/logout.svg"> Log Out</a></li>
+		    </ul>
+		</li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right left-menu">
+		<li><a class="nav-search" href="" data-toggle="modal" data-target="#searchModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+		<li>
+		    <a class="nav-list" href="#" ng-hide="icon_map_list || !landingShow" ng-click="icon_map_list = true"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+		    <a class="nav-list" href="#" ng-show="icon_map_list || !landingShow" ng-click="icon_map_list = false"><img src="image/world.svg"></a>
+		</li>
+		  
+		<li class="dropdown">
+		    <a class="nav-noti dropdown-toggle" href="/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+			<img src="image/line-graph.svg"><span></span>
+		    </a>
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			
+			<li ng-repeat="notification in lastUpdateStautsTrackNotification">
+			    <a ng-click="viewStudentProfile(notification.application_id, notification.student_id);">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<!--<img src="image/eye-icon.png" ng-show="notification.name == 'Review'">
+					<img src="image/doc-icon.png" ng-show="notification.name != 'Review'">-->
+					<img ng-src="image/default-user.png" ng-hide="notification.student.img_profile_link" alt="..." height="40" width="40">
+					<img ng-src="uploads/{{notification.student.img_profile_link}}" ng-show="notification.student.img_profile_link" alt="..." height="40" width="40">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>{{notification.student.name | limitTo: 23}}{{notification.student.name.length > 23 ? '...' : ''}}</label></h4>
+					<p><label>{{notification.message | limitTo: 18}} {{notification.message.length > 18 ? '...' : ''}}</label> <span>{{notification.date_maj}}</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>    
+			    
+			<!--<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/eye-icon.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>University ITB</label></h4>
+					<p><label>Has been reviewed</label> <span>09:00 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/doc-icon.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>Mumbay University</label></h4>
+					<p><label>Check your docu...</label> <span>08:00 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/eye-icon.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>University Gajah Mada</label></h4>
+					<p><label>Has been reviewed</label> <span>06:30 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>-->
+			<li><a class="see-all" href="#!/application">See All</a></li>
+		    </ul>
+		</li>
+		<li class="dropdown">
+		    <a class="nav-msg dropdown-toggle" href="/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span></span></a>
+		    
+		    <ul class="dropdown-menu">
+			<img class="droup-arrow" src="img/droup-arrow.png">
+			
+			<li ng-repeat="message in lastSendUserMessages">
+			    <a ng-click="selectChatUser(message.user_sender_id)">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img ng-src="image/msg-user.png" ng-hide="message.user.img_profile_link" alt="..." height="40" width="40">
+					<img ng-src="uploads/{{message.user.img_profile_link}}" ng-show="message.user.img_profile_link" alt="..." height="40" width="40">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>
+					{{message.user.name}}</label> <span ng-show="message.unread">{{message.unread}}</span></h4>
+					<p><label>{{message.text | limitTo: 18}}{{message.text.length > 18 ? '...' : ''}}</label> <span>{{message.created_at | moment: 'format': 'DD-MM-YY hh:mm A' }}</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			
+			<!--<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/msg-user.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>Michael Lawren</label> <span>1</span></h4>
+					<p><label>Hello, how are you?</label> <span>09:00 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/msg-user.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>Michael Lawren</label></h4>
+					<p><label>Hello, how are you?</label> <span>08:00 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>
+			<li>
+			    <a href="#">
+				<div class="user-message">
+				    <div class="user-img-msg">
+					<img src="image/msg-user.png">
+				    </div>
+				    <div class="user-con-msg">
+					<h4><label>Michael Lawren</label></h4>
+					<p><label>Hello, how are you?</label> <span>06:30 PM</span></p>
+				    </div>
+				</div>
+			    </a>
+			</li>-->
+			<li><a class="see-all" href="#!/chat/">See All</a></li>
+		    </ul>
+		</li>
+	    </ul>
+	</div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="profile-main" ng-show="authenticated && schoolSubHeader && userType == 'school'"><!--{{schoolSubHeader}}-->
+    <div class="profile-userbox-main">
+	<div class="container">
+	    <div class="profile-box">
+		<div class="profile-img">
+		    <span class="btn btn-file">
+			   <input type="hidden" name="profileimage"  ng-model-options="{ getterSetter: true }" ng-model="universityData.logo_link = uploadPicture">
+			    <img ng-src="uploads/{{universityData.logo_link}}" ng-show="universityData.logo_link" height="221" width="221"/>
+			    <img ng-src="image/profile-user.png" ng-hide="universityData.logo_link" height="221" width="221">	
+			    <p>Change Profile Logo</p> 
+			    <input data-upload-logo="" model="uploadPicture" name="file" class="ng-isolate-scope" type="file">
+		    </span>
+		</div>
+		
+		<div class="profile-con-top">
+		    <h1>{{universityData.name}}</h1>
+		    <p><img src="image/pin.svg">{{universityData.address.address_name}} {{universityData.refCountry.ref_cntry_name}}</p>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="main-menu" ng-show="!landingShow && authenticated && userType == 'school_sub_menu'">
+    <div class="container">
+	<div class="row">
+	    <nav class="navbar navbar-default">
+		<!--<div class="container-fluid">-->
+		<div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+			    <span class="sr-only">Toggle navigation</span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			</button>
+		    </div>
+	    
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			<ul class="nav navbar-nav">
+			    <li><a href="#"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> BACK TO MAP</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			    <li ng-class="schoolMainMenu == 'home' ? 'active' : ''"><a href="#!/home" ng-click="schoolMainMenu = 'home'">HOME</a></li>
+			    <li ng-class="schoolMainMenu == 'application' ? 'active' : ''"><a href="#!/application" ng-click="schoolMainMenu = 'application'">APPLICATION</a></li>
+			    <li ng-class="schoolMainMenu == 'programs' ? 'active' : ''"><a href="#!/programList" ng-click="schoolMainMenu = 'programs'">PROGRAMS</a></li>
+			    <li ng-class="schoolMainMenu == 'housing' ? 'active' : ''"><a ng-href="#!/housingList" ng-click="schoolMainMenu = 'housing'">HOUSING</a></li>
+			</ul>
+		    </div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	    </nav>
+	</div>
+    </div>
+</div>
+
+<!-- School Header bar of before created -->
+<div class="row margin-nav-important" ng-show="authenticated && userType == 'school_before_header'">
+    <div class="col-md-12">
+        <nav class="navbar navbar-inverse navbar-fixed-top change-navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#"><img src="images/small-logo-wexcape.jpg" alt="logo" class="profile-small-logo"/></a>-->
+                    <a class="navbar-brand" href="#"><img src="images/logo_wexcape.png"/> </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse text-center" id="navbar-1">
+                    <div class="display-inline-block">
+                        <span class="font-size-22"><p class="university-name">University of Name of Univ</p></span><br>
+                        <span class="university-image-span"><img src="images/uni-logo.png" class="university-image"></span>
+                    </div>
+
+                    <div class="navbar-right">
+                        <div class="profile-btn" data-toggle="modal" data-target="#adModal" ng-click="closeMainModal('custom-modal-1')">
+                            <div class="profile-btn-text">
+                                <div class="profile-clickme" style="background-image: none; font-size: 22px;">
+                                    <img src="images/click.gif" height="70"/> &nbsp; &nbsp; Click me
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="col-md-12 text-center profile-submenu">
+        <nav class= "profile-submenu-nav">
+            <ul class="profile-navigation">
+                <li class="active"><a href="">HOME</a></li>
+                <li><a href="">APPLICATIONS/MESSAGES</a></li>
+                <li><a href="">PROGRAMS</a></li>
+                <li><a href="">HOUSING</a></li>
+                <li>
+                    <button type="button" class="btn btn-outline-secondary view-public-profile">VIEW PUBLIC PROFILE</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!--<div class="container">
+  <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{ alert.msg }}</alert>
+</div>-->
+
+<div class="alert-box">
+  <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{ alert.msg }}</alert>
+</div>
+
+<!--<ui-view></ui-view>-->
+<div ui-view></div>
+
+
+
+<!--<div class="modal animated fadeIn fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal">
+    <div class="modal-dialog search-dialog animated slideInDown" role="document">
+        <div class="modal-content search-content">
+            <div class="searchbox-input">
+                <input type="search" placeholder="Search"/>
+            </div>
+            <div class="filter-input">
+                <div>Where</div>
+                <select name="select" ng-model="hdr.countrySearch">
+                    <option value="" selected>Choose</option>
+                    <option ng-repeat="universitiesCountry in hdr.universitiesCountryList" value="{{universitiesCountry}}">
+                        {{universitiesCountry}}
+                    </option>
+                </select>
+            </div>
+            <div class="filter-input">
+                <div>Diploma</div>
+                <select name="select" ng-model="hdr.diplomaSearch">
+                    <option value="" selected>Choose</option>
+                    <option ng-repeat="universitiesDiploma in hdr.universitiesDiplomaList" value="{{universitiesDiploma}}">
+                        {{universitiesDiploma}}
+                    </option>
+                </select>
+            </div>
+            <div class="filter-input">
+                <div>Speciality</div>
+                <select name="select" ng-model="hdr.specialitySearch">
+                    <option value="" selected>Choose</option>
+                    <option ng-repeat="universitiesSpeciality in hdr.universitiesSpecialityList" value="{{universitiesSpeciality}}">
+                        {{universitiesSpeciality}}
+                    </option>
+                </select>
+            </div>
+            <span class="searchbox-button-border"></span>
+            <div class="searchbox-button" ng-click="hdr.submitSearch()" role="button" tabindex="0">
+                SEARCH <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<div class="filter-main animated-fast slideInDown" ng-class="!authenticated && landingShow ? 'filter-home':''" style="display:none;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-7">
+				<ul>
+					<li>
+						<a class="filter-icon1" ng-class="selectedIcons=='All'? 'active':''" href="" ng-click="iconByFilter('All')">
+							<span></span><br>
+							All
+						</a>
+					</li>
+					<li>
+						<a class="filter-icon2" ng-class="selectedIcons=='Ideas'? 'active':''" href="#" ng-click="iconByFilter('Ideas')">
+							<span></span><br>
+							Ideas
+						</a>
+					</li>
+					<li>
+						<a class="filter-icon3" ng-class="selectedIcons=='Favorites'? 'active':''" href="#" ng-click="iconByFilter('Favorites')">
+							<span></span><br>
+							Favorites
+						</a>
+					</li>
+					<li>
+						<a class="filter-icon4" ng-class="selectedIcons=='English'? 'active':''" href="#" ng-click="iconByFilter('English')">
+							<span></span><br>
+							English
+						</a>
+					</li>
+					<li>
+						<a class="filter-icon5" ng-class="selectedIcons=='Recent'? 'active':''" href="#" ng-click="filterUniversities('Recent')">
+							<span></span><br>
+							Recent
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-5 col-sm-5">
+			    <div class="price-filter">
+				<label class="col-md-4 col-sm-5 price-label">Price By Semester</label>
+				<div class="col-md-8 col-sm-7">
+					<div class="row">
+						<input type="text" id="filter_by_price" name="filter_by_price" value="" />
+					</div>
+				</div>
+			    </div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog search-dialog animated-fast slideInDown" role="document">
+	<div class="modal-content">
+	    <div class="modal-body search-main-form">
+		<!--<form class="search-form">
+		    <div class="form-group">
+			<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Search here...">
+		    </div>
+		</form>-->
+		<p class="close-search-modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></p>
+		<form class="search-inner-form" name="searchForm">
+		    <div class="form-group">
+			<input type="text" class="form-control keyword" id="exampleInputEmail1" placeholder="Search here..." ng-model="searchForm.keywords">
+		    </div>
+		    <div class="form-group">
+			    <label>Where</label>
+			    <!--<select name="select" ng-model="hdr.countrySearch" class="form-control">
+				<option value="" selected>Choose</option>
+				<option ng-repeat="universitiesCountry in hdr.universitiesCountryList" value="{{universitiesCountry}}">
+				    {{universitiesCountry}}
+				</option>
+			    </select>-->
+			    
+			    <select id="refcountry" class="form-control" ng-model="searchForm.ref_country_id">
+				    <option value="">Choose</option>
+				    <option ng-repeat="country in refCountry" value="{{country.id}}">{{country.ref_cntry_name}}</option>
+			    </select>
+		    </div>
+		    <div class="form-group">
+			    <label>Diploma</label>
+			    <!--<select name="select" ng-model="hdr.diplomaSearch" class="form-control">
+				<option value="" selected>Choose</option>
+				<option ng-repeat="universitiesDiploma in hdr.universitiesDiplomaList" value="{{universitiesDiploma}}">
+				    {{universitiesDiploma}}
+				</option>
+			    </select>-->
+			    <select name="select" class="form-control" ng-model="searchForm.diploma">
+				<option value="" selected>Choose</option>
+				<option ng-repeat="program in programsData" value="{{program.id}}">{{program.name}}</option>
+			    </select>
+		    </div>
+		    <div class="form-group">
+			    <label>Field</label>
+			    <!--<select name="select" ng-model="hdr.specialitySearch" class="form-control">
+				<option value="" selected>Choose</option>
+				<option ng-repeat="universitiesSpeciality in hdr.universitiesSpecialityList" value="{{universitiesSpeciality}}">
+				    {{universitiesSpeciality}}
+				</option>
+			    </select>-->
+			    
+			    <select name="select" class="form-control" ng-model="searchForm.speciality">
+					<option value="" selected>Choose</option>
+					<option ng-repeat="speciality in specialityData" value="{{speciality.id}}"> {{speciality.name}} </option>
+			    </select>
+		    </div>
+		    <button type="submit" class="btn btn-default" ng-click="searchUniversities(searchForm);">Search</button>
+		</form>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<!-- track-Modal -->
+<div class="default-modal modal fade" id="trackModal2" tabindex="-1" role="dialog" aria-labelledby="trackModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+	<div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	    <h4 class="modal-title" id="trackModalLabel">Track My Application<span></span></h4>
+	    </div>
+	    <div class="modal-body">
+		<div class="university-name">
+		    <div class="university-img">
+			<img ng-src="uploads/{{applicationData.university.logo_link}}">
+		    </div>
+		    <div class="university-con">
+			<h3>{{applicationData.university.name}}</h3>
+			<p>{{applicationData.diplomas.name}}</p>
+		    </div>
+		</div>
+		<div class="track-app-tab">
+		    <!-- Nav tabs -->
+		    <ul class="nav nav-tabs" role="tablist">
+			  <li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Send') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'send'" aria-controls="send" role="tab" ><span><i class="fa fa-envelope" aria-hidden="true"></i></span>Send</a></li>
+			  <li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Review') >= 0 ? 'active' : 'deactive' "><a href="" ng-click="track_tab = 'review'" aria-controls="review" role="tab" ><span><i class="fa fa-eye" aria-hidden="true"></i></span>Review</a></li>
+			  <li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Complete') >= 0 ? 'active' : applicationData.application_statuses_name.indexOf('Accepted') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'checked'" aria-controls="checked" role="tab" ><span><i class="fa fa-file-text" aria-hidden="true"></i></span>Checked</a></li>
+			  <li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Incomplete') >= 0 ? 'active' : applicationData.application_statuses_name.indexOf('Rejected') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'decision'" aria-controls="decision" role="tab" ><span><i class="fa fa-question" aria-hidden="true"></i></span>Decision</a></li>
+		    </ul>
+		    <!-- Tab panes -->
+		    <div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="send" >
+			    <div class="row">
+				<div class="col-md-12 col-sm-12 content-head" ng-if="applicationData.required_document">
+				    <h4><img src="image/missing.png"> Missing</h4>
+				</div>
+				
+				<div class="upload-main upload-box" ng-if="applicationData.required_document[requirements.id]" ng-repeat="requirements in applicationData.diplomas.diplomaRequirements">
+				    <div class="col-md-3 col-sm-3">
+					<div class="radio">
+					    <label>{{requirements.name}}</label>
+					    <!--<div class="up-img" ng-show="uploadDocument">
+						<a ng-href="uploads/documents/{{uploadDocument}}" target="_blank"><img src="image/document.png"></a>
+					    </div>
+					    <div class="up-img" ng-if="!uploadDocument && application_document.diploma_requirement_id == requirements.id"  ng-repeat="application_document in applicationData.applicationDocuments">
+						<input type="hidden" ng-model="document_type_id[requirements.id]" ng-init="document_type_id[requirements.id] = application_document.studentDocuments.document_type_id" ng-value="{{application_document.studentDocuments.document_type_id}}" />
+						<a ng-href="uploads/documents/{{application_document.studentDocuments.link}}" target="_blank"><img src="image/document.png"></a>
+					    </div>-->
+					</div>
+				    </div>
+				    <div class="col-md-1 col-sm-1">
+					<div class="up-img" ng-show="uploadDocument">
+					    <a ng-href="uploads/documents/{{uploadDocument}}" target="_blank"><img src="image/document.png"></a>
+					</div>
+					<div class="up-img" ng-if="!uploadDocument && application_document.diploma_requirement_id == requirements.id"  ng-repeat="application_document in applicationData.applicationDocuments">
+					    <input type="hidden" ng-model="document_type_id[requirements.id]" ng-init="document_type_id[requirements.id] = application_document.studentDocuments.document_type_id" ng-value="{{application_document.studentDocuments.document_type_id}}" />
+					    <a ng-href="uploads/documents/{{application_document.studentDocuments.link}}" target="_blank"><img src="image/document.png"></a>
+					</div>
+				    </div>
+				    <div class="col-md-4 col-sm-4">
+					<select ng-model="document_type_id[requirements.id]" class="form-control">
+					    <option value="">Document Type</option>
+					    <option ng-value="{{type.id}}" ng-selected="type.id == document_type_id[requirements.id]" ng-repeat="type in documentTypes">{{type.name}}</option>
+					</select>
+				    </div>
+				    <div class="col-md-4 col-sm-4">
+					<div class="fileUpload btn btn-primary">
+					    <span><img src="image/upload.png"> Upload</span>
+					    <input data-upload-document="" model="uploadDocument" application_id="{{applicationData.id}}" diploma_requirement_id="{{requirements.id}}" document_type_id="{{document_type_id[requirements.id]}}" name="file" class="upload" type="file">
+					</div>
+				    </div>
+				</div>
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>
+
+<div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body adbodyx">
+                <div class="ad-logo">
+                    <img src="images/wexcape_ad.jpg" />
+                </div>
+
+                <div class="adcontainer">
+                    <div class="row ad-body">
+                        <div class="col-sm-12 text-center">
+                            <h2 style="margin-top:0px;">Do you like the project?</h2><br>
+                        </div>
+                        <div class="motiv">
+                            <br><br>
+                            Give us that<br><img src="images/motivation.png" />
+                            <div class="text-right">
+                                by supporting us
+                            </div>
+                        </div>
+                        <div class="ad-bottom">
+                            <div class="col-sm-5">
+                                <div class="ad">
+                                    <div class="adhead">
+                                        Privately
+                                    </div>
+                                    <div class="adbody">
+                                        <br>
+                                        <form>
+                                            <label>Name of your school</label>
+                                            <input class="form-control form-orange" type="text">
+
+                                        </form>
+                                        <div class="text-center ad-btn">
+                                            <a class="btn btn-orange">Keep Going Guys!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="or">
+                                    or
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="ad">
+                                    <div class="adhead">
+                                        Publicly
+                                    </div>
+                                    <div class="adbody adbody2">
+                                        <div class="col-sm-6">
+                                            <img src="images/facebook-3.svg" /><br>
+                                            Like Us
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <img src="images/twitter-3.svg" /><br>
+                                            Follow Us
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ad-footer">
+                            &nbsp;<br>
+                            Or both...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal Start -->
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signinModalLabel">
+  <div class="modal-dialog sign-in-popup" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signinModalLabel">&nbsp;</h4>
+      </div>
+      <div class="modal-body">
+        <div class="sign-in">
+			<div class="site-logo">
+				<img src="images/login-logo.png">
+			</div>
+			<div class="sign-in-user-img">
+				<img src="images/sign up.png">
+			</div>
+				  
+			<div class="login-form">
+				<form name="loginForm" class="form-horizontal" role="form">
+				  <!--<input type="hidden" name="_token" value="{{ csrf_token() }}">-->
+				  <div class="form-group">
+					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address" ng-model="login.email" required focus>
+				  </div>
+				  <div class="form-group">
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="login.password" required="">
+				  </div>
+				  <div class="form-group">
+					<div class="social-btn">
+						<ul>
+							<li><a href="#"><img src="images/icon1.png"></a></li>
+							<li><a href="#"><img src="images/icon2.png"></a></li>
+							<li><span class="or">OR</span></li>
+							<li><button type="submit" class="btn btn-default" ng-click="hdr.doLogin(login)" data-ng-disabled="loginForm.$invalid">SIGN IN <img src="images/right-arrow-l.png"></button></li>
+						</ul>
+					</div>
+				  </div>
+				</form>
+			</div>
+			
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal End -->
+
+<!-- Signup Modal Start -->		
+<div id="signupModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel">
+  <div class="modal-dialog modal-lg sign-in-popup" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signupModalLabel">&nbsp;</h4>
+      </div>
+      <div class="modal-body">
+        <div class="sign-in">
+			<div class="site-logo">
+				<img src="images/login-logo.png">
+			</div>
+			<div class="sign-up-con">
+				<p>Welcome to WeXCape, the future of studying abroad.</p>
+				<p>This community of students and schools will change for ever<br> 
+the access to international studies.</p>
+				<p>Let’s build it together!</p>
+				<span>#MadeByStudents</span>
+			</div>
+			
+			<div class="login-form">
+
+				<div class="tab-main">
+
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				  	<li><span>ARE YOU :</span></li>
+					<li role="presentation" class="active student"><a href="#student" aria-controls="student" role="tab" data-toggle="tab">A STUDENT</a></li>
+					<li role="presentation" class="school"><a href="#school" aria-controls="school" role="tab" data-toggle="tab">A SCHOOL</a></li>
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="student">
+						<form name="signupForm1" class="form-horizontal" role="form">
+							<!--<input type="hidden" name="_token" value="{{ csrf_token() }}">-->
+							<input type="hidden" name="type" ng-init="signup1.type = 'student'" ng-model="signup1.type"/>
+						  <div class="form-group">
+							<input type="text" class="form-control" id="exampleInputName" placeholder="Full Name" name="name" ng-model="signup1.name" focus>
+							<span ng-show="signupForm1.name.$error.name" class="help-inline">Name is not valid</span> 				
+						  </div>
+						  <div class="form-group">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address" name="email" ng-model="signup1.email" focus>
+							<span ng-show="signupForm1.email.$error.email" class="help-inline">Email is not valid</span> 				
+						  </div>
+						  <div class="form-group">
+							<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" ng-model="signup1.password" required>
+							<small class="errorMessage" data-ng-show="signupForm1.password.$dirty && signupForm1.password.$invalid"> Enter Password.</small>
+						  </div>
+						  <div class="form-group">
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm password" name="password2" ng-model="signup1.password2" password-match="signup1.password" required>
+							<small class="errorMessage" data-ng-show="signupForm1.password2.$dirty && signupForm1.password2.$error.required"> Enter password again.</small>
+
+							<small class="errorMessage" data-ng-show="signupForm1.password2.$dirty && signupForm1.password2.$error.passwordNoMatch && !signupForm1.password2.$error.required"> Password do not match.</small>
+			                
+						  </div>
+						  <div class="form-group">
+							<div class="social-btn">
+								<ul>
+									<li><a href="#"><img src="images/icon1.png"></a></li>
+									<li><a href="#"><img src="images/icon2.png"></a></li>
+									<li><span class="or">OR</span></li>
+									<li><button type="submit" class="btn btn-default" ng-click="hdr.signUp(signup1)" data-ng-disabled="signupForm1.$invalid">SIGN UP <img src="images/right-arrow-l.png"></button></li>
+								</ul>
+							</div>
+						  </div>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="school">
+						<form name="signupForm" class="form-horizontal" role="form">
+							<input type="hidden" name="type" ng-init="signup.type = 'school'" ng-model="signup.type" />
+						  <div class="form-group">
+							<input type="text" class="form-control" id="exampleInputName" placeholder="Name of the school" name="name" ng-model="signup.name" focus>
+							<span ng-show="signupForm.name.$error.name" class="help-inline">Name is not valid</span> 				
+						  </div>
+						  <div class="form-group">
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address" name="email" ng-model="signup.email" focus>
+							<span ng-show="signupForm.email.$error.email" class="help-inline">Email is not valid</span> 				
+						  </div>
+						  <div class="form-group">
+							<input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" ng-model="signup.password" required>
+							<small class="errorMessage" data-ng-show="signupForm.password.$dirty && signupForm.password.$invalid"> Enter Password.</small>
+						  </div>
+						  <div class="form-group">
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm password" name="password2" ng-model="signup.password2" password-match="signup.password" required>
+							<small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.required"> Enter password again.</small>
+
+			                <small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.passwordNoMatch && !signupForm.password2.$error.required"> Password do not match.</small>
+			                
+						  </div>
+						  <div class="form-group">
+							<div class="social-btn">
+								<ul>
+									<li><a href="#"><img src="images/icon1.png"></a></li>
+									<li><a href="#"><img src="images/icon2.png"></a></li>
+									<li><span class="or">OR</span></li>
+									<li><button type="submit" class="btn btn-default" ng-click="hdr.signUp(signup)" data-ng-disabled="signupForm.$invalid">SIGN UP <img src="images/right-arrow-l.png"></button></li>
+								</ul>
+							</div>
+						  </div>
+						</form>
+					</div>
+				  </div>
+
+				</div>
+
+			</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Signup Modal End -->	
+
+<script type="text/javascript">
+    $('.profile-clickme').on('click',function(){
+        $('.motiv').hide();
+        $('.motiv').addClass('animated');
+        setTimeout(function(){
+            $('.motiv').show();
+            $('.motiv').addClass('slideInRight');
+        }, 1000);
+        $('.ad-bottom').hide();
+        $('.ad-bottom').addClass('animated');
+        setTimeout(function(){
+            $('.ad-bottom').show();
+            $('.ad-bottom').addClass('fadeInUp');
+        }, 2000);
+        $('.ad-footer').hide();
+        $('.ad-footer').addClass('animated');
+        setTimeout(function(){
+            $('.ad-footer').show();
+            $('.ad-footer').addClass('slideInRight');
+        }, 3000);
+    });
+    $('#searchModal').on('hide.bs.modal', function (e) {
+        $('#searchModal').addClass('fadeOutUp');
+        $('#searchModal').find('.modal-backdrop').hide();
+    });
+    $('#searchModal').on('hidden.bs.modal', function (e) {
+        $('#searchModal').removeClass('fadeOutUp');
+    });
+
+</script>

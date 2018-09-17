@@ -1,0 +1,288 @@
+<ui-view></ui-view>
+
+<div class="profile-main">
+    <div class="container">
+	<div class="profile-content-main">
+	    <div class="row">
+		<div class="profile-tabs">
+		    <div class="col-md-3 col-sm-3">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation"><a ui-sref="app.schoolFrontpage" aria-controls="home" role="tab"><img src="image/user.png"> Front Page</a></li>
+			    <li role="presentation"><a ui-sref="app.programList" aria-controls="profile" role="tab"><img src="image/diploma.png"> Diploma</a></li>
+			    <li role="presentation" class="active"><a ui-sref="app.housingList" aria-controls="messages" role="tab"><img src="image/home.png"> Housing</a></li>
+			</ul>
+		    </div>
+		    <div class="col-md-9 col-sm-9">
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="active" id="housing">
+				<!--{{campus}}-->
+				<!--{{housing}}-->
+				    <div class="housing-form">
+				    <div class="list-content">
+				    	<h3><a class="btn btn-primary" href="#!/housingList"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Go to Back</a></h3>
+				    </div>
+					<form name="housingForm">
+						
+					    <div class="col-md-3 col-sm-3">
+						<div class="form-group">
+						    <label for="name">Name</label>
+						    <input type="text" id="name" ng-model="housing.name" class="form-control" placeholder="Name">
+						</div>
+					    </div>
+					    <div class="col-md-3 col-sm-3">
+						<div class="form-group">
+						    <label for="address">Address</label>
+						    <input type="text" id="address" ng-model="housing.address" class="form-control address-edit" placeholder="Address">
+						</div>
+					    </div>
+					    <div class="clearfix"></div>
+					    <div class="drom-main-photo col-md-12">
+						    <div class="photo-main">
+						    	<h4>Dorm Photo Collection</h4>
+								<div class="photo-inner up-image">
+									<div class="photo-box up-box" ng-repeat="picture in housing.campus_dorm_pictures">
+										<img ng-src="uploads/campuses/{{picture.link}}" height="159" width="135"/>
+							    		<div class="up-delete"><a ng-click="deleteCampusDormImages($index, 'picture', picture.id, housing.id);"> X </a></div>
+								    </div>
+								
+								    <div class="photo-box up-box" ng-repeat="file in dfiles">
+										<input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="housing.campusDormPictures[$index] = file">
+										<img ng-src="uploads/campuses/{{file}}" ng-show="file" height="159" width="135"/>
+										<div class="up-delete"><a ng-click="deleteCampusDormImages($index,'file');"> X </a></div>
+								    </div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="file-upload">
+									<label class="file-upload__label_housing" for="upload-dorm-image"> <img src="image/up-plus.png"> </label>
+									<input id="upload-dorm-image" type="file" class="file-upload__input" ng-file-model="dfiles" multiple />
+								</div>
+							</div>
+						</div>	
+						<div class="clearfix"></div>
+					    <div class="col-md-3 col-sm-3">
+						<div class="form-group">
+						    <label for="accomodation">Type of accomodation?</label>
+						    <select id="accomodation" class="form-control" ng-model="housing.accomodation" ng-init="housing.accomodation = data.accomodation">
+							<option value="">Type of accomodation</option>
+							<option value="Dormitory">Dormitory</option>
+						    </select>
+						</div>
+					    </div>
+					    <div class="col-md-3 col-sm-3">
+						<div class="form-group">
+						    <label for="room_type">How many type of room?</label>
+						    <select id="room_type" class="form-control" ng-model="housing.room_type" ng-init="housing.room_type = data.room_type">
+							<option value="">How many type of room</option>
+							<option ng-value="1">1</option>
+							<option ng-value="2">2</option>
+							<option ng-value="3">3</option>
+							<option ng-value="4">4</option>
+							<option ng-value="5">5</option>
+						    </select>
+						</div>
+					    </div>
+					
+					<div class="clearfix"></div>
+					<div class="panel-group accordion-form" id="accordion" role="tablist" aria-multiselectable="true">
+					    <div class="panel panel-default" ng-repeat="n in [] | range:housing.room_type">
+						<div class="panel-heading" role="tab" id="heading{{n}}">
+						    <h4 class="panel-title">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" data-target="#room{{n}}" aria-expanded="true" aria-controls="room{{n}}">
+							    {{n + 1}}. Detail ed room type one
+							    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+							    <span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>
+							</a>
+						    </h4>
+						</div>
+						<div id="room{{n}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{n}}">
+						    <div class="panel-body">
+							<div class="row">
+							    <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								    <label for="type{{n}}">Type</label>
+								    <input type="text" id="type{{n}}" ng-model="housing.roomObj[n].type" class="form-control" placeholder="Type">
+								</div>
+							    </div>
+							    <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								    <label for="price{{n}}">Price</label>
+								    <input type="text" id="price{{n}}" ng-model="housing.roomObj[n].price" class="form-control" placeholder="Price">
+								</div>
+							    </div>
+							    <div class="clearfix"></div>
+							    <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								    <label for="fit{{n}}">Fit?</label>
+								    <select id="fit{{n}}" class="form-control" ng-model="housing.roomObj[n].fit" >
+										<option value="">Fit</option>
+										<option ng-value="1">1</option>
+										<option ng-value="2">2</option>
+										<option ng-value="3">3</option>
+										<option ng-value="4">4</option>
+										<option ng-value="5">5</option>
+								    </select>
+								</div>
+							    </div>
+							    <div class="col-md-4 col-sm-4">
+								<div class="form-group">
+								    <label for="size{{n}}">Size</label>
+								    <input type="text" id="size{{n}}" ng-model="housing.roomObj[n].size" class="form-control" placeholder="Size">
+								</div>
+							    </div>
+							</div>
+							<div class="clearfix"></div>
+							<hr>
+							<div class="rooms-main">
+							    <h4>Room Amenities</h4>
+							    <div class="rooms-inner">
+								<label class="checkbox-inline" ng-class="housing.roomObj[n].room_amenities[amenity.id] == true ? 'active':''" ng-repeat="amenity in amenities">
+								    <img ng-src="{{amenity.img_link}}">
+								    <input type="checkbox" ng-model="housing.roomObj[n].room_amenities[amenity.id]" ng-value="amenity.id" ng-checked="housing.roomObj[n].room_amenities[amenity.id]"/>
+								</label>
+							    </div>
+							</div>
+							<div class="photo-main">
+							    <h4>Photo Collection</h4>
+							    <div class="photo-inner up-image">
+							    	<div class="photo-box up-box" ng-repeat="picture in housing.roomObj[n].campusRoomType_pictures">
+										<img ng-src="uploads/campuses/{{picture.link}}" height="159" width="135"/>
+							    		<div class="up-delete"><a href="" ng-click="deleteCampusRoomImages($index, 'picture', n, picture.id, picture.campus_room_type_id);"> X </a></div>
+								    </div>
+									<div class="photo-box up-box" ng-repeat="rfile in rfiles[n]">
+									    <input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="housing.roomObj[n].campusRoomTypePictures[$index] = rfile">
+									    <img ng-src="uploads/campuses/{{rfile}}" ng-show="rfile" height="159" width="135"/>
+									    <div class="up-delete"><a href="" ng-click="deleteCampusRoomImages($index,'rfile', n);"> X </a></div>
+									</div>
+							    </div>
+							    <div class="clearfix"></div>
+								<div class="file-upload">
+									<label class="file-upload__label_housing" for="upload-room-image{{n}}"> <img src="image/up-plus.png"> </label>
+									<input id="upload-room-image{{n}}" type="file" class="file-upload__input" ng-file-model="rfiles[n]" multiple />
+								</div>
+							</div>
+							
+							<!--<div class="fileUpload btn btn-primary">
+							    <span><img src="image/upload.png"> Upload</span>
+							    <input type="file" class="upload" ng-file-model="rfiles[n]" multiple />
+							</div>-->
+							
+						    </div>
+						</div>
+					    </div>
+					</div>
+					<div class="drom-main">
+					    <div class="rooms-main">
+							<h4>Dorm Amenities</h4>
+							<div class="rooms-inner">
+							    <label class="checkbox-inline" ng-class="housing.drom_amenities[amenity.id] == true ? 'active':''" ng-repeat="amenity in amenities">
+								<img ng-src="{{amenity.img_link}}">
+								<input type="checkbox" ng-model="housing.drom_amenities[amenity.id]" ng-value="amenity.id" ng-checked="housing.drom_amenities[amenity.id]"/>
+							    </label>
+							</div>
+					    </div>
+					    
+					    <!--<div class="photo-main">
+					    	<h4>Dorm Photo Collection</h4>
+							<div class="photo-inner up-image">
+								<div class="photo-box up-box" ng-repeat="picture in housing.campus_dorm_pictures">
+									<img ng-src="uploads/campuses/{{picture.link}}" height="159" width="135"/>
+						    		<div class="up-delete"><a ng-click="deleteCampusDormImages($index, 'picture', picture.id, housing.id);"> X </a></div>
+							    </div>
+							
+							    <div class="photo-box up-box" ng-repeat="file in dfiles">
+									<input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="housing.campusDormPictures[$index] = file">
+									<img ng-src="uploads/campuses/{{file}}" ng-show="file" height="159" width="135"/>
+									<div class="up-delete"><a ng-click="deleteCampusDormImages($index,'file');"> X </a></div>
+							    </div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="file-upload">
+								<label class="file-upload__label_housing" for="upload-dorm-image"> <img src="image/up-plus.png"> </label>
+								<input id="upload-dorm-image" type="file" class="file-upload__input" ng-file-model="dfiles" multiple />
+							</div>
+						</div>-->
+					    
+					    <div class="drom-item-main">
+							<h4>What to bring</h4>
+							<div class="row add-items" ng-repeat="n in [] | range:items">
+								<div class="col-md-4 col-sm-4">
+								    <div class="form-group">
+										<input type="text" class="other-input form-control" placeholder="Item" ng-model="housing.dormItems[n].name">
+								    </div>
+								</div>
+								<div class="col-md-3 col-sm-3">
+								    <div class="form-group">
+										<a ng-click="addItems()" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Item</a>
+								    </div>
+								</div>
+							</div>
+							<!--<div class="addPlus" ng-repeat="n in [] | range:requirements">
+											<a ng-click="addRequirements()"><img ng-src="image/plus.png" width="25" height="25"></a>	
+											<input type="text" class="other-input form-control" ng-model="program.otherDocuments[n].name">						
+										</div>-->
+						</div>
+						<!--<div class="photo-inner up-image">
+							
+							<div class="photo-box up-box" ng-repeat="picture in housing.campus_pictures">
+								<img ng-src="uploads/campuses/{{picture.link}}" height="159" width="135"/>
+					    		<div class="up-delete"><a href="" ng-click="deleteCampusImages($index, 'picture', picture.id, housing.id);"> X </a></div>
+						    </div>
+						
+						    <div class="photo-box up-box" ng-repeat="file in files">
+								<input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="housing.campusPictures[$index] = file">
+								<img ng-src="uploads/campuses/{{file}}" ng-show="file" height="159" width="135"/>
+								<div class="up-delete"><a href="" ng-click="deleteCampusImages($index,'file');"> X </a></div>
+						    </div>
+						</div>
+					    </div>
+					    <div class="fileUpload btn btn-primary">
+							<span><img src="image/upload.png"> Upload</span>
+							<input type="file" class="upload" ng-file-model="files" multiple />
+					    </div>-->
+					</div>
+					
+					<!--<div class="photo-main">
+						<h4>Photo Collection</h4>
+						<div class="photo-inner up-image">
+							<div class="photo-box up-box" ng-repeat="picture in housing.campus_pictures">
+								<img ng-src="uploads/campuses/{{picture.link}}" height="159" width="135"/>
+					    		<div class="up-delete"><a href="" ng-click="deleteCampusImages($index, 'picture', picture.id, housing.id);"> X </a></div>
+						    </div>
+						    <div class="photo-box up-box" ng-repeat="file in files">
+								<input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="housing.campusPictures[$index] = file">
+								<img ng-src="uploads/campuses/{{file}}" ng-show="file" height="159" width="135"/>
+								<div class="up-delete"><a ng-click="deleteCampusImages($index,'file');"> X </a></div>
+						    </div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="file-upload">
+							<label class="file-upload__label_housing" for="upload-housing-image"> <img src="image/up-plus.png"> </label>
+							<input id="upload-housing-image" type="file" class="file-upload__input" ng-file-model="files" multiple />
+						</div>
+					</div>-->
+					
+				    <!--<div class="form-group fileUpload btn btn-primary">
+						<span><img src="image/upload.png"> Upload</span>
+						<input type="file" class="upload" ng-file-model="files" multiple />
+				    </div>-->
+				    
+					<div class="desc-main">
+					    <h4 for="description">Description</h4>
+					    <div class="form-group">
+						<textarea class="form-control" id="description" ng-model="housing.description" rows="5" placeholder="Description"></textarea>
+					    </div>
+					    <button type="submit" class="btn btn-primary save-btn" ng-click="housingC.saveHousing(housing);">Save</button>
+					    <button type="submit" class="btn btn-primary cancel-btn" ng-click="housingC.cancelHousing();">Cancel</button>
+					</div>
+					</form>
+				    </div>
+				</div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>

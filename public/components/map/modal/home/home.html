@@ -1,0 +1,125 @@
+<uib-carousel class="home-slider">
+    <uib-slide ng-repeat="itemImage in university.pictures track by $index" active="active" index="$index">
+        <a title="{{university.name}}"  rel="home-carousel" ng-href="uploads/universities/{{itemImage.link}}" fancyboxable class="home-slider-image">
+            <img ng-src="uploads/universities/{{ itemImage.link }}" class="img-responsive"/>
+        </a>
+    </uib-slide>
+</uib-carousel>
+<div class="container modal-home-content">
+    <div class="row">
+        <div class="clearfix"></div>
+        <div class="text-center"><!--{{university}}-->
+            <div class="row modal-home-top">
+                <div class="col-sm-9 text-center col-md-padding-important">
+                    <span class="uppercase">{{university.slogan}}</span>
+                </div>
+                <div class="col-sm-9 col-md-padding-important">
+                    <div class="modal-home-box">
+                        {{university.description}}
+                    </div>
+                    <div class="modal-home-infox">
+                        <div class="col-md-12 col-sm-12 ">
+                            <div class="col-md-6 section ">
+                                <div class="col-md-2 col-xs-2 ">
+                                    <img src="images/home/stats_icon.png" alt="icon stats"
+                                         width="52" height="52">
+                                </div>
+                                <div class="col-md-10 col-xs-10 numbers ">
+                                    <p>
+                                        <span class="pcolor">{{university.nb_student}}</span>
+                                        <span>Students</span>
+                                    </p>
+                                    <p>
+                                        <span class="pcolor">70%</span>
+                                        <span>Acceptance race</span>
+                                    </p>
+                                    <p>
+                                        <span class="pcolor">{{university.nb_student_campus}}</span>
+                                        <span>Students on campus</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="clearfix visible-sm-block"></div>
+                            <div class="clearfix visible-xs-block"></div>
+                            <div class="col-md-6 section col-md-padding-important">
+                                <div class="col-md-2 col-xs-2">
+                                    <img src="images/home/course_icon.png" alt="" width="52"
+                                         height="52">
+                                </div>
+                                <div class="col-md-10 col-xs-10 numbers ">
+                                    <p>
+                                        <span class="pcolor">41</span>
+                                        <span>Bachelor's degree</span>
+                                    </p>
+                                    <p>
+                                        <span class="pcolor">16</span>
+                                        <span>Master's degree</span>
+                                    </p>
+                                    <p>
+                                        <span class="pcolor">12</span>
+                                        <span>6 month to 1 year course</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-md-12 section">
+                                <div class="col-sm-6">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <img src="images/home/fall_icon.png" alt=""> fall 2017
+                                        </div>
+                                        <div class="box-text">
+                                            <ul class="box-ul">
+                                                <li>Sept. 15th 2016</li>
+                                                <li>Open until Sept. 15th 2017</li>
+                                                <li>4 weeks break</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 ">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <img src="images/home/spring_icon.png" alt=""> spring
+                                            2018
+                                        </div>
+                                        <div class="box-text">
+                                            <ul class="box-ul">
+                                                <li>Sept. 15th 2016</li>
+                                                <li>Open until Sept. 15th 2017</li>
+                                                <li>4 weeks break</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="clearfix"><br></div>
+                            <div class="col-md-12 section col-md-padding-important">
+                                <div class="col-md-1 col-xs-2 col-md-padding-important">
+                                    <div style="width: 52px; padding: 0px 11.5px;">
+                                        <img src="images/home/adress_icon.png" alt="" width="29"
+                                             height="36">
+                                    </div>
+                                </div>
+                                <div class="col-md-11 col-xs-10">
+                                    <p>{{university.address.street_number ? university.address.street_number+' ' : ''}}
+                                    {{university.address.street_name}}, {{university.address.city}}</p>
+                                    <p>{{university.address.country}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-center home-modal-calendar col-md-padding-important">
+                    <div style="float: right;   margin-bottom: 40px;">
+                        <div class="calendar-above-link">View full calendar</div>
+                        <img src="images/home/calendar.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

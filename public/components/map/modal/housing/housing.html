@@ -1,0 +1,93 @@
+<div class="carousel-center" style="width: 100%;" ng-if="showSlick">
+    <slick  ng-if="university.housing.length" class="one-time"  data="items"  responsive="breakpoints"  settings="slickPanels">
+        <div ng-repeat="housing in university.housing" >
+            <h4 class="dorm-link" ng-click="goToSubHousing($index)">{{housing.name}}</h4>
+            <div class="card">
+                <div class="card-img" ng-click="goToSubHousing($index)">
+                    <img ng-src="uploads/campuses/{{ housing.campusDormPictures[0].link }}" alt="{{housing.name}}"  class="img-responsive"/>
+                </div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/localization.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            <span class="pcolor">{{item.meters}}</span> meters away from the campus
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/simple-room.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            Simple room <span class="pcolor">({{item.singleRoom}}m<sup>2</sup>)</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/double-room.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            Double room <span class="pcolor">({{item.doubleRoom}}m<sup>2</sup>)</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/dd.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            {{housing.address.address_name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+</div>
+
+<!--<div class="carousel-center" style="width: 100%;" ng-if="showSlick">
+    <slick  ng-if="items.length" class="one-time"  data="items"  responsive="breakpoints"  settings="slickPanels">
+        <div ng-repeat="item in items" >
+            <h4 class="dorm-link" ng-click="goToSubHousing()">{{item.domName}}</h4>
+            <div class="card">
+                <div class="card-img" ng-click="goToSubHousing()">
+                    <img ng-src="{{ item.imgSrc }}" alt="{{ item.domName}}"  class="img-responsive"/>
+                </div>
+                <div class="card-text">
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/localization.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            <span class="pcolor">{{item.meters}}</span> meters away from the campus
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/simple-room.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            Simple room <span class="pcolor">({{item.singleRoom}}m<sup>2</sup>)</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/double-room.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            Double room <span class="pcolor">({{item.doubleRoom}}m<sup>2</sup>)</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2 col-md-padding">
+                            <img src="images/dd.png" />
+                        </div>
+                        <div class="col-sm-10 col-md-padding">
+                            {{item.location}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+</div>-->

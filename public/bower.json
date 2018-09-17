@@ -1,0 +1,44 @@
+{
+  "name": "wexcape",
+  "description": "",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-aria": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-local-storage": "*",
+    "angular-cookies": "*",
+    "angular-translate-loader-static-files": "*",
+    "angular-moment": "*",
+    "angular-ui-router": "*",
+    "bootstrap": "*",
+    "less": "*",
+    "satellizer": "*",
+    "angular-sanitize": "^1.5.8",
+    "angular-i18n": "^1.5.8",
+    "angular-filter": "^0.5.11",
+    "angular-bootstrap": "^2.5.0",
+    "angular-touch": "^1.6.2",
+    "angular-leaflet-directive": "leaflet-directive#^0.10.0",
+    "leaflet": "^1.0.3",
+    "Leaflet.awesome-markers": "^2.0.2",
+    "photoswipe": "^4.1.2",
+    "angular-fancybox-plus": "^1.0.3",
+    "angularjs-slider": "^6.1.1",
+    "angular-slick-carousel": "^3.1.7"
+  },
+  "resolutions": {
+    "angular": "1.6.4",
+    "moment": "~2.11.1",
+    "leaflet": "0.7.x"
+  }
+}

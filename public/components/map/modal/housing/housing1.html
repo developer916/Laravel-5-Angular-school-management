@@ -1,0 +1,59 @@
+<div id="page-content">
+    <div class="dorm-section container-fluid">
+        <div class="row no-gutters">
+            <div ng-repeat="housing in mmodhsg.university.housing"
+                 ng-class="mmodhsg.university.housing.length === 2 ? 'col-md-6' : 'col-md-4'">
+                <div class="housing-title pcolor text-center">
+                    {{housing.name}}
+                </div>
+                <div style="margin: auto; box-shadow: 1px 1px 12px #555; width: 256px;">
+                    <div zoomable pictures="housing.pictures">
+                        <img ng-src='images/universities/{{housing.url}}' alt="" height="256px" width="256px"/>
+                    </div>
+                    <div style="background-color: #ffffff; padding: 20px;">
+                        <table cellpadding="10">
+                            <tbody>
+                            <tr>
+                                <td><img src="images/modal/localization.png" alt=""/></td>
+                                <td class="little-padding-left">
+                                            <span>
+                                                <span>{{housing.position_desc}}</span>
+                                            </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="images/modal/simple-room.png" alt=""/></td>
+                                <td class="little-padding-left">
+                                            <span>
+                                                <span> Simple room (<span class="pcolor">9m<sup>2</sup></span>)</span>
+                                            </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="images/modal/double-room.png" alt=""/></td>
+                                <td class="little-padding-left">
+                                            <span>
+                                                <span> Double room (<span class="pcolor">20m<sup>2</sup></span>)</span>
+                                            </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="images/modal/dd.png" alt=""/></td>
+                                <td class="little-padding-left">
+                                            <span>
+                                                <span>{{housing.address}}</span>
+                                            </span>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

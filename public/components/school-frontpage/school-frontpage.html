@@ -1,0 +1,60 @@
+<!--<div class="container margin-top-20" >-->
+
+<ui-view></ui-view>
+
+<div class="profile-main">
+    <div class="container">
+	<div class="profile-content-main">
+	    <div class="row">
+		<div class="profile-tabs">
+		    <div class="col-md-3 col-sm-3">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" class="active"><a ui-sref="app.schoolFrontpage" aria-controls="home" role="tab"><img src="image/user.png"> Front Page</a></li>
+			    <li role="presentation"><a ui-sref="app.programList" aria-controls="profile" role="tab"><img src="image/diploma.png"> Diploma</a></li>
+			    <li role="presentation"><a ui-sref="app.housingList" aria-controls="messages" role="tab"><img src="image/home.png"> Housing</a></li>
+			</ul>
+		    </div>
+		    <div class="col-md-9 col-sm-9">
+			<!-- Tab panes -->
+			<div class="tab-content">
+			    <div role="tabpanel" class="tab-pane active" id="front">
+				<form name="universityFrom">
+				<div class="upload-img">
+				    <h3><img src="image/gallery.png"> Cover Pictures</h3>
+				    <div class="up-image">
+					<div class="up-box" ng-repeat="picture in university.pictures">
+					    <img ng-src="uploads/universities/{{picture.link}}" height="210" width="240"/>
+					    <div class="up-delete"><a href="" ng-click="deleteUniversityImages($index, 'picture', picture.id);"> X </a></div>
+					</div>
+					<div class="up-box" ng-repeat="ufile in ufiles">
+					    <input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="universityFrom.pictures[$index] = ufile">
+					    <img ng-src="uploads/universities/{{ufile}}" ng-show="ufile" height="210" width="240"/>
+					    <div class="up-delete"><a href="" ng-click="deleteUniversityImages($index,'ufile');"> X </a></div>
+					</div>
+					
+				    </div>
+				    <div class="clearfix"></div>
+				    <div class="file-upload">
+					<label for="upload" class="file-upload__label"><img src="image/up-plus.png"></label>
+					<input id="upload" class="file-upload__input" type="file" name="file-upload" ng-file-universities="ufiles" multiple />
+				    </div>
+				</div>
+				<div class="up-forms">
+				   	<div class="form-group">
+					    <a href="#"><img src="image/edit-icon1.png"> Edit Info</a>
+					</div>
+					<div class="form-group">
+					    <textarea class="form-control" rows="5" placeholder="Description" ng-model="universityFrom.info"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="schoolFrontpageC.saveFrontpage(universityFrom)">Catch phrase of the school Edit</button>
+				</div>
+				</form>
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>

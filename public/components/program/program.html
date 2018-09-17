@@ -1,0 +1,188 @@
+<ui-view></ui-view>
+
+<div class="profile-main">
+    <div class="container">
+	<div class="profile-content-main">
+	    <div class="row">
+		<div class="profile-tabs">
+		    <div class="col-md-3 col-sm-3">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation"><a ui-sref="app.schoolFrontpage" aria-controls="home" role="tab"><img src="image/user.png"> Front Page</a></li>
+			    <li role="presentation" class="active"><a ui-sref="app.programList" aria-controls="profile" role="tab"><img src="image/diploma.png"> Diploma</a></li>
+			    <li role="presentation"><a ui-sref="app.housingList" aria-controls="messages" role="tab"><img src="image/home.png"> Housing</a></li>
+			</ul>
+		    </div>
+		    <div class="col-md-9 col-sm-9">
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="active" id="program">
+					<div class="housing-form">
+						<div class="list-content">
+					    	<h3><a class="btn btn-primary" href="#!/programList"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Go to Back</a></h3>
+					    </div>
+						<form name="programForm">
+							<div class="row">
+							<!--{{program}}-->
+								<div class="col-md-4 col-sm-4">
+									<div class="form-group">
+										<label for="field-of-study">Choose of a field of study</label>
+										<!--<div class="custom-select">-->
+											<select id="field-of-study" class="form-control" ng-model="program.diploma_study_id">
+												<option value="">Choose of a field of study</option>
+												<option ng-repeat="diploma_study in diplomaStudy" ng-value="{{diploma_study.id}}" >{{diploma_study.name}}</option>
+											</select>
+										<!--</div>-->
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+							      <label for="">Level of study</label>
+							      <div class="radio-btn">
+							      	<div class="radio" ng-repeat="levelOfStudy in diplomaLevelStudy">
+										<input id="radio-{{$index}}" type="radio" ng-model="program.level_of_study" ng-value="{{levelOfStudy.id}}" ng-checked="levelOfStudy.id == 1">
+										<label for="radio-{{$index}}" class="radio-label">{{levelOfStudy.name}}</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-inline">
+								<h5><label>Name of Diploma</label></h5>
+								<div class="form-group">
+								      <label for="bestof">Best-of</label>
+								      <input type="text" id="bestof" ng-model="program.nameBest" class="form-control">
+								</div>
+								<div class="form-group">
+								      <label for="in">in</label>
+								      <input type="text" id="in" ng-model="program.nameIn" class="form-control">
+								</div>
+							</div>
+							<div>
+								<div class="row">
+									<div class="col-md-3 col-sm-3">
+										<div class="form-group">
+										      <label for="specialization">Specialization</label>
+										      <input type="text" id="specialization" ng-model="program.specialization" class="form-control" ng-value="{{program.specialization}}">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-3 col-sm-3">
+										<div class="form-group">
+											<label for="language">Language</label>
+											<select id="language" class="form-control" ng-model="program.ref_language">
+												<option value="">-- Language --</option>
+												<option ng-repeat="language in refLanguage" ng-value="{{language.id}}">{{language.name}}</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-inline">
+								<h5><label>Price</label></h5>
+								<div class="form-group">
+								      <label for="price">Per semester</label>
+								      <input type="text" id="price" ng-model="program.price" class="form-control">
+								</div>
+							</div>
+							<div class="form-inline">
+								<h5><label for="numberOfSemeter">Length</label></h5>
+								<div class="form-group">
+								      	<select id="numberOfSemeter" class="form-control" ng-model="program.numberOfSemeter" required>
+								      		<option value=""> No of semester </option>
+								      		<option ng-value="n" ng-repeat="n in [] | range:10:1">{{n}}</option>	
+									    </select>
+									    <label for="numberOfSemeter">&nbsp;&nbsp; Semester</label>
+								</div>
+							</div>
+							
+							<div class="form-inline years">
+								<h5><label>Classes</label></h5>
+								<div class="form-group col-md-12 col-sm-12" ng-repeat="n in [] | range:program.numberOfSemeter">								
+									<div class="col-md-4 col-sm-4">
+										<label for="semester{{n}}">Semester {{n + 1}}</label>
+										<select id="semester{{n}}" ng-model="program.semester[n].classes" class="form-control">
+											<option value="">No of classes</option>
+											<option ng-value="class_n" ng-repeat="class_n in [] | range:10:1">{{class_n}}</option>
+										</select>
+									</div>
+									<div class="col-md-8 col-sm-8">
+										<div class="col-md-6 col-sm-6" ng-repeat="class_n in [] | range:program.semester[n].classes">
+											<label>{{class_n + 1}} </label>
+											<input type="text" class="form-control" ng-model="program.semester[n].semesterClasses[class_n].name"  placeholder="name of class"/>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!--<div>
+								<div class="row">
+									<div class="col-md-3 col-sm-3">
+										<div class="form-group">
+											<label for="necessaryDiploma">Necessary diploma</label>
+											<select id="necessaryDiploma" ng-model="program.necessaryDiploma" class="form-control">
+												<option value="">Choose</option>
+												<option>Lorem</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>-->
+							<div class="form-inline other-requirements">
+								<h5><label>Other specific requirements for this program (Documents)</label></h5>
+								<div class="row">
+									<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label class="other-text">Name</label><!--{{requirements}}-->
+										<div class="addPlus" ng-repeat="n in [] | range:requirements">
+											<a ng-click="addRequirements()"><img ng-src="image/plus.png" width="25" height="25"></a>	
+											<input type="text" class="other-input form-control" ng-model="program.otherDocuments[n].name">						
+										</div>
+									</div>
+									</div>
+								</div>
+							</div>
+							<!--<div class="clearfix"></div>-->
+							<!--<div class="form-inline requsriments">-->
+								
+								<!--<h5><label>Requirements</label></h5>
+								<div class="form-group">
+									<label for="religion">What is your Religion ?</label>
+									<input type="text" ng-model="program.religion" class="form-control">
+								</div>-->
+								<!--<div class="clearfix"></div>
+								<div class="form-group">
+									<label for="" ng-if="file">TTTTLLLL </label>
+									<a ng-href="uploads/programs/{{file}}" ng-if="file" target="_blank"> <img ng-src="image/up-img1.png"> </a>
+									<input type="hidden" ng-model-options="{ getterSetter: true }" ng-model="program.document = file">
+								</div>-->
+							<!--</div>-->
+							<!--<div class="form-horizontal">
+								<div class="form-group">
+									<label for="" class="pull-left control-label">Add Requirement</label>
+									<div class="col-sm-3">
+										<div class="fileUpload btn btn-primary">
+											<span><img src="image/upload.png"> Upload</span>
+											<input class="upload" ng-file-program="file" type="file">
+										</div>
+									</div>
+								</div>
+							</div>-->
+							<div class="desc-main">
+								<h4>Description</h4>
+								<div class="form-group">
+								      <textarea class="form-control" ng-model="program.description" rows="5" placeholder="Description"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary save-btn" ng-click="programC.saveProgram(program);">Save</button>
+								<button type="submit" class="btn btn-primary cancel-btn" ng-click="programC.cancelProgram();">Cancel</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>

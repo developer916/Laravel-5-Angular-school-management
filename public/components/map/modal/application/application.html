@@ -1,0 +1,193 @@
+<div class="applying-section container-fluid">
+    <form name="applyForm">
+        <input type="hidden" ng-value="university.id" ng-bind="applyForm.university_id = university.id" ng-model="applyForm.university_id">
+    <div class="col-md-12">
+        <div class="col-md-1">
+            <img src="images/modal/icon-date.png" alt="icon"/>
+        </div>
+        <div class="col-md-11 term-box" style="padding-left: 10px">
+            <span class="title" style="font-size: 14px; line-height: 3.4"><strong>EXPECTED START</strong></span>
+            <div>
+                <div class="term-checkbox" style="margin-bottom: 5px" ng-repeat="val in university.terms">
+                    <!--<input id="term_{{$index}}" type="checkbox" class="first_class_checkbox" ng-value="val.id" ng-model="applyForm.terms[val.id]">-->
+                    <input id="term_{{$index}}" type="radio" class="first_class_checkbox" ng-value="val.id" ng-model="applyForm.terms">
+                    <label for="term_{{$index}}" style="vertical-align: top; display: inline-block;">{{val.term_name}} {{val.start_date}}</label>
+                </div>
+                <!--<div class="term-checkbox" style="margin-bottom: 5px">
+                    <input type="checkbox" class="first_class_checkbox">
+                    <label style="vertical-align: top; display: inline-block;">Fall 2017</label>
+                </div>
+                <div class="term-checkbox">
+                    <input type="checkbox" class="second_class_checkbox">
+                    <label style="vertical-align: top; display: inline-block;">Spring 2018</label>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-1">
+            <img src="images/modal/icon-training.png" alt="icon"/>
+        </div>
+        <div class="col-md-11" style="padding-left: 10px">
+            <div class="col-md-12">
+                <span style="font-size: 14px; line-height: 3.4"><strong>WICH PROGRAM DO YOU WANT TO APPLY FOR ?</strong></span>
+            </div>
+
+            <div class="col-md-12" style="margin-top: 12px;">
+                <div class="col-md-4">
+                    <div style="width: 160px">
+                        <div class="custom-select col-md-12" style="border: 1px solid #c0c0c0; margin-bottom: 20px;">
+                            <select class="col-md-12" style="cursor:pointer; width: 99.7%;" ng-model="applyForm.diploma">
+                                <option value="">Choose a field</option>
+                                <option ng-value="diplomas.id" ng-selected="diplomas.id" ng-repeat="diplomas in university.diplomas">{{diplomas.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!--<div class="col-md-4">
+                    <div style="width: 160px">
+                        <div class="custom-select col-md-12" style="border: 1px solid #c0c0c0; margin-bottom: 20px;">
+                            <select class="col-md-12" style="cursor:pointer; width: 99.7%;">
+                                <option>Chose a field</option>
+                                <option>choice 1</option>
+                                <option>choice 2</option>
+                                <option>choice 3</option>
+                                <option>choice 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div style="width: 160px">
+                        <div class="custom-select col-md-12" style="border: 1px solid #c0c0c0; margin-bottom: 20px;">
+                            <select class="col-md-12" style="cursor:pointer; width: 99.7%;">
+                                <option>Chose a field</option>
+                                <option>choice 1</option>
+                                <option>choice 2</option>
+                                <option>choice 3</option>
+                                <option>choice 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div style="width: 160px">
+                        <div class="custom-select col-md-12" style="border: 1px solid #c0c0c0; margin-bottom: 20px;">
+                            <select class="col-md-12" style="cursor:pointer; width: 99.7%;">
+                                <option>Chose a field</option>
+                                <option>choice 1</option>
+                                <option>choice 2</option>
+                                <option>choice 3</option>
+                                <option>choice 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+            <!--<div class="col-md-12" ng-repeat="diplomas_requirements in university.diplomas.diplomaRequirements">-->
+            <div class="col-md-12" ng-if="diplomas.id == applyForm.diploma" ng-repeat="diplomas in university.diplomas">
+                <span> The {{diplomas.name}} management would also require the following secific documents:</span>
+                <div ng-repeat="diplomas_requirements in diplomas.diplomaRequirements">
+                    <br/>
+                    - <span style="text-decoration: underline;"> {{diplomas_requirements.name}} </span>&nbsp;&nbsp;
+                    <a href="" alt="" data-toggle="collapse" data-target="#popover-{{diplomas_requirements.id}}"><img src="images/modal/icon-pdf.png"/></a>
+                    <div id="popover-{{diplomas_requirements.id}}" class="collapse">
+                        <div class="row">
+                            <br/>
+                            <div class="col-md-2 col-sm-2"><strong style="line-height: 2.5;">Document</strong></div>
+                            <div class="col-md-4 col-sm-4">
+                                <select class="form-control" ng-model="applyForm.document_types[applyForm.diploma][diplomas_requirements.id]">
+                                    <option value="">Document Type</option>
+                                    <option ng-value="{{type.id}}" ng-repeat="type in documentTypes">{{type.name}}</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="fileUpload btn btn-primary">
+                                    <span><img src="image/upload.png"> Upload</span>
+                                    <input data-upload-document-send="" model="applyForm.uploadDocuments[applyForm.diploma][diplomas_requirements.id]" document_type_id="{{applyForm.document_types[applyForm.diploma][diplomas_requirements.id]}}" name="file" class="upload" type="file">
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--{{applyForm}}-->
+                    <!--<br/><br/>
+                    - <span style="text-decoration: underline;"> Personnal esport achievements</span>&nbsp;&nbsp;
+                    <img src="images/modal/icon-pdf.png" alt=""/>-->
+                </div>
+            </div>
+            
+            <!--<div class="col-md-12">
+                <span> The bachelor of science in sport management would also require the following secific documents:</span>
+                <br/><br/>
+                - <span style="text-decoration: underline;"> Personnal essay on your passion for sports</span>&nbsp;&nbsp;
+                <a href="" alt="" data-toggle="collapse" data-target="#popover"><img src="images/modal/icon-pdf.png"/></a>
+                <div id="demo" class="collapse">
+                    <div class="row">
+                        <br/>
+                        <div class="col-md-2 col-sm-2"></div>
+                        <div class="col-md-4 col-sm-4">
+                            <select class="form-control">
+                                <option value="">Document Type</option>
+                                <option ng-value="{{type.id}}" ng-selected="type.id == document_type_id[requirements.id]" ng-repeat="type in documentTypes">{{type.name}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="fileUpload btn btn-primary">
+                                <span><img src="image/upload.png"> Upload</span>
+                                <input data-upload-document="" model="uploadDocument" application_id="{{applicationData.id}}" diploma_requirement_id="{{requirements.id}}" document_type_id="{{document_type_id[requirements.id]}}" name="file" class="upload" type="file">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/><br/>
+                - <span style="text-decoration: underline;"> Personnal esport achievements</span>&nbsp;&nbsp;
+                <img src="images/modal/icon-pdf.png" alt=""/>
+            </div>-->
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-1">
+            <img src="images/modal/icon-date.png" alt="icon"/>
+        </div>
+        <div class="col-md-11" style="padding-left: 10px">
+            <div class="col-md-12">
+                <span style="font-size: 14px; line-height: 3.4"><strong>ADDITIONAL INFORMATION ASKED BY <span
+                        class="pcolor">THE UNIVERSITY OF KINGSTON</span></strong></span>
+            </div>
+            <div class="col-md-12">
+                <span> Do you hold a passport from a country of the common wealth nations ?</span>
+                <br/><br/>
+                <hr/>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-1">
+            <img src="images/modal/icon-date.png" alt="icon"/>
+        </div>
+        <div class="col-md-11" style="padding-left: 10px">
+            <div class="col-md-12">
+                <span style="font-size: 14px; line-height: 3.4"><strong>ADD A SHORT MESSAGE WITH YOUR APPLICATION ?</strong></span>
+            </div>
+            <div class="col-md-12">
+                <textarea style="padding: 4px; resize: vertical; background-color: #f3f3f3;" rows="3" cols="67" placeholder="Type here..." ng-model="applyForm.message"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <!--{{applyForm}}-->
+        <div class="col-md-4" ng-click="applyApplication(applyForm);"
+             style="float: right; color:#ffffff;cursor: pointer;border-radius: 4px;line-height: 2.3;text-align: center;width: 146px; padding: 5px; background-color: #FF7F00;">
+            <strong> XCAPE NOW > </strong>
+        </div>
+        <!--<button class="btn btn-primary save-btn" type="submit" ng-click="applyApplication(applyForm);">Save</button>-->
+    </div>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "id": 1,
+    "firstname": "John",
+    "lastname": "Doe",
+    "favorites": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      }
+    ]
+  }
+}

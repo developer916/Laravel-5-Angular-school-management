@@ -1,0 +1,70 @@
+<!--<div ng-show="!showOverview" class="popup-carousel">-->
+    <div class="main-slider popup-carousel">
+        <uib-carousel class="main-img">
+            <uib-slide ng-repeat="picture in university.pictures " active="active" index="$index">
+                <a title="{{university.name}}"  rel="dorm-carousel" ng-href="uploads/universities/{{picture.link}}" fancyboxable class="fancybox grouped_elements">
+                    <img ng-src="uploads/universities/{{ picture.link }}" class="img-responsive lazyload"/>
+                </a>
+            </uib-slide>
+        </uib-carousel>
+        
+    </div>   
+    <!--<div id="carousel-map" class="main-img carousel slide popup-carousel" data-ride="carousel"> 
+    	<ol class="carousel-indicators"> 
+    		<li data-target="#carousel-map" ng-repeat="slide in university.pictures" data-slide-to="{{$index}}" class="" ng-class="$index == 0 ? 'active':''"></li> 
+    	</ol> 
+    	<div class="carousel-inner" role="listbox"> 
+    		<div class="item" ng-repeat="slide in university.pictures" index="$index" ng-class="$index == 0 ? 'active':''"> 
+    			<a title="{{slide.title}}" class="fancybox" rel="popup-carousel" href="images/universities/{{slide.url}}">
+    				<img src="images/universities/{{ slide.url }}" alt="..." class="img-responsive">
+    			</a>  
+    		</div>
+    	</div> 
+    	<a class="left carousel-control" href="#carousel-map" role="button" data-slide="prev"> 
+    		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> 
+    		<span class="sr-only">Previous</span> 
+    	</a> 
+    	<a class="right carousel-control" href="#carousel-map" role="button" data-slide="next"> 
+    		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> 
+    		<span class="sr-only">Next</span> 
+    	</a> 
+    </div>--> 	
+<!--</div>-->
+<div class="map-popup" ng-click="mapOpenDialog(university.id)">
+    <span class="popup-title">{{university.name}}</span>
+    <br>
+    <!--<span class="popup-subtitle">{{university.address.city}}, {{university.address.country}}</span>-->
+    <span class="popup-subtitle">{{university.address.address_name}} {{university.refCountry.ref_cntry_name}}</span>
+    <br>
+    <span class="pcolor">Next Start {{university.terms[0].start_date}}</span>
+</div>
+
+<!--<div ng-show="showOverview" class="">-->
+
+    <div class="popup-2">
+
+        <div class="pop-head">DIPLOMAS :{{showOverview}}</div>
+        <div class="pop-text">Undergraduate - Postgraduate - Language Course - Other Certificates</div>
+        <div class="pop-head">Fields :</div>
+        <div class="pop-text">Undergraduate - Postgraduate - Language Course - Other Certificates</div>
+        <div class="pop-head">ACCOMODATION :</div>
+        <div class="pop-text">Undergraduate - Postgraduate - Language Course - Other Certificates</div>
+    </div>
+<!--</div>-->
+<div class="popup-footer">
+    <div class="col-xs-2" ng-click="openMainModal('message',university.id)">
+        <span class="glyphicon glyphicon-envelope"></span>
+    </div>
+    <div class="col-xs-2" ng-click="university.isFavorite = !university.isFavorite">
+        <span class="glyphicon" ng-class="university.isFavorite ? 'glyphicon-star' : 'glyphicon-star-empty'" aria-hidden="true"></span>
+    </div>
+    <!--<div class="col-xs-3" ng-click="showOverview = !showOverview">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    </div>-->
+    <div class="col-xs-3" ng-click="showOverview1()">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    </div>
+    <div class="col-xs-5" ng-click="openMainModal('application',university.id)">
+        <img src="images/apply.png" height="30">
+    </div>
+</div>

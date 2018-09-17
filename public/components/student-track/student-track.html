@@ -1,0 +1,588 @@
+<ui-view></ui-view>
+
+<div class="track-main animated fadeIn">
+	<div class="container">
+		<div class="row">
+			<div class="track-form">
+				<form>
+					<div class="col-md-3 col-sm-3">
+						<div class="form-group">
+							<label for="trackKeyword">Keyword</label>
+							<input id="trackKeyword" type="text" class="form-control" ng-model="trackKeyword" ng-change="searchTrackKeyword(trackKeyword)" placeholder="Keyword">
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-2">
+						<div class="form-group">
+							<label for="sortByPerPage">Application</label>
+							<select id="sortByPerPage" class="form-control" ng-model="perPageApp" ng-change="sortByPerPage(perPageApp)">
+								<option value="">All</option>
+								<option value="2">2</option>
+								<option value="5">5</option>
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="20">20</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-7">
+						<label for="exampleInputPassword1">Filters</label>
+						<div class="checkbox-btn">
+							<label for="check-10" class="checkbox">All
+								<input id="check-10" type="checkbox" ng-model="isAllSelected" ng-click="toggleAllStatus()">
+							  	<span class="checkmark"></span>
+							</label>
+							<label for="check-{{$index}}" class="checkbox" ng-repeat="status in statuses">{{status.value}}
+							  	<input id="check-{{$index}}" type="checkbox" ng-model="status.checked" ng-change="filterByUpdateStatus()">
+							  	<span class="checkmark"></span>
+							</label>
+							
+							<!--<label for="check-10" class="checkbox">All
+								<input id="check-10" type="checkbox" ng-value="All" ng-model="updateStatus['All']" ng-change="filterByUpdateStatus(updateStatus)">
+							  	<span class="checkmark"></span>
+							</label>
+							<label for="check-11" class="checkbox">Opened
+							  	<input id="check-11" type="checkbox" value="Open" ng-model="updateStatus['Open']" ng-change="filterByUpdateStatus(updateStatus)">
+							  	<span class="checkmark"></span>
+							</label>
+							<label for="check-12" class="checkbox">Pending
+							  	<input id="check-12" type="checkbox" value="Pending" ng-model="updateStatus['Pending']" ng-change="filterByUpdateStatus(updateStatus)">
+							  	<span class="checkmark"></span>
+							</label>
+							<label for="check-13" class="checkbox">Accepted
+							  	<input id="check-13" type="checkbox" value="Accepted" ng-model="updateStatus['Accepted']" ng-change="filterByUpdateStatus(updateStatus)">
+							  	<span class="checkmark"></span>
+							</label>
+							<label for="check-14" class="checkbox">Rejected
+							  	<input id="check-14" type="checkbox" value="Rejected" ng-model="updateStatus['Rejected']" ng-change="filterByUpdateStatus(updateStatus)">
+							  	<span class="checkmark"></span>
+							</label>-->
+						</div>
+						<!--{{statuses}}-->
+						<!--<div class="radio-btn">
+							<div class="radio">
+								<input id="radio-10" name="inlineRadioOptions" type="radio" value="All" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'All'">
+								<label for="radio-10" class="radio-label">All</label>
+							</div>
+							<div class="radio">
+								<input id="radio-11" name="inlineRadioOptions" type="radio" value="Open" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Open'">
+								<label for="radio-11" class="radio-label">Opened</label>
+							</div>
+							<div class="radio">
+								<input id="radio-12" name="inlineRadioOptions" type="radio" value="Pending" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Pending'">
+								<label for="radio-12" class="radio-label">Pending</label>
+							</div>
+							<div class="Accepted-main-box">
+								<div class="radio">
+									<input id="radio-13" name="inlineRadioOptions" type="radio" value="Accepted" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Accepted'">
+									<label for="radio-13" class="radio-label">Accepted</label>
+								</div>
+								<div class="radio">
+									<input id="radio-14" name="inlineRadioOptions" type="radio" value="Rejected" ng-model="updateStatus" ng-change="sortByUpdateStatus(updateStatus)" ng-checked="updateStatus == 'Rejected'">
+									<label for="radio-14" class="radio-label">Rejected</label>
+								</div>
+							</div>
+						</div>-->
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="track-list">
+			<!--{{applications}}-->
+			<div class="track-box" ng-if="$index < perPage" ng-repeat="application in applications">
+				<div class="col-xs-12 col-md-1">
+					<!--<a href="" ng-click="trackModal(application.id)" class="thumbnail">-->
+					<!--<div ng-controller="MapController"> 
+						<a ng-click="universityModal()" class="thumbnail">
+						  Call to other controller
+						</a>
+						<button ng-click="universityModal();"> Call Another Controller</button> 
+					</div>-->
+					<!--<a ui-sref="app.map({ uid: application.university.id })" ng-click="universityModal(application.university.id)" class="thumbnail">-->
+					<a ui-sref="app.map({ uid: application.university.id })" class="thumbnail">
+					  <img ng-src="uploads/{{application.university.logo_link}}" alt="..." height="60" width="60">
+					</a>
+					
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>{{application.university.name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>{{application.university.address.address_name}} {{application.university.refCountry.ref_cntry_name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>{{application.diplomas.name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p ng-show="application.application_statuses.name == 'Send'">Pending</p>
+					<p ng-show="application.application_statuses.name == 'Review'">Opened</p>
+					<p ng-show="application.application_statuses.name == 'Accepted'">Accepted</p>
+					<p ng-show="application.application_statuses.name == 'Rejected'">Rejected</p>
+					<p ng-show="application.application_statuses.name == 'Complete'">Completed</p>
+					<p ng-show="application.application_statuses.name == 'Incomplete' || application.application_statuses.name == 'Documents' ">Incompleted</p>
+				</div>
+				<div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="" ng-click="selectChatUser(application.university.user_id)"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="" ng-click="trackModal(application.id)" data-toggle="modal"><img src="image/line-graph-list.svg"><span></span></a>
+					</div>
+				</div>
+			</div>
+			
+			<!--<div class="track-box" ng-repeat="university in universities">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img ng-src="uploads/{{university.logo_link}}" alt="..." height="60" width="60">
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>{{university.name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>{{university.address.address_name}}</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				</div>
+				<div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Open</p>
+				</div>
+				<div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="" ng-click="trackModal(university.id)" data-toggle="modal"><img src="image/line-graph-list.svg"><span></span></a>
+					</div>
+				</div>
+			</div>-->
+			<!--<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/list-img.png" alt="...">
+					</a>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>Institut Teknologi Bandung</p>
+				</div>
+				<div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>Bandung, Indonesia</p>
+				</div>
+				<div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Informatika</p>
+				</div>
+				<div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Open</p>
+				</div>
+				<div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="" data-toggle="modal" data-target="#trackModal"><img src="image/line-graph-list.svg"><span></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/list-img-1.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>British Technologi University</p>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>North London, English</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Technologi</p>
+				  </div>
+				  <div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Pending</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="#"><img src="image/line-graph-list.svg"></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/list-img-2.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>Libya CAI University </p>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>Baton, Libya</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Medichine</p>
+				  </div>
+				  <div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Rejected</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="#"><img src="image/line-graph-list.svg"></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/list-img-3.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>Nusa Putra University</p>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>Sukabumi, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Design</p>
+				  </div>
+				  <div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Open</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="#"><img src="image/line-graph-list.svg"><span></span></a>
+					</div>
+				  </div>
+			</div>
+			<div class="track-box">
+				<div class="col-xs-12 col-md-1">
+					<a href="#" class="thumbnail">
+					  <img src="image/list-img-4.png" alt="...">
+					</a>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>University</label>
+					<p>Politeknik Sukabumi</p>
+				  </div>
+				  <div class="col-xs-12 col-md-3">
+					<label>Location</label>
+					<p>Sukabumi, Indonesia</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2">
+					<label>Program</label>
+					<p>Programming</p>
+				  </div>
+				  <div class="col-xs-12 col-md-1">
+					<label>Status</label>
+					<p>Pending</p>
+				  </div>
+				  <div class="col-xs-12 col-md-2 Action-box">
+					<label>Action</label>
+					<div class="Action-link">
+						<a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+						<a href="#"><img src="image/line-graph-list.svg"><span></span></a>
+					</div>
+				  </div>
+			</div>-->
+		</div>
+		<div class="see-more" ng-hide="numOfPage < perPage" ng-click="loadMore();">
+			<a href="">See More</a>
+	    </div>
+	</div>
+</div>
+
+
+<!-- track-Modal -->
+<div class="default-modal modal fade" id="trackModal1" tabindex="-1" role="dialog" aria-labelledby="trackModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="trackModalLabel">Track My Application<span></span></h4>
+      </div>
+      <div class="modal-body">
+        <div class="university-name">
+			<div class="university-img">
+				<img ng-src="uploads/{{applicationData.university.logo_link}}">
+			</div>
+			<div class="university-con">
+				<h3>{{applicationData.university.name}}</h3>
+				<p>{{applicationData.diplomas.name}}</p>
+			</div>
+		</div>
+		<div class="track-app-tab">
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Send') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'send'" aria-controls="send" role="tab" ><span><i class="fa fa-envelope" aria-hidden="true"></i></span>Send</a></li>
+			<li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Review') >= 0 ? 'active' : 'deactive' "><a href="" ng-click="track_tab = 'review'" aria-controls="review" role="tab" ><span><i class="fa fa-eye" aria-hidden="true"></i></span>Review</a></li>
+			<li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Complete') >= 0 ? 'active' : applicationData.application_statuses_name.indexOf('Accepted') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'checked'" aria-controls="checked" role="tab" ><span><i class="fa fa-file-text" aria-hidden="true"></i></span>Checked</a></li>
+			<li role="presentation" ng-class="applicationData.application_statuses_name.indexOf('Incomplete') >= 0 ? 'active' : applicationData.application_statuses_name.indexOf('Rejected') >= 0 ? 'active' : '' "><a href="" ng-click="track_tab = 'decision'" aria-controls="decision" role="tab" ><span><i class="fa fa-question" aria-hidden="true"></i></span>Decision</a></li>
+		  </ul>
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="send" >
+				<div class="row">
+					<div class="col-md-12 col-sm-12 content-head" ng-if="applicationData.required_document">
+						<h4><img src="image/missing.png"> Missing</h4>
+					</div>
+					<div class="upload-main upload-box" ng-if="applicationData.required_document[requirements.id]" ng-repeat="requirements in applicationData.diplomas.diplomaRequirements">
+						<div class="col-md-3 col-sm-3">
+							<div class="radio">
+								<label>{{requirements.name}}</label>
+								<!--<div class="up-img" ng-show="uploadDocument">
+									<a ng-href="uploads/documents/{{uploadDocument}}" target="_blank"><img src="image/document.png"></a>
+								</div>
+								<div class="up-img" ng-if="!uploadDocument && application_document.diploma_requirement_id == requirements.id"  ng-repeat="application_document in applicationData.applicationDocuments">
+									<input type="hidden" ng-model="document_type_id[requirements.id]" ng-init="document_type_id[requirements.id] = application_document.studentDocuments.document_type_id" ng-value="{{application_document.studentDocuments.document_type_id}}" />
+									<a ng-href="uploads/documents/{{application_document.studentDocuments.link}}" target="_blank"><img src="image/document.png"></a>
+								</div>-->
+							</div>
+						</div>
+						<div class="col-md-1 col-sm-1">
+							<div class="up-img" ng-show="uploadDocument">
+								<a ng-href="uploads/documents/{{uploadDocument}}" target="_blank"><img src="image/document.png"></a>
+							</div>
+							<div class="up-img" ng-if="!uploadDocument && application_document.diploma_requirement_id == requirements.id"  ng-repeat="application_document in applicationData.applicationDocuments">
+								<input type="hidden" ng-model="document_type_id[requirements.id]" ng-init="document_type_id[requirements.id] = application_document.studentDocuments.document_type_id" ng-value="{{application_document.studentDocuments.document_type_id}}" />
+								<a ng-href="uploads/documents/{{application_document.studentDocuments.link}}" target="_blank"><img src="image/document.png"></a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4"><!--{{document_type_id[requirements.id]}}-->
+							<select ng-model="document_type_id[requirements.id]" class="form-control">
+								<option value="">Document Type</option>
+								<option ng-value="{{type.id}}" ng-selected="type.id == document_type_id[requirements.id]"  ng-repeat="type in documentTypes">{{type.name}}</option>
+							</select>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input data-upload-document="" model="uploadDocument" application_id="{{applicationData.id}}" diploma_requirement_id="{{requirements.id}}" document_type_id="{{document_type_id[requirements.id]}}" name="file" class="upload" type="file">
+							</div>
+						</div>
+					</div>	
+					
+					<!--<div class="upload-main">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option2">
+								Curriculum Vitae
+							  </label>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<div class="upload-main">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option2">
+								Passport photo
+							  </label>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">							
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="upload-main upload-box">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								TOEFL
+							  </label>
+							  <div class="up-img">
+							  	<img src="image/up-img1.png">
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<div class="upload-main upload-box">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								Sketchbook
+							  </label>
+							  <div class="up-img">
+							  	<img src="image/up-img2.png">
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">							
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>-->
+					
+				</div>
+			</div>
+			<!--<div role="tabpanel" class="tab-pane" id="review" ng-class="track_tab == 'review' ? 'active' : ''">...</div>
+			<div role="tabpanel" class="tab-pane" id="checked" ng-class="track_tab == 'checked' ? 'active' : ''">...</div>
+			<div role="tabpanel" class="tab-pane" id="decision" ng-class="track_tab == 'decision' ? 'active' : ''">...</div>-->
+		  </div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- track-Modal -->
+<!--<div class="default-modal modal fade" id="trackModal" tabindex="-1" role="dialog" aria-labelledby="trackModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="trackModalLabel">Track My Application<span></span></h4>
+      </div>
+      <div class="modal-body">
+        <div class="university-name">
+			<div class="university-img">
+				<img src="image/list-img.png">
+			</div>
+			<div class="university-con">
+				<h3>Institut Teknologi Bandung</h3>
+				<p>Medichine</p>
+			</div>
+		</div>
+		<div class="track-app-tab">
+		  
+		  <ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="" ng-click="track_tab = 'send'" aria-controls="send" role="tab" data-toggle="tab"><span><i class="fa fa-envelope" aria-hidden="true"></i></span>Send</a></li>
+			<li role="presentation"><a href="" ng-click="track_tab = 'review'" aria-controls="review" role="tab" data-toggle="tab"><span><i class="fa fa-eye" aria-hidden="true"></i></span>Review</a></li>
+			<li role="presentation"><a href="" ng-click="track_tab = 'checked'" aria-controls="checked" role="tab" data-toggle="tab"><span><i class="fa fa-file-text" aria-hidden="true"></i></span>Checked</a></li>
+			<li role="presentation"><a href="" ng-click="track_tab = 'decision'" aria-controls="decision" role="tab" data-toggle="tab"><span><i class="fa fa-question" aria-hidden="true"></i></span>Decision</a></li>
+		  </ul>
+		  
+		  <div class="tab-content">
+			<div role="tabpanel" class="tab-pane" id="send" ng-class="track_tab == 'send' ? 'active' : ''">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 content-head">
+						<h4><img src="image/missing.png"> Missing</h4>
+					</div>
+					<div class="upload-main">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option2">
+								Curriculum Vitae
+							  </label>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<div class="upload-main">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								<input type="radio" name="optionsRadios" value="option2">
+								Passport photo
+							  </label>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">							
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div class="upload-main upload-box">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								TOEFL
+							  </label>
+							  <div class="up-img">
+							  	<img src="image/up-img1.png">
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					<div class="upload-main upload-box">
+						<div class="col-md-7 col-sm-7">
+							<div class="radio">
+							  <label>
+								Sketchbook
+							  </label>
+							  <div class="up-img">
+							  	<img src="image/up-img2.png">
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-5">							
+							<div class="fileUpload btn btn-primary">
+								<span><img src="image/upload.png"> Upload</span>
+								<input type="file" class="upload" />
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="review" ng-class="track_tab == 'review' ? 'active' : ''">...</div>
+			<div role="tabpanel" class="tab-pane" id="checked" ng-class="track_tab == 'checked' ? 'active' : ''">...</div>
+			<div role="tabpanel" class="tab-pane" id="decision" ng-class="track_tab == 'decision' ? 'active' : ''">...</div>
+		  </div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>-->

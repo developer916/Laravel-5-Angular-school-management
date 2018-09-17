@@ -1,0 +1,414 @@
+<!--<div class="container margin-top-20" >-->
+
+<ui-view></ui-view>
+
+<div class="profile-main animated fadeIn">
+	<div class="profile-userbox-main">
+		<div class="container">
+			<div class="profile-box">
+				<div class="profile-img">
+					<!--<img src="image/profile-user.png">-->
+					<img ng-src="uploads/{{applicationData.student.img_profile_link}}" ng-show="applicationData.student.img_profile_link" height="221" width="221"/>
+					<img ng-src="image/profile-user.png" ng-show="!applicationData.student.img_profile_link" height="221" width="221">	
+				</div>
+				<div class="profile-con-top">
+					<h1>{{applicationData.student.name}}</h1>
+					<p>Student</p>
+					<p><img src="image/pin.svg">{{applicationData.student.address}} {{applicationData.student.refCountry.ref_cntry_name}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="profile-content-main">
+			<div class="row">
+				<div class="col-md-8 col-sm-8">
+					<div class="profile-content-left">
+						<div class="profile-content-box">
+							<!--{{applicationData}}
+							{{educations}}
+							{{experiences}}
+							{{languages}}-->
+						
+							<h4>Applying for</h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>University</th>
+										<th>Program</th>
+										<th>Term</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{{applicationData.university.name}}</td>
+										<td>{{applicationData.diplomas.name}}</td>
+										<td ng-show="term.id == applicationData.university_term_id" ng-repeat="term in applicationData.university.terms">{{term.term_name}} {{term.start_date}}</td>
+										<td><a href="" data-toggle="modal" data-target="#trackStatus"><img src="image/edit-icon.png"></a></td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						<div class="profile-content-box">
+							<h4>Education </h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>School</th>
+										<th>Country</th>
+										<th>Program</th>
+										<th>Period</th>
+										<th>Graduated</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="education in educations">
+										<td>{{education.school}}</td>
+										<td>{{education.refCountry.ref_cntry_name}}</td>
+										<td>{{education.program}}</td>
+										<!--<td>{{education.period}}</td>-->
+										<td>From: {{education.period.fromMonth}}/{{education.period.fromYear}}<br>To: {{education.period.toMonth}}/{{education.period.toYear}}</td>
+										<td>{{education.graduated}}</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						<div class="profile-content-box">
+							<h4>Experience </h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Company/Organization</th>
+										<th>Place</th>
+										<th>Period</th>
+										<th>Type of Experience</th>
+										<th>Position</th>
+										<th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="experience in experiences">
+										<td>{{experience.name}}</td>
+										<td>{{experience.place}}</td>
+										<td>{{experience.period}}</td>
+										<td>{{experience.type}}</td>
+										<td>{{experience.position}}</td>
+										<td>{{experience.description}}</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+						
+						<div class="profile-content-box">
+							<h4>Languages</h4>
+							<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Proficiency</th>
+										<th>Accreditation</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="language in languages">
+										<td>{{language.name}}</td>
+										<td>{{language.proficiency}}</td>
+										<td>{{language.accreditation}}</td>
+									</tr>
+								</tbody>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="profile-content-right">
+						<h4>Contact</h4>
+						<ul>
+							<li class="email-icon">lucasvanroekel@gmail.com</li>
+							<li class="phone-icon">+1 830-234-345</li>
+							<li class="site-icon">Lucasweb-art.com</li>
+							<li class="date-icon">01 September 1998</li>
+						</ul>
+					</div>
+					<div class="profile-content-right">
+						<h4>Documents <a href="#">See All</a></h4>
+						<div class="photos-profile">
+							<div class="photo-img">
+								<img src="image/document/video.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/music.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/camera.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/frame.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/education.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/book.png">
+							</div>
+							<!--<div class="photo-img">
+								<img src="image/profile-user.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/profile-user.png">
+							</div>-->
+						</div>
+					</div>
+					
+					<div class="profile-content-right">
+						<h4>Application Documents <a href="#">See All</a></h4>
+						<div class="photos-profile">
+							<div class="photo-img" ng-repeat="application_document in applicationData.applicationDocuments">
+								<a ng-href="uploads/documents/{{application_document.studentDocuments.link}}" target="_blank">
+									<img src="image/document/other.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Other' || application_document.studentDocuments.DocumentTypes.name == ''">
+									<img src="image/document/video.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Video'">
+									<img src="image/document/music.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Music'">
+									<img src="image/document/book.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Book'">
+									<img src="image/document/camera.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Picture'">
+									<img src="image/document/certificate.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Certificate'">
+									<img src="image/document/education.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Education'">
+									<img src="image/document/grade.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Grade Report'">
+									<img src="image/document/passport.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Passport'">
+									<img src="image/document/diploma.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Diploma'">
+									<img src="image/document/cv.png" height="100" width="100" ng-if="application_document.studentDocuments.DocumentTypes.name == 'Curriculum'">
+								</a>
+								{{application_document.studentDocuments.name}}
+							</div>
+							<!--<div class="photo-img">
+								<img src="image/document/music.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/camera.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/frame.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/education.png">
+							</div>
+							<div class="photo-img">
+								<img src="image/document/books.png">
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Update status modal-->
+<div class="default-modal modal fade" id="trackStatus" tabindex="-1" role="dialog" aria-labelledby="trackStatusLabel">
+	<div class="modal-dialog modal-sm student-modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="student-img">
+					<img src="image/default-user.png">
+				</div>
+				<div class="student-con">
+					<h4>{{applicationData.student.name}}</h4>
+					<p><i class="fa fa-file-text-o" aria-hidden="true"></i> Application</p>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div class="modal-body">
+				<div class="radio">
+					<input id="radio-7" name="radio" type="radio" value="Complete" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Complete'">
+					<label for="radio-7" class="radio-label">Complete</label>
+				</div>
+				<div class="radio">
+					<input id="radio-8" name="radio" type="radio" value="Incomplete" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Incomplete'">
+					<label for="radio-8" class="radio-label">Incomplete</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="required-document" ng-show="updateStatus[applicationData.id] == 'Incomplete' || applicationData.application_statuses.name == 'Incomplete'" >
+					<div ng-repeat="requirements in applicationData.diplomas.diplomaRequirements">
+						<input id="check-{{$index}}" ng-model="diplomaRequirements[requirements.id]" ng-change="updateApplicationStatus('Incomplete', diplomaRequirements)" type="checkbox"> <label for="check-{{$index}}" >{{requirements.name}}</label>
+					</div>
+					<!--<div>
+						<input id="check-1" name="incomplete[]" type="checkbox" value=""> <label for="check-1">Sketch Book</label>
+					</div>
+					<div>
+						<input id="check-2" name="incomplete[]" type="checkbox" value=""> <label for="check-2">Music Chart</label>
+					</div>
+					<div>
+						<input id="check-3" name="incomplete[]" type="checkbox" value=""> <label for="check-3">Letter and Motivation</label>
+					</div>-->
+				</div>
+				<hr>
+				<div class="Accepted-main-box">
+					<div class="radio">
+						<input id="radio-9" name="radio" type="radio" value="Accepted" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Accepted'">
+						<label  for="radio-9" class="radio-label">Accepted</label>
+					</div>
+					<div class="radio">
+						<input id="radio-10" name="radio" type="radio" value="Rejected" ng-model="updateStatus[applicationData.id]" ng-change="updateApplicationStatus(updateStatus[applicationData.id])" ng-checked="applicationData.application_statuses.name == 'Rejected'">
+						<label  for="radio-10" class="radio-label">Rejected</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--<div class="default-modal modal fade" id="updateApplying" tabindex="-1" role="dialog" aria-labelledby="updateApplyingLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="updateApplyingLabel">Edit Applying for</h4>
+			  </div>
+			<div class="modal-body add-item">
+				<form class="search-inner-form">
+					<div class="form-group">
+						<label>University</label>
+						<input type="text" class="form-control" placeholder="University" ng-value="applicationData.university.name" readonly>
+					</div>
+					<div class="form-group">
+						<label>Program</label>
+						<select id="program" class="form-control" ng-model="updateApplicationFrom.diploma">
+							<option value="">Program</option>
+							<option ng-repeat="diploma in applicationData.university.diplomas" value="{{diploma.id}}">{{diploma.name}}</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Term</label>
+						<select id="program" class="form-control" ng-model="updateApplicationFrom.term">
+							<option value="">Term</option>
+							<option ng-repeat="term in applicationData.university.terms" value="{{term.id}}">{{term.term_name}}</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-default" ng-click="updateApplication(updateApplicationFrom)">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>-->
+<!--<div class="default-modal modal fade" id="addEducation" tabindex="-1" role="dialog" aria-labelledby="addEducationLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addEducationLabel">Add Education</h4>
+			  </div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form">
+					<div class="form-group">
+						<label>School</label>
+						<input type="text" class="form-control" placeholder="School">
+					</div>
+					<div class="form-group">
+						<label>Country</label>
+						<input type="text" class="form-control" placeholder="Country">
+					</div>
+					<div class="form-group">
+						<label>Program</label>
+						<input type="text" class="form-control" placeholder="Program">
+					</div>
+					<div class="form-group">
+						<label>Period</label>
+						<select class="form-control">
+							<option>Period</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Graduated</label>
+						<input type="text" class="form-control" placeholder="Graduated">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="default-modal modal fade" id="addExperience" tabindex="-1" role="dialog" aria-labelledby="addExperienceLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addExperienceLabel">Add Experience</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="modal-inner-form">
+					<div class="form-group">
+						<label>Company/Organization</label>
+						<input type="text" class="form-control" placeholder="Company/Organization">
+					</div>
+					<div class="form-group">
+						<label>Place</label>
+						<input type="text" class="form-control" placeholder="Place">
+					</div>
+					<div class="form-group">
+						<label>Period</label>
+						<select class="form-control">
+							<option>Period</option>
+							<option>2015</option>
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Type of Experience</label>
+						<input type="text" class="form-control" placeholder="Type of Experience">
+					</div>
+					<div class="form-group">
+						<label>Position</label>
+						<input type="text" class="form-control" placeholder="Position">
+					</div>
+					<div class="form-group">
+						<label>Description</label>
+						<textarea class="form-control description" rows="1" placeholder="Description"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="default-modal modal fade" id="addLanguages" tabindex="-1" role="dialog" aria-labelledby="addLanguagesLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="addLanguagesLabel">Add Languages</h4>
+			</div>
+			<div class="modal-body add-item">
+				<form class="search-inner-form">
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" class="form-control" placeholder="Name">
+					</div>
+					<div class="form-group">
+						<label>Proficiency</label>
+						<input type="text" class="form-control" placeholder="Proficiency">
+					</div>
+					<div class="form-group">
+						<label>Accreditation</label>
+						<input type="text" class="form-control" placeholder="Accreditation">
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>-->

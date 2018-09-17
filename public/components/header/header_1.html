@@ -1,0 +1,129 @@
+<div id="overlay" ng-click="hdr.closeSearch()"></div>
+<main ng-show="landingShow">
+    <div class="custom-row" >
+        <div class="custom-column _25">
+            <a class="header-logo" href="#">
+                <img src="images/logo_wexcape.png" alt="logo" height="65"/>
+            </a>
+
+            <section class="searchbox">
+                <div class="searchbox-input">
+                    <input ng-model="hdr.textSearch" type="text" placeholder="Search"/>
+                    <span ng-show="hdr.textSearch" ng-click="hdr.textSearch = null" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                </div>
+                <div class="filter-input">
+                    <div>Where</div>
+                    <select name="select" ng-model="hdr.countrySearch">
+                        <option value="" selected>Choose</option>
+                        <option ng-repeat="universitiesCountry in hdr.universitiesCountryList" value="{{universitiesCountry}}">
+                            {{universitiesCountry}}
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-input">
+                    <div>Diploma</div>
+                    <select name="select" ng-model="hdr.diplomaSearch">
+                        <option value="" selected>Choose</option>
+                        <option ng-repeat="universitiesDiploma in hdr.universitiesDiplomaList" value="{{universitiesDiploma}}">
+                            {{universitiesDiploma}}
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-input">
+                    <div>Speciality</div>
+                    <select name="select" ng-model="hdr.specialitySearch">
+                        <option value="" selected>Choose</option>
+                        <option ng-repeat="universitiesSpeciality in hdr.universitiesSpecialityList" value="{{universitiesSpeciality}}">
+                            {{universitiesSpeciality}}
+                        </option>
+                    </select>
+                </div>
+                <span class="searchbox-button-border"></span>
+                <div class="searchbox-button" ng-click="hdr.submitSearch()">
+                    SEARCH <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </div>
+            </section>
+        </div>
+        <div class="custom-column _75">
+            <div class="custom-row">
+                <div class="custom-column search-col">
+                    <div class="search" ng-click="hdr.openSearch()">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="custom-column profil-col">
+                    <a href="#">
+                        <div class="profil">
+                            <div class="profil_info">
+                                <p class="profil_welcome">Bienvenue</p>
+                                <p class="profil_name">Alexander</p>
+                                <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                            </div>
+                            <div class="profil_thumbnail">
+                                <img src="http://lorempixel.com/200/200/people" alt="thumbnail" height="45" width="45"/>
+                                <span class="profil_notif">2</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="row margin-nav-important"  ng-hide="landingShow">
+    <div class="col-md-12">
+        <nav class="navbar navbar-default change-navbar">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="images/small-logo-wexcape.jpg" alt="logo" class="profile-small-logo"/></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                    <div class="display-inline-block">
+                        <span class="font-size-22"><p class="university-name">University of Name of Univ</p></span><br>
+                        <span class="university-image-span"><img src="images/uni-logo.png" class="university-image"></span>
+                    </div>
+
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="col-md-12 text-center profile-submenu">
+        <nav class= "profile-submenu-nav">
+            <ul   class="profile-navigation">
+                <li class="active"><a href="">HOME</a></li>
+                <li><a href="">DIPLOMA</a></li>
+                <li><a href="">HOUSING</a></li>
+                <li><a href="">WALL</a></li>
+                <li>
+                    <button type="button" class="btn btn-outline-secondary view-public-profile">VIEW PUBLIC PROFILE</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<ui-view></ui-view>

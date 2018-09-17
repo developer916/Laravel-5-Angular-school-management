@@ -1,0 +1,55 @@
+<!--<div class="edit-profile-form terms-view">
+	
+	<div class="edit-tab-link">
+		<ul style="margin-top: 65px;">
+			<li><a class="edit-tab1" href="#"></a></li>
+			<li><a class="edit-tab2 active" href="#"></a></li>
+			<li><a class="edit-tab3" href="#"></a></li>
+		</ul>
+	</div>-->
+	<div class="edit-tab-content animated fadeInRight">
+		<div class="basic-introduction">
+			<div class="inner-tab">
+			  <!-- Nav tabs -->
+			  <ul class="nav nav-tabs nav-tabs-js" role="tablist">
+				<li role="presentation" class="" ng-repeat="n in [] | range:schoolProfile.terms" ng-class="n == 0 ? 'active' : ''">
+					<a href="" ng-click="nav_tab(n);" aria-controls="home" role="tab" data-toggle="tab">TERM {{n + 1}}</a>
+				</li>
+			  </ul>
+			
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+				
+				<div role="tabpanel" ng-repeat="n in [] | range:schoolProfile.terms" class="tab-pane animated fadeIn"  id="term-{{n}}" ng-class="n == 0 ? 'active' : ''">
+					<form>
+					  	<div class="form-group">
+							<div class="row">
+								<div class="">
+									<label for="">Name</label>
+									<input type="text" class="form-control" placeholder="Name of the term" ng-model="schoolProfile.termsObj[n].term_name">
+								</div>
+							</div>
+					  	</div>
+					
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-8 col-sm-8">
+								<h4>Select the start of your first term</h4>
+								<table jq-calendar model="calendarValue" class="calendar" termDate="{{schoolProfile.termsObj[n].term_date}}"></table>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="date-desc">
+									<label>Start</label>
+									<span class="start-term-date">{{calendarValue}}</span>
+									<input class="input-start-term-date" type="hidden" ng-model-options="{ getterSetter: true }" ng-model="schoolProfile.termsObj[n].term_date = calendarValue"/>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				
+				
+			  </div>
+			</div>
+		</div>
+	</div>
+<!--</div>-->

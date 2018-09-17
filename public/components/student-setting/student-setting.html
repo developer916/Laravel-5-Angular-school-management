@@ -1,0 +1,176 @@
+<ui-view></ui-view>
+
+<div class="setting-main animated fadeIn">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3">
+				<div class="setting-left">
+					<h4>Setting</h4>
+					<div class="setting-left-menu">
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a class="account" href="" ng-click="setting_tab = 'account'" aria-controls="account" role="tab" data-toggle="tab">Account</a></li>
+						<li role="presentation"><a class="password" href="" ng-click="setting_tab = 'password'" aria-controls="password" role="tab" data-toggle="tab">Password</a></li>
+						<li role="presentation"><a class="language" href="" ng-click="setting_tab = 'language'" aria-controls="language" role="tab" data-toggle="tab">Language</a></li>
+						<li role="presentation"><a class="privacy-police" href="" ng-click="setting_tab = 'privacy-police'" aria-controls="privacy-police" role="tab" data-toggle="tab">Privacy Police</a></li>
+						<li role="presentation"><a class="help" href="" ng-click="setting_tab = 'help'" aria-controls="help" role="tab" data-toggle="tab">Help</a></li>
+					  </ul>
+					</div>	
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-9">
+				<div class="setting-right">
+					<div class="setting-left-content">
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+						<div role="tabpanel" class="tab-pane animated fadeIn" id="account" ng-class="setting_tab == 'account' ? 'active' : ''" >
+							<h4>Account</h4>
+							<div class="account-form row">
+								<form name="accountForm">
+								  <div class="col-md-6 col-sm-6">
+									<div class="form-group" ng-class="{ 'has-error' : (accountForm.firstname.$error.pattern) || (accountForm.firstname.$error.minlength) || (accountForm.firstname.$dirty && accountForm.firstname.$invalid && accountForm.firstname.$error.required) }">
+										<label for="firstname">First Name</label>
+										<input type="text" class="form-control" id="firstname" name="firstname" ng-model="userAccount.firstname" ng-init="userAccount.firstname = userData.firstname" value="{{userData.firstname}}" minlength="3" placeholder="First Name" ng-pattern="/^[a-zA-Z]*$/" required>
+										<small class="help-block" data-ng-show="accountForm.firstname.$dirty && accountForm.firstname.$invalid && accountForm.firstname.$error.required"> Required</small>
+										<small class="help-block" data-ng-show="accountForm.firstname.$error.minlength && accountForm.firstname.$invalid"> Too short</small>
+										<small class="help-block" data-ng-show="accountForm.firstname.$error.pattern && !accountForm.firstname.$error.minlength && accountForm.firstname.$invalid"> Not valid</small>
+									</div>
+								  </div>
+								  <div class="col-md-6 col-sm-6">
+									  <div class="form-group" ng-class="{ 'has-error' : (accountForm.lastname.$error.pattern) || (accountForm.lastname.$error.minlength) || (accountForm.lastname.$dirty && accountForm.lastname.$invalid && accountForm.lastname.$error.required) }">
+										<label for="lastname">Last Name</label>
+										<input type="text" class="form-control" id="lastname" name="lastname" ng-model="userAccount.lastname" ng-init="userAccount.lastname = userData.lastname" value="{{userData.lastname}}" minlength="3" placeholder="Last Name" ng-pattern="/^[a-zA-Z]*$/" required>
+										<small class="help-block" data-ng-show="accountForm.lastname.$dirty && accountForm.lastname.$invalid && accountForm.lastname.$error.required"> Required</small>
+										<small class="help-block" data-ng-show="accountForm.lastname.$error.minlength && accountForm.lastname.$invalid"> Too short</small>
+										<small class="help-block" data-ng-show="accountForm.lastname.$error.pattern && !accountForm.lastname.$error.minlength && accountForm.lastname.$invalid"> Not valid</small>
+									  </div>
+								  </div>
+								  <div class="clearfix"></div>
+								  <div class="col-md-6 col-sm-6">
+									  <div class="form-group" ng-class="{ 'has-error' : (accountForm.email.$error.email) || (accountForm.email.$dirty  && accountForm.email.$error.required) }">
+										<label for="email">Email</label>
+										<input type="email" class="form-control" id="email" name="email" ng-model="userAccount.email" ng-init="userAccount.email = userData.email" value="{{userData.email}}" placeholder="Email Address" required>
+										<small class="help-block" data-ng-show="accountForm.email.$dirty && accountForm.email.$invalid && accountForm.email.$error.required"> Required</small>
+										<small class="help-block" data-ng-show="accountForm.email.$error.email"> Not valid</small>
+									  </div>
+								  </div>
+								  <div class="col-md-6 col-sm-6">
+									  <div class="form-group" ng-class="{ 'has-error' : (accountForm.phone.$error.pattern) || (accountForm.phone.$error.minlength) || (accountForm.phone.$dirty && accountForm.phone.$invalid && accountForm.phone.$error.required) }">
+										<label for="phone">Phone</label>
+										<input type="text" class="form-control" id="phone" name="phone" ng-model="userAccount.phone" ng-init="userAccount.phone = userData.phone"  value="{{userData.phone}}" minlength="10" maxlength="15" placeholder="Phone" ng-pattern="/^\d+$/" required>
+										<small class="help-block" data-ng-show="accountForm.phone.$dirty && accountForm.phone.$invalid && accountForm.phone.$error.required"> Required</small>
+										<small class="help-block" data-ng-show="accountForm.phone.$error.minlength && accountForm.phone.$invalid"> Too short</small>
+										<small class="help-block" data-ng-show="accountForm.phone.$error.pattern && !accountForm.phone.$error.minlength && accountForm.phone.$invalid"> Not valid</small>
+									  </div>
+								  </div>
+								  <div class="clearfix"></div>
+								  <div class="col-md-6 col-sm-6">
+									<div class="form-group" ng-class="{ 'has-error' : accountForm.Bdate.$dirty && accountForm.Bdate.$invalid && accountForm.Bdate.$error.required }">
+										<label for="Bdate">Date</label>
+										<div>
+											<input type="text" class="form-control datepicker-account" id="Bdate" name="Bdate" ng-model="userAccount.Bdate"  ng-init="userAccount.Bdate= userData.Bdate" value="" required />
+											<small class="help-block" data-ng-show="accountForm.Bdate.$dirty && accountForm.Bdate.$invalid && accountForm.Bdate.$error.required"> Required</small>
+										</div>
+									</div>
+								  </div>
+								  <div class="col-md-6 col-sm-6">
+									  <div class="form-group" ng-class="{ 'has-error' : accountForm.address.$dirty && accountForm.address.$invalid && accountForm.address.$error.required }">
+										<label for="address">Address</label>
+										<input type="text" class="form-control" id="address" name="address" ng-model="userAccount.address" placeholder="Address" ng-init="userAccount.address = userData.address"  value="{{userData.address}}" required>
+										<small class="help-block" data-ng-show="accountForm.address.$dirty && accountForm.address.$invalid && accountForm.address.$error.required"> Required</small>
+									  </div>
+								  </div>
+								  <div class="col-md-6 col-sm-6">
+									  <div class="form-group" ng-class="{ 'has-error' : accountForm.ref_country_id.$dirty && accountForm.ref_country_id.$invalid && accountForm.ref_country_id.$error.required }">
+										<label for="ref_country_id">Country</label>
+										<select id="ref_country_id" class="form-control" name="ref_country_id" ng-model="userAccount.ref_country_id">
+				    						<option value="">Choose</option>
+				    						<option ng-repeat="country in refCountry" ng-value="country.id">{{country.ref_cntry_name}}</option>
+			    						</select>
+			    						
+										<small class="help-block" data-ng-show="accountForm.ref_country_id.$dirty && accountForm.ref_country_id.$invalid && accountForm.ref_country_id.$error.required"> Required</small>
+									  </div>
+								  </div>
+								  
+								  <div class="col-md-12 col-sm-12">
+									  <button type="submit" class="btn btn-default save-btn" ng-click="studentSettingC.updateAccount(userAccount)" data-ng-disabled="accountForm.$invalid">SAVE</button>
+									  <button type="submit" class="btn btn-default cancel-btn">CANCEL</button>
+								  </div>
+								</form>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane animated fadeIn" id="password" ng-class="setting_tab == 'password' ? 'active' : ''">
+							<h4>Password</h4>
+							<div class="account-form">
+								<form name="resetForm">
+									<div class="form-group" ng-class="{ 'has-error' : resetForm.old_password.$dirty && resetForm.old_password.$invalid && resetForm.old_password.$error.required }">
+									      <label for="old_password">Old Password</label>
+									      <input type="password" class="form-control" id="old_password" name="old_password" ng-model="reset.old_password" placeholder="Old Password" required>
+									      <small class="help-block errorMessage" data-ng-show="resetForm.old_password.$dirty && resetForm.old_password.$invalid && resetForm.old_password.$error.required"> Please enter Old Password.</small>
+									</div>
+									<div class="form-group" ng-class="{ 'has-error' : (reset.password == reset.old_password  && !resetForm.password.$invalid && !resetForm.password.$error.required) || (resetForm.password.$dirty && resetForm.password.$invalid && resetForm.password.$error.required) }">
+									      <label for="Password">New Password</label>
+									      <input type="password" class="form-control" id="Password" name="password" ng-model="reset.password" placeholder="New Password" required>
+									      <small class="help-block errorMessage" data-ng-show="resetForm.password.$dirty && resetForm.password.$invalid"> Enter New Password.</small>
+									      <small class="help-block errorMessage" data-ng-show="reset.password == reset.old_password  && !resetForm.password.$invalid && !resetForm.password.$error.required" > Please enter new password.</small>
+									</div>
+									<div class="form-group" ng-class="{ 'has-error' : (reset.password != reset.password2 && !resetForm.password2.$error.required) ||  (resetForm.password2.$dirty && resetForm.password2.$error.required) }">
+									      <label for="password2">Confirm New Password</label>
+									      <input type="password" class="form-control" id="password2" placeholder="Confirm New Password" name="password2" ng-model="reset.password2" password-match="reset.password" required>
+									      <small class="help-block errorMessage" data-ng-show="resetForm.password2.$dirty && resetForm.password2.$error.required"> Please enter Confirm New Password.</small>
+									      <small class="help-block errorMessage" data-ng-show="reset.password != reset.password2 && !resetForm.password2.$error.required"> Password do not match.</small>
+									      
+									</div>
+									<button type="submit" class="btn btn-default save-btn" ng-click="studentSettingC.updatePassword(reset)" data-ng-disabled="resetForm.$invalid">SAVE</button>
+									<button type="submit" class="btn btn-default cancel-btn">CANCEL</button>
+								</form>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane animated fadeIn" id="language" ng-class="setting_tab == 'language' ? 'active' : ''">
+							<h4>Language</h4>
+							<div class="account-form">
+								<form name="languageForm">
+								  <div class="form-group">
+									<label for="language">Language</label>
+									<!--<select class="form-control">
+									  <option>Language</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>-->
+									<select id="language" class="form-control" ng-model="languageForm.ref_language">
+										<option value="">-- Language --</option>
+										<option ng-repeat="language in refLanguage" value="{{language.id}}">{{language.name}}</option>
+									</select>
+								  </div>
+								</form>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane animated fadeIn" id="privacy-police" ng-class="setting_tab == 'privacy-police' ? 'active' : ''">
+							<h4>Privacy Police</h4>
+							<div class="privacy-con">
+								<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. <strong>Lorem Ipsum</strong> has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a <strong>galley</strong> of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> 
+								<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <strong>Lorem Ipsum</strong>.</p>
+								<ul>
+									<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+									<li>Lorem Ipsum has been the industry's standard dummy text</li>
+									<li>Lorem Ipsum has been the industry's standard </li>
+									<li>Lorem Ipsum has been the industry</li>
+									<li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+									<li>Lorem Ipsum has been the industry's standard dummy text</li>
+								</ul>
+								<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. <strong>Lorem Ipsum</strong> has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a <strong>galley</strong> of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> 
+								<p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of <strong>Lorem Ipsum</strong>.</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane animated fadeIn" id="help" ng-class="setting_tab == 'help' ? 'active' : ''">
+							<h4>Help</h4>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

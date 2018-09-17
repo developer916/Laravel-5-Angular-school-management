@@ -1,0 +1,234 @@
+<ui-view></ui-view>
+
+<div class="chat-message-main">
+    <div class="col-md-3 col-sm-3">
+    	<div class="row">
+            <div class="chat-box-user-list">
+            	<div class="user-list-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" ng-change="searchUser()" ng-model="searchName">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="searchUser()" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+                <div class="chat-user-list-main">
+                    <div id="scrollable_div3" class="scrollator" data-scrollator-prevent-propagation="true">
+                        <div class="chat-user-list-box">
+                        	<h4></h4>
+                            <!--<h4>Today</h4>-->
+                            <ul>
+                        	<li ng-click="selectChatUser(userVal.id)" ng-class="userVal.id == message.user_receiver_id ? 'active' : ''" ng-repeat="userVal in users">
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img ng-src="uploads/{{userVal.img_profile_link}}" ng-show="userVal.img_profile_link" height="59" width="59"/>
+                                            <img ng-src="image/chat-user-2.png" ng-show="!userVal.img_profile_link" height="59" width="59">	
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>
+                                            	<label>{{userVal.name}}</label> 
+                                            	<span ng-if="userVal.unread">{{userVal.unread}}</span>
+                                        	</h3>
+                                            <p>{{userVal.text | limitTo : 34}}{{userVal.text.length > 34 ? '...' : ''}} <!--Your don't accept--></p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                   	<div class="chat-user-list-box">
+                            <!--<h4>Yesterday</h4>-->
+                            <!--<ul>
+                        	<li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-1.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>Lucas van roekel</h3>
+                                            <p>How are you?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-2.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>London Universities</h3>
+                                            <p>Your don't accept</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-1.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>Lucas van roekel</h3>
+                                            <p>How are you?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-2.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>London Universities</h3>
+                                            <p>Your don't accept</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>-->
+                        </div>
+                    	<!--<div class="chat-user-list-box">
+                            <h4>Monday</h4>
+                            <ul>
+                        	<li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-1.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>Lucas van roekel</h3>
+                                            <p>How are you?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-2.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>London Universities</h3>
+                                            <p>Your don't accept</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-1.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>Lucas van roekel</h3>
+                                            <p>How are you?</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chat-user-box">
+                                            <div class="chat-user">
+                                            <img src="image/chat-user-2.png">
+                                        </div>
+                                        <div class="chat-user-title">
+                                            <h3>London Universities</h3>
+                                            <p>Your don't accept</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 pull-right">
+    	<div class="row">
+            <div class="documents-main">
+            	<h4>Documents <a href="#">See All</a></h4>
+                <div class="documents-img">
+                    <ul>
+                    	<li>
+                            <img src="image/list-img1.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img2.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img3.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img1.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img2.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img3.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img2.png">
+                        </li>
+                        <li>
+                            <img src="image/list-img3.png">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+    	<div class="row">
+            <div class="chat-content-main">
+            	<div class="chat-con">
+                    <div id="scrollable_div3-1" class="scrollator" data-scrollator-prevent-propagation="true">
+                        <div ng-class="msg.user_sender_id == userData.id ? 'user-chat-box1' : 'user-chat-box'" ng-repeat="msg in messages">
+                            <div class="media">
+                                <div class="media-left" ng-hide="msg.user_sender_id == userData.id">
+                                    <a href="#">
+                                        <!--<img class="media-object" src="image/profile-user.png" alt="...">-->
+                                        
+                                        <img ng-src="uploads/{{msg.user.img_profile_link}}" ng-show="msg.user.img_profile_link" height="221" width="221"/>
+                                        <img ng-src="image/profile-user.png" ng-show="!msg.user.img_profile_link" height="221" width="221">	
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="chat-user-con">
+                                	<span class="arrow">
+                                            <img ng-show="msg.user_sender_id != userData.id" src="image/chat-left-arrow.png">
+                                            <img ng-show="msg.user_sender_id == userData.id" src="image/chat-right-arrow.png">    
+                                        </span>
+                                	<h4 class="media-heading">{{msg.text}}</h4>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <span class="chat-time">{{msg.created_at | moment: 'format': 'DD-MM-YY hh:mm A' }}</span>
+                                    <!--<h4 class="media-heading">{{msg.user.name}}</h4>-->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="chat-form">
+                    <!--<form action="" ng-submit="createMessage(message)">-->
+                    <form name="chatForm">
+                        <div class="input-group"> 
+                            <div class="input-group-btn"> 
+                               <span id="fileselector">
+                                    <label class="btn btn-default" for="upload-file-selector">
+                                        <input id="upload-file-selector" type="file">
+                                        <img src="image/pin1.png">
+                                    </label>
+                                </span> 
+                            </div> 
+                            <textarea id="chat-textarea" row="2" class="form-control" ng-model="message.text" placeholder="type something to send"></textarea>
+                            <input type="hidden" ng-model="message.user_receiver_id" >
+                            <div class="input-group-btn"> 
+                                <button class="btn btn-default" aria-label="Bold" ng-click="createMessage(message)" data-ng-disabled="message.text.length == 0">
+                                    <img src="image/send.png">
+                                </button> 
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

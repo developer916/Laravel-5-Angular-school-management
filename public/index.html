@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<meta name="csrf-token" content="{{ csrf_token() }}">-->
+        <title>WEXCAPE</title>
+
+        <!-- Styles dependencies -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+        <link rel="stylesheet" href="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
+        <link rel="stylesheet" href="bower_components/photoswipe/dist/photoswipe.css">
+        <link rel="stylesheet" href="bower_components/photoswipe/dist/default-skin/default-skin.css">
+        <link rel="stylesheet" href="bower_components/fancybox-plus/css/jquery.fancybox-plus.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css" type="text/css" media="screen"/>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet/less" type="text/css" href="css/dcalendar.picker.css"> 
+        <!-- Styles App -->
+        <link rel="stylesheet/less" type="text/css" href="css/style.less">
+        <link rel="stylesheet/less" type="text/css" href="css/animate.css">
+        <link rel="stylesheet/less" type="text/css" href="css/profilemessage.less">
+	
+	<!-- Stylesheet for student interface -->
+	<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/ion.rangeSlider.css" rel="stylesheet" />
+	<link href="css/ion.rangeSlider.skinNice.css" rel="stylesheet" />
+	<link href="css/fm.scrollator.jquery.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	    
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    </head>
+    <body ng-app="app">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+        <!-- Bower dependencies -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+	<!--<script src="bower_components/angular-route/angular-route.min.js"></script>-->
+	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+        <script src="bower_components/satellizer/dist/satellizer.min.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+        <script src="bower_components/less/dist/less.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular-i18n/angular-locale_fr-fr.js"></script>
+        <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/leaflet/dist/leaflet.js"></script>
+        <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+        <script src="bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.min.js"></script>
+        <script src="bower_components/photoswipe/dist/photoswipe.min.js"></script>
+        <script src="bower_components/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/fancybox-plus/dist/jquery.fancybox-plus.js"></script>
+        <script src="bower_components/angular-fancybox-plus/js/angular-fancybox-plus.js"></script>
+        <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
+        <script src="bower_components/slick-carousel/slick/slick.js"></script>
+        <script src="bower_components/angular-slick-carousel/dist/angular-slick.min.js"></script>
+        <script src="bower_components/angularjs-slider/demo/lib/ui-bootstrap-tpls.js"></script>
+<!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>-->
+
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<!--<script src="js/jquery.min.js"></script>-->
+    	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<!--<script src="js/bootstrap.min.js"></script>-->
+    	
+    	<!--<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/angular-animate.min.js" ></script>
+		<script src="js/toaster.js"></script>-->
+		
+		<!--<script src="app/app.js"></script>
+		<script src="app/data.js"></script>
+		<script src="app/directives.js"></script>
+		<script src="app/authCtrl.js"></script>-->
+		
+		<script src="js/lazysizes.min.js"></script>
+		<script src="js/dcalendar.picker.js"></script>
+		<script src="js/ion.rangeSlider.js"></script>
+		<script src="js/fm.scrollator.jquery.js"></script>
+        <!-- Main sources -->
+        <script src="js/module.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/run.js"></script>
+        <script src="js/routes.js"></script>
+
+        <!-- Services sources -->
+        <script src="services/universityService.js"></script>
+        <script src="services/userService.js"></script>
+	<script src="services/alertService.js"></script>
+	
+	<!-- Chat Application Js -->
+	<script src="services/message.js"></script>
+        <script src="services/chatservice.js"></script>
+        <!--<script src="services/chat.js"></script>-->
+        <script src="services/user.js"></script>
+	
+	<script src="components/chat/chat.js"></script>
+	<script src="components/chat/chatCtrl.js"></script>
+
+        <!-- Header sources -->
+        <script src="components/header/header.js"></script>
+        <script src="components/header/headerCtrl.js"></script>
+
+        <!-- Map sources -->
+        <script src="components/map/map.js"></script>
+        <script src="components/map/mapCtrl.js"></script>
+
+        <script src="components/map/modal/modal.directive.js"></script>
+        <script src="components/map/modal/modal.service.js"></script>
+        <script src="components/map/modal/modalDir.js"></script>
+
+            <!-- Map Modal sources -->
+            <script src="components/map/modal/modal.js"></script>
+            <script src="components/map/modal/modalCtrl.js"></script>
+
+                <!-- Map Modal Home sources -->
+                <script src="components/map/modal/home/home.js"></script>
+                <script src="components/map/modal/home/homeCtrl.js"></script>
+
+                <!-- Map Modal Diploma sources -->
+                <script src="components/map/modal/diploma/diploma.js"></script>
+                <script src="components/map/modal/diploma/diplomaCtrl.js"></script>
+
+                <!-- Map Modal Housing sources -->
+                <script src="components/map/modal/housing/housing.js"></script>
+                <script src="components/map/modal/housing/housingCtrl.js"></script>
+
+                <!-- Map Modal Wall sources -->
+
+                <!-- Map Modal Message sources -->
+                <script src="components/map/modal/message/message.js"></script>
+                <script src="components/map/modal/message/messageCtrl.js"></script>
+
+                <!-- Map Modal Apply sources -->
+                <script src="components/map/modal/application/application.js"></script>
+                <script src="components/map/modal/application/applicationCtrl.js"></script>
+
+            <!-- Map Popup sources -->
+            <script src="components/map/popup/popupDir.js"></script>
+
+        <!-- School Profile Sources -->
+        <script src="components/profile/profile.js"></script>
+        <script src="components/profile/profileCtrl.js"></script>
+	
+	<!-- School user view Student Profile Sources -->
+        <script src="components/view-student-profile/view-student-profile.js"></script>
+        <script src="components/view-student-profile/view-student-profileCtrl.js"></script>
+	
+	<!-- School Housing list Sources -->
+        <script src="components/housing-list/housing-list.js"></script>
+        <script src="components/housing-list/housing-listCtrl.js"></script>
+	
+	<!-- School Housing Manage Sources -->
+        <script src="components/housing/housing.js"></script>
+        <script src="components/housing/housingCtrl.js"></script>
+	<script src="components/housing/housingDir.js"></script>
+	
+	<!-- School Program list Sources -->
+        <script src="components/program-list/program-list.js"></script>
+        <script src="components/program-list/program-listCtrl.js"></script>
+	
+	<!-- School Program Manage Sources -->
+        <script src="components/program/program.js"></script>
+        <script src="components/program/programCtrl.js"></script>
+	<script src="components/program/programDir.js"></script>
+	
+	<!-- School Track My Application (TEMP) Sources -->
+        <script src="components/application/application.js"></script>
+        <script src="components/application/applicationCtrl.js"></script>
+        
+	<!-- Student Profile Sources -->
+        <script src="components/student-profile/student-profile.js"></script>
+        <script src="components/student-profile/student-profileCtrl.js"></script>
+	<script src="components/student-profile/student-profileDir.js"></script>
+	
+	<!-- Student setting Sources -->
+        <script src="components/student-setting/student-setting.js"></script>
+        <script src="components/student-setting/student-settingCtrl.js"></script>
+	
+	<!-- Student track application Sources -->
+        <script src="components/student-track/student-track.js"></script>
+        <script src="components/student-track/student-trackCtrl.js"></script>
+	<script src="components/student-track/student-trackDir.js"></script>
+	
+	<!-- School front page Sources -->
+        <script src="components/school-frontpage/school-frontpage.js"></script>
+        <script src="components/school-frontpage/school-frontpageCtrl.js"></script>
+	<script src="components/school-frontpage/school-frontpageDir.js"></script>
+	
+        <!-- Profile Modal Sources -->
+        <script src="components/profile/profilemodal/profilemodal.directive.js"></script>
+        <script src="components/profile/profilemodal/profilemodal.service.js"></script>
+        <script src="components/profile/profilemodal/profilemodalDir.js"></script>
+
+            <!-- profile Modal sources -->
+            <script src="components/profile/profilemodal/profilemodal.js"></script>
+            <script src="components/profile/profilemodal/profilemodalCtrl.js"></script>
+
+                <!-- profile Modal Basic sources -->
+                <script src="components/profile/profilemodal/basic/basic.js"></script>
+                <script src="components/profile/profilemodal/basic/basicCtrl.js"></script>
+
+        <script src="components/profile/messages/messages.js"></script>
+        <script src="components/profile/messages/messagesCtrl.js"></script>
+
+        <script src="components/profile/home/home.js"></script>
+        <script src="components/profile/home/homeCtrl.js"></script>
+
+	
+
+	<script>
+	    angular.module("app").constant("CSRF_TOKEN", $('meta[name="csrf-token"]').attr('content'));
+	</script>
+        <!-- Utils sources -->
+        <script src="components/utils/utilsFilters.js"></script>
+        <script src="components/utils/utilsDir.js"></script>
+        <script src="components/utils/zoomDir.js"></script>
+        <ui-view></ui-view>
+        <photo-swipe></photo-swipe>
+	
+	<script type="text/javascript">
+	    $.ajaxSetup({
+		headers: {
+		    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	    });
+	</script>
+	
+    </body>
+</html>

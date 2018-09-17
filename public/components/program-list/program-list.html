@@ -1,0 +1,57 @@
+<ui-view></ui-view>
+<div class="profile-main">
+    <div class="container">
+	<div class="profile-content-main">
+	    <div class="row">
+		<div class="profile-tabs">
+		    <div class="col-md-3 col-sm-3">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation"><a ui-sref="app.schoolFrontpage" aria-controls="home" role="tab"><img src="image/user.png"> Front Page</a></li>
+			    <li role="presentation" class="active"><a ui-sref="app.programList" aria-controls="profile" role="tab"><img src="image/diploma.png"> Diploma</a></li>
+			    <li role="presentation"><a ui-sref="app.housingList" aria-controls="messages" role="tab"><img src="image/home.png"> Housing</a></li>
+			</ul>
+		    </div>
+		    <div class="col-md-9 col-sm-9">
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="active" id="program">
+					<div class="list-content">
+						<h3>Program List <a class="btn btn-primary" ng-href="#!/program"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Program</a></h3>
+						<div class="row">
+						    
+							<div class="col-sm-6 col-md-3 animated" ng-class="$index < perPage ? 'fadeIn' : 'fadeOut'" ng-repeat="program in programs" >
+								<div class="thumbnail">
+									<div class="pro-img" ng-click="editProgram(program.id)" >
+									      <img src="image/pro-img.png">
+									</div>
+									<div class="caption">
+									    <h3 ng-click="editProgram(program.id)" >{{program.name | limitTo: 16}}{{program.name.length > 16 ? '...' : ''}}</h3>
+									    <!--<p><span ng-click="editProgram(program.id)"><i class="fa fa-calendar" aria-hidden="true"></i>June, 12 2017 </span><a href="" ng-click="deleteProgram(program.id)"><img src="image/3dott-icon.png"></a></p>-->
+									    <div class="dropdown">
+									      	<span ng-click="editProgram(program.id)"><i class="fa fa-calendar" aria-hidden="true"></i>June, 12 2017 </span>
+									    	<a class="program-action dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="image/3dott-icon.png"></a>
+									    	<ul class="dropdown-menu">
+											    <li><a ng-click="deleteProgram(program.id, $index)" title="Delete"><i class="fa fa-trash-o" aria-hidden="true"></i>
+ Delete</a></li>
+											    <li><a ng-click="copyProgram(program.id)"><i class="fa fa-files-o" aria-hidden="true" title="Copy"></i>
+Copy</a></li>
+											</ul>
+									    </div>
+									</div>
+								</div>
+							</div>
+						  	
+							<div class="see-more" ng-hide="numOfPage < perPage" ng-click="loadMore();">
+								<a href="#">See More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	</div>
+    </div>
+</div>

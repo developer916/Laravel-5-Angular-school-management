@@ -1,0 +1,60 @@
+<div class="container margin-top-20" >
+
+<ui-view></ui-view>
+
+<modal id="custom-modal-2">
+    <div class="modal fade modal-popup"  style="display: block"  id="profileModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" ng-click="closeModal('custom-modal-2')"> <span  aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                    	<img src="images/profilemodal/school_profile.png" height="35">
+                    	School Profile 
+                    </h4>
+                </div>
+                <div class="modal-body">
+                   <div class="edit-profile-form terms-view">
+			<div class="edit-profile-title" ng-class="modalPopupType == 'basic' || modalPopupType == 'terms'  ? 'animated rollIn' : '' ">
+			    <h3 ng-if="modalPopupType == 'basic' || modalPopupType== 'basicupload' || modalPopupType== 'basicinfo' || modalPopupType== 'basicslogan' || modalPopupType== 'basicdetail'"><img src="images/profilemodal/info_blue.png" height="35px" /> Basic Introduction</h3>
+			    <h3 ng-if="modalPopupType == 'terms'"><img src="images/profilemodal/calendar_blue.png" height="35px" /> Calendar informations</h3>
+			</div>
+			<div class="edit-tab-link" ng-class="modalPopupType == 'basic' ? 'animated fadeInLeft' : ''">
+			    <ul ng-class="modalPopupType == 'termsview' || modalPopupType== 'success' ? 'terms-view-icon' : ''">
+				<li><a class="edit-tab1" ng-class="modalPopupType == 'basic' ? 'animated fadeInLeft' : ''" href="#"></a></li>
+				<li><a class="edit-tab2" ng-class="modalPopupType == 'basic' ? 'animated fadeInLeft' : (modalPopupType == 'terms' || modalPopupType == 'termsview' || modalPopupType == 'success' ? 'active' : '')" href="#"></a></li>
+				<li><a class="edit-tab3" ng-class="modalPopupType == 'basic' ? 'animated fadeInLeft' : (modalPopupType == 'success'? 'active' : '')" href="#"></a></li>
+			    </ul>
+			</div>
+			
+			<profilemodal-success school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'success'" id="directiveprofilemodalsuccess" class="profilepage"></profilemodal-success>
+			
+			<profilemodal-termsview school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'termsview'" id="directiveprofilemodaltermsview" class="profilepage"></profilemodal-termsview>
+			
+			<profilemodal-terms school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'terms'" id="directiveprofilemodalterms" class="profilepage"></profilemodal-terms>
+			
+			<profilemodal-basicdetail school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'basicdetail'" id="directiveprofilemodalbasicdetail" class="profilepage" ></profilemodal-basicdetail>
+			
+			<profilemodal-basicslogan school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'basicslogan'" id="directiveprofilemodalbasicslogan" class="profilepage" ></profilemodal-basicslogan>
+			
+			<profilemodal-basicinfo school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'basicinfo'" id="directiveprofilemodalbasicinfo" class="profilepage" ></profilemodal-basicinfo>
+			
+			<profilemodal-basicupload school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'basicupload'" id="directiveprofilemodalbasicupload" class="profilepage" ></profilemodal-basicupload>
+			
+			<profilemodal-basic school_profile="school_profile" university_data="universityData" ng-show="modalPopupType== 'basic'" id="directiveprofilemodalbasic" class="profilepage" ></profilemodal-basic>
+		    </div>
+                </div>
+               	<div class="modal-footer" ng-show="next_btn">
+                    <button type="button" class="btn btn-default" ng-show="step!= 'step-1'" data-dismiss="modal" ng-click="comebacklater('{{step}}');">COME BACK LATER</button>
+        	    <button type="button" class="btn btn-primary btn-next" ng-click="next_modal('{{step}}');">NEXT</button>
+        	</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-background fade" id="modalBackground"></div>
+</modal>
+
+</div>
+
+
+

@@ -1,0 +1,38 @@
+<!--<div class="edit-profile-form">
+	<div class="edit-profile-title">
+		<h3><img src="images/profilemodal/info_blue.png" height="35px" /> Basic Introduction</h3>
+	</div>
+	<div class="edit-tab-link">
+		<ul>
+			<li><a class="edit-tab1" href="#"></a></li>
+			<li><a class="edit-tab2" href="#"></a></li>
+			<li><a class="edit-tab3" href="#"></a></li>
+		</ul>
+	</div>-->
+	<div class="edit-tab-content animated fadeInRight">
+		<div class="basic-introduction">
+			<div class="upload-main indicate-main">
+				<h4> School Contact Details  </h4>
+				<form>
+					<div class="form-group">
+						<img src="images/profilemodal/address.png" height="25">
+						<input type="text" class="form-control" placeholder="Address ..." ng-model="schoolProfile.address">
+					</div>
+					
+					<div class="form-group">
+						<img src="images/profilemodal/address.png" height="25">
+						<select id="refcountry" class="form-control" ng-model="schoolProfile.ref_country_id">
+							<option value="">Country</option>
+							<option ng-repeat="country in refCountry" ng-value="{{country.id}}">{{country.ref_cntry_name}}</option>
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<img src="images/profilemodal/phone.png" height="25">
+						<input type="text" class="form-control" placeholder="Phone No..." ng-model="schoolProfile.phone">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+<!--</div>-->

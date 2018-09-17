@@ -1,0 +1,4187 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Mumbai University of Economic Sciences",
+      "lat": 19.070263,
+      "lng": 72.857155,
+      "description": "The primary mission of the University of Mumbai University of Economic Science is the education of the state’s citizens through teaching, research, creative activity, and community engagement. Among India’s oldest and most comprehensive public universities, MUES is the major research institution in South India, enrolling approximately 21,000 undergraduate students and approximately 8,000 students in graduate and professional programs. At the heart of its mission lies the University’s responsibility to state and society to promote the dissemination of knowledge, cultural enrichment, and an enhanced quality of life.",
+      "slogan": "As a Gamecock, your inspiration will have No Limits.",
+      "nb_student": 17000,
+      "nb_student_campus": 12000,
+      "logo_url": "UniversityofMumbai_Logo.png",
+      "address": {
+        "street_number": null,
+        "street_name": "Kalina, Santacruz East",
+        "city": "Mumbai",
+        "zip_code": "400098",
+        "country": "Maharashtra, India"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in bobo",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "MBA in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "MBA",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "10/05/2017",
+          "end_date": "02/25/2018",
+          "deadline_date": "08/15/2017",
+          "break_desc": "1 month winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "03/01/2018",
+          "end_date": "07/25/2018",
+          "deadline_date": "01/18/2018",
+          "break_desc": "2 months 1/2 summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "UniversityofMumbai_Housing1_Cover.jpg",
+          "name": "Mumbai appartement massala",
+          "title": "Nice appartment",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "16 Chelsea Avenue, Mumbai, India",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "UniversityofMumbai_Housing1_01.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "UniversityofMumbai_Housing1_02.jpg",
+              "title": "Main reception"
+            },
+            {
+              "url": "UniversityofMumbai_Housing1_03.jpg",
+              "title": "indoor patio"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityofMumbai_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityofMumbai_Room_02.jpg"
+                },
+                {
+                  "url": "UniversityofMumbai_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "UniversityofMumbai_Housing2_Cover.jpg",
+          "name": "Indhira Ghandi housing",
+          "title": "Nice housing",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "22 Chelsea Avenue, Mumbai, India",
+          "description": "A co-ed 2 stories housing 30 rooms",
+          "pictures": [
+            {
+              "url": "UniversityofMumbai_Housing2_01.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "UniversityofMumbai_Housing2_02.png",
+              "title": "Hall way to rooms"
+            },
+            {
+              "url": "UniversityofMumbai_Housing2_03.png",
+              "title": "Fountain"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityofMumbai_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityofMumbai_Room_02.jpg"
+                },
+                {
+                  "url": "UniversityofMumbai_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "UniversityofMumbai-1.jpg",
+            "title": "Main entrance"
+          },
+          {
+            "url": "UniversityofMumbai-2.jpg",
+            "title": "Faculty of Economics"
+          },
+          {
+            "url": "UniversityofMumbai-3.jpeg",
+            "title": "Cricket Stadium"
+          },
+          {
+            "url": "UniversityofMumbai-4.jpg",
+            "title": ""
+          },
+          {
+            "url": "UniversityofMumbai-5.jpg",
+            "title": "Library"
+          },
+          {
+            "url": "UniversityofMumbai-6.jpg",
+            "title": "Our latest graduates"
+          }
+        ]
+    },
+    {
+      "id": 2,
+      "name": "Universidad Pacifico de Buenos Aires",
+      "lat": -34.599234,
+      "lng": -58.374782,
+      "description": "On top of being one of the best university in South America, La Universidad Pcifico de Buenos Aires is rich in traditions and diversity is part of its DNA. Every year, hundreds of international students from over 60 countries study with us. Our rich multi-cultural environment ensures that our students benefit from holistic education and develop global perspectives.",
+      "slogan": "Great education equals to great career",
+      "nb_student": 12000,
+      "nb_student_campus": 8950,
+      "logo_url": "UniversidadPacificoDeBuenosAires_Logo.png",
+      "address": {
+        "street_number": "430",
+        "street_name": "Viamonte",
+        "city": "Buenos Aires",
+        "zip_code": "1053",
+        "country": "Argentina"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "03/08/2017",
+          "end_date": "08/14/2017",
+          "deadline_date": "01/08/2017",
+          "break_desc": "1 month winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "09/21/2017",
+          "end_date": "07/02/2018",
+          "deadline_date": "01/18/2018",
+          "break_desc": "1 months 1/2 summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "UniversidadPacificoDeBuenosAires_Housing_Cover.png",
+          "name": "Indigo Mumbai appartment",
+          "title": "Nice appartment",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "16 Chelsea Avenue, Mumbai, India",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "UniversidadPacificoDeBuenosAires_Housing_01.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "UniversidadPacificoDeBuenosAires_Housing_02.png",
+              "title": "Working space"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_01.png"
+                },
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_03.png"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "UniversidadPacificoDeBuenosAires_Housing2_Cover.png",
+          "name": "Indigo Mumbai housing",
+          "title": "Nice housing",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "22 Chelsea Avenue, Mumbai, India",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "UniversidadPacificoDeBuenosAires_Housing2_01.jpg",
+              "title": "Where friendship begins"
+            },
+            {
+              "url": "UniversidadPacificoDeBuenosAires_Housing2_02.jpg",
+              "title": "Cafeteria"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_01.png"
+                },
+                {
+                  "url": "UniversityPacificoDeBuenosAires_Room_03.png"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "UniversidadPacificoDeBuenosAires-1.jpg",
+            "title": "Main entrance"
+          },
+          {
+            "url": "UniversidadPacificoDeBuenosAires-2.png",
+            "title": "Garden"
+          },
+          {
+            "url": "UniversidadPacificoDeBuenosAires-3.png",
+            "title": "Faculty of Science"
+          },
+          {
+            "url": "UniversidadPacificoDeBuenosAires-4.png",
+            "title": "Library"
+          },
+          {
+            "url": "UniversidadPacificoDeBuenosAires-5.png",
+            "title": "Administration offices"
+          }
+        ]
+    },
+    {
+      "id": 3,
+      "name": "Jakarta Bhasha University",
+      "lat": -6.174465,
+      "lng": 106.822745,
+      "description": "We started out as a modest medical school in 1905, founded by a determined group of businessmen led by Tanu Kam, to serve the needs of the local community. Today, we are Indonesia’s flagship university consistently ranked first in Asia and among the leading universities in the world. Our focus will centre on nurturing future-ready graduates, enhancing our research's translational impact and making JBU Asia's most vibrant university enterprise ecosystem. Our goal? More distinctive, high-impact value for Indonesia and the world.",
+      "slogan": "A leading global university centred in Asia, influencing the future",
+      "nb_student": 24000,
+      "nb_student_campus": 15896,
+      "logo_url": "JakartaBhashaUniversity_Logo.png",
+      "address": {
+        "street_number": null,
+        "street_name": "Higher Kentridge Road",
+        "city": "Jakarta",
+        "zip_code": "119082",
+        "country": "Indonesia"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "06/02/2017",
+          "end_date": "11/05/2017",
+          "deadline_date": "03/15/2017",
+          "break_desc": "1 month winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "01/06/2018",
+          "end_date": "05/02/2018",
+          "deadline_date": "10/12/2017",
+          "break_desc": "1 months 1/2 summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "JakartaBhashaUniversity_Housing_Cover.png",
+          "name": "Bhasha Campus",
+          "title": "A home away from home",
+          "position_desc": "With a nice view across the lake",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "16 Chelton Rama Khan, Jakarta, Indonesia",
+          "description": "A large campus with 50 rooms",
+          "pictures": [
+            {
+              "url": "JakartaBhashaUniversity_Housing_01.png",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "JakartaBhashaUniversity_Housing_02.png",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "JakartaBhashaUniversity_Housing_03.jpg",
+              "title": "Spicy cafeteria"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "JakartaBhashaUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "JakartaBhashaUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "JakartaBhashaUniversity_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "JakartaBhashaUniversity_Housing2_Cover.png",
+          "name": "Rammatra Campus",
+          "title": "The place to hang around",
+          "position_desc": "With a direct access to school Facilities",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "Large apartments with sport facilities",
+          "pictures": [
+            {
+              "url": "JakartaBhashaUniversity_Housing2_01.png",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "JakartaBhashaUniversity_Housing2_02.png",
+              "title": "A home outside of home"
+            },
+            {
+              "url": "JakartaBhashaUniversity_Housing2_03.jpg",
+              "title": "A common space"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "JakartaBhashaUniversity_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "JakartaBhashaUniversity_Room_03.jpg"
+                },
+                {
+                  "url": "JakartaBhashaUniversity_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "JakartaBhashaUniversity-1.png",
+            "title": "A pleasant athmosphere to study"
+          },
+          {
+            "url": "JakartaBhashaUniversity-2.png",
+            "title": "State of the art facility"
+          },
+          {
+            "url": "JakartaBhashaUniversity-3.png",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "JakartaBhashaUniversity-4.png",
+            "title": "Where students have the freedom to create"
+          },
+          {
+            "title": "Well balanced environment"
+          }
+        ]
+    },
+    {
+      "id": 4,
+      "name": "University of Guadalajara",
+      "lat": 20.659699,
+      "lng": -103.349609,
+      "description": "The University of Guadalajara was founded on 22 September 1910 by Juan el Primero Fuentes, former Minister of Education who sought to create a very different institution from its 19th-century precursor, the Royal and Pontifical University of Guadalajara, which had been founded on 21 September 1551 by a royal decree signed by Crown Prince Phillip on behalf of Charles I of Spain and brought to a definitive closure in 1865 by Maximilian I of Mexico. Instead of reviving what he saw as an anachronistic institution with strong ties to the Roman Catholic Church, he aimed to create a new university, secular in nature and national in scope, that could reorganize higher education within the country, serve as a model of positivism and encompass the ideas of the dominant Mexican liberalism.",
+      "slogan": "Aim beyond your diploma",
+      "nb_student": 23000,
+      "nb_student_campus": 14750,
+      "logo_url": "UniversityOfGuadalajara_Logo.jpeg",
+      "address": {
+        "street_number": "1555",
+        "street_name": "Avenida del Rei Carlos",
+        "city": "Guadalajara",
+        "zip_code": "58000",
+        "country": "Mexico"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "04/02/2017",
+          "end_date": "07/30/2017",
+          "deadline_date": "03/05/2017",
+          "break_desc": "1 month 10 days summer break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "09/05/2017",
+          "end_date": "01/11/2018",
+          "deadline_date": "07/12/2017",
+          "break_desc": "1 week Christmas break + 3 weeks winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "UniversityOfGuadalajara_Housing_Cover.png",
+          "name": "Casa del sol",
+          "title": "Modernity inside traditions",
+          "position_desc": "Located 10 minutes away from the school by bus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "99 avenida del sol, Guadalajara, Mexico",
+          "description": "Big complex composed of 2 buildings",
+          "pictures": [
+            {
+              "url": "UniversityOfGuadalajara_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "UniversityOfGuadalajara_Housing_02.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "UniversityOfGuadalajara_Housing_03.jpeg",
+              "title": "Garden"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityOfGuadalajara_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityOfGuadalajara_Room_02.jpg"
+                },
+                {
+                  "url": "UniversityOfGuadalajara_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "UniversityOfGuadalajara_Housing2_Cover.png",
+          "name": "Santa Maria Dos",
+          "title": "A newly built campus",
+          "position_desc": "Directly within the walls of the school",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "Spread out 2 stories building with integrated cafeteria",
+          "pictures": [
+            {
+              "url": "UniversityOfGuadalajara_Housing2_01.png",
+              "title": "Relax in the beautiful main garden"
+            },
+            {
+              "url": "UniversityOfGuadalajara_Housing2_02.jpeg",
+              "title": "A fun athmosphere"
+            },
+            {
+              "url": "UniversityOfGuadalajara_Housing2_03.jpg",
+              "title": "A brand new cafeteria"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversityOfGuadalajara_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversityOfGuadalajara_Room_03.jpg"
+                },
+                {
+                  "url": "UniversityOfGuadalajara_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "UniversityOfGuadalajara-1.png",
+            "title": "State of the art facility"
+          },
+          {
+            "url": "UniversityOfGuadalajara-2.png",
+            "title": "A pleasant athmosphere to relax"
+          },
+          {
+            "url": "UniversityOfGuadalajara-3.png",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "UniversityOfGuadalajara-4.png",
+            "title": "A home outside of home"
+          }
+        ]
+    },
+    {
+      "id": 5,
+      "name": "Institute of Higher Education of Accra",
+      "lat": 5.603717,
+      "lng": -0.186964,
+      "description": "The Institute of Higher Education of Accra is proudly the oldest and largest of the thirteen Ghanaian universities and tertiary institutions. It was founded in 1948 as the University College of the Gold Coast, and was originally an affiliate college of the University of London which supervised its academic programmes and awarded degrees. It gained full university status in 1961, and now has nearly 40,000 students. The original emphasis was on the liberal arts, social sciences, basic science, agriculture, and medicine, but (partly as the result of a national educational reform programme) the curriculum was expanded to provide more technology-based and vocational courses and postgraduate training.",
+      "slogan": "Build Africa's bright future today",
+      "nb_student": 38000,
+      "nb_student_campus": 14000,
+      "logo_url": "InstituteOfHigherEducationOfAccra_Logo.png",
+      "address": {
+        "street_number": "8230",
+        "street_name": "PO Box LG 30",
+        "city": "Accra",
+        "zip_code": "",
+        "country": "Ghana"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "04/12/2017",
+          "end_date": "08/20/2017",
+          "deadline_date": "02/01/2017",
+          "break_desc": "1 month 20 days summer break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "10/08/2017",
+          "end_date": "02/28/2018",
+          "deadline_date": "08/25/2017",
+          "break_desc": "1 month 20 days winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "InstituteOfHigherEducationOfAccra_Housing_Cover.png",
+          "name": "Nana Kusi Appiah building",
+          "title": "Giving view to the central court",
+          "position_desc": "Located between Science and Economic faculty",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "88 Jefferson Street, Accra, Ghana",
+          "description": "Spread-out bulding with single rooms and dormitories",
+          "pictures": [
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing_01.png",
+              "title": "Quick access to the city"
+            },
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing_02.png",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing_03.jpg",
+              "title": "Great cafeteria"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_02.jpg"
+                },
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "InstituteOfHigherEducationOfAccra_Housing2_Cover.png",
+          "name": "Accoufo Addo building",
+          "title": "The place behind the pines",
+          "position_desc": "Located outside the main campus, 5 minutes walking",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "Small apartments with common halls",
+          "pictures": [
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing2_02.jpg",
+              "title": "A home outside of home"
+            },
+            {
+              "url": "InstituteOfHigherEducationOfAccra_Housing2_03.jpg",
+              "title": "Common link through the garden"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_03.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_01.jpg"
+                },
+                {
+                  "url": "InstituteOfHigherEducationOfAccra_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "InstituteOfHigherEducationOfAccra-1.png",
+            "title": "West Africa's top campus"
+          },
+          {
+            "url": "InstituteOfHigherEducationOfAccra-2.png",
+            "title": "A pleasant athmosphere to study"
+          },
+          {
+            "url": "InstituteOfHigherEducationOfAccra-3.png",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "InstituteOfHigherEducationOfAccra-4.png",
+            "title": "A home outside of home"
+          }
+        ]
+    },
+    {
+      "id": 6,
+      "name": "Johannesburg Business School",
+      "lat": -26.204103,
+      "lng": 28.047305,
+      "description": "The roots of Johannesburg Business School lie in the establishment of the South African College in 1985 as a school for created by mainly inverstors. In 1874 the South African College Schools, teaching up to secondary level, were separated from the College, which prepared students for the examinations of the University of the Cape of Good Hope. In 1887 the first male residence in Southern Africa was established, known as College House Residence, under the initiative of Professor C.E. Lewis. In 1918 the South African College was elevated to full university status with the power to award degrees, and renamed the Johannesburg Business School.",
+      "slogan": "Make our differences our strentgh",
+      "nb_student": 26000,
+      "nb_student_campus": 5000,
+      "logo_url": "JohanessburgBusinessSchool_Logo.jpg",
+      "address": {
+        "street_number": null,
+        "street_name": "DondeGosh",
+        "city": "Johannesburg",
+        "zip_code": "7733",
+        "country": "South Africa"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "04/01/2017",
+          "end_date": "08/10/2017",
+          "deadline_date": "08/10/2017",
+          "break_desc": "1 month 1/2 summer break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "10/09/2017",
+          "end_date": "02/19/2018",
+          "deadline_date": "08/15/2017",
+          "break_desc": "1 month 20 days winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "JohanessburgBusinessSchool_Housing_Cover.png",
+          "name": "Green City",
+          "title": "Thrive in a natural-looking environment",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Johanessburg Business School - Green City",
+          "description": "3 stories building with access to rooftop",
+          "pictures": [
+            {
+              "url": "JohanessburgBusinessSchool_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "JohanessburgBusinessSchool_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "JohanessburgBusinessSchool_Housing_03.jpg",
+              "title": "The student auditorium"
+            },
+            {
+              "url": "JohanessburgBusinessSchool_Housing_04.jpg",
+              "title": "Connecting Hall"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "JohanessburgBusinessSchool_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "JohanessburgBusinessSchool_Room_02.jpg"
+                },
+                {
+                  "url": "JohanessburgBusinessSchool_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "JohanessburgBusinessSchool_Housing2_Cover.jpg",
+          "name": "Nelson Mandela 3000",
+          "title": "The most improved facility on campus",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A group of 6 buildings for a total of 150 rooms",
+          "pictures": [
+            {
+              "url": "JohanessburgBusinessSchool_Housing2_01.png",
+              "title": "A relaxing athmosphere"
+            },
+            {
+              "url": "JohanessburgBusinessSchool_Housing2_02.jpeg",
+              "title": "By lake Kissami"
+            },
+            {
+              "url": "JohanessburgBusinessSchool_Housing2_03.jpg",
+              "title": "A cafeteria of a hundred nations"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "JohanessburgBusinessSchool_Room_03.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "JohanessburgBusinessSchool_Room_01.jpg"
+                },
+                {
+                  "url": "JohanessburgBusinessSchool_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "JohanessburgBusinessSchool-1.png",
+            "title": "State of the art facility"
+          },
+          {
+            "url": "JohanessburgBusinessSchool-2.png",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "JohanessburgBusinessSchool-3.png",
+            "title": "Surrounded by the economic center of the city"
+          },
+          {
+            "url": "JohanessburgBusinessSchool-4.png",
+            "title": "A home outside of home"
+          }
+        ]
+    },
+    {
+      "id": 7,
+      "name": "Oslo NordenBoerg University",
+      "lat": 59.913869,
+      "lng": 10.752245,
+      "description": "The Oslo NordenBoerg University is the oldest university in Norway, located in the beautiful Norwegian capital of Oslo. Until 1 January 2016 it was the largest Norwegian institution of higher education in terms of size, and we are proud of having led the way for our country which has a long reputation for excellence. The Academic Ranking of World Universities has ranked it the 58th best university in the world and the third best in the Nordic countries. In 2015, the Times Higher Education World University Rankings ranked it the 135th best university in the world and the seventh best in the Nordics.",
+      "slogan": "Reaching self-excellence is the very first step",
+      "nb_student": 25000,
+      "nb_student_campus": 12000,
+      "logo_url": "OsloNordenBoergUniversity_Logo.png",
+      "address": {
+        "street_number": "P.O. Box 2589 Blindern",
+        "street_name": "",
+        "city": "Oslo",
+        "zip_code": "314",
+        "country": "Norway"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "08/01/2017",
+          "end_date": "01/10/2017",
+          "deadline_date": "06/14/2017",
+          "break_desc": "3 weeks Christmas break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "02/25/2018",
+          "end_date": "06/19/2018",
+          "deadline_date": "08/15/2017",
+          "break_desc": "1 month 20 days winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "OsloNordenBoergUniversity_Housing_Cover.png",
+          "name": "Magnus Karlsen Complex ",
+          "title": "A warm place away from home",
+          "position_desc": "In the outskirt of Oslo",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "16 Chelsea Avenue, Mumbai, India",
+          "description": "A complex with sport facilities and cafeteria",
+          "pictures": [
+            {
+              "url": "OsloNordenBoergUniversity_Housing_01.png",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "OsloNordenBoergUniversity_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "OsloNordenBoergUniversity_Housing_03.jpg",
+              "title": "A place to make friends from all over the world"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "OsloNordenBoergUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "OsloNordenBoergUniversity_Room_01.jpg"
+                },
+                {
+                  "url": "OsloNordenBoergUniversity_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "OsloNordenBoergUniversity_Housing2_Cover.jpg",
+          "name": "Henrik Ibsen apartment",
+          "title": "Feeling the royality of Norway",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A modern campus with 4 floors",
+          "pictures": [
+            {
+              "url": "OsloNordenBoergUniversity_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "OsloNordenBoergUniversity_Housing2_02.jpg",
+              "title": "A hall way where ideas are exchanged"
+            },
+            {
+              "url": "OsloNordenBoergUniversity_Housing2_03.jpg",
+              "title": "Cafeteria"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "OsloNordenBoergUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "OsloNordenBoergUniversity_Room_01.jpg"
+                },
+                {
+                  "url": "OsloNordenBoergUniversity_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "OsloNordenBoergUniversity-1.png",
+            "title": "State of the art facility"
+          },
+          {
+            "url": "OsloNordenBoergUniversity-2.png",
+            "title": "A pleasant athmosphere to study"
+          },
+          {
+            "url": "OsloNordenBoergUniversity-3.png",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "OsloNordenBoergUniversity-4.png",
+            "title": "A home away from home"
+          }
+        ]
+    },
+    {
+      "id": 8,
+      "name": "Paris Louis XIV University",
+      "lat": 48.856614,
+      "lng": 2.352222,
+      "description": "Paris Louis XIV University is one of the most prestigious institution in France dedicated to the study of literature, languages, civilizations, arts, humanities and social sciences is located on the original medieval foundations, and now extends to the Latin Quarter and to other areas in Paris. The University is characterized by rich culture and tradition with top-quality researchers. Its excellent scientific reputation is demonstrated by regular publications and international exchanges. Paris Louis XIV University seeks to constantly adapt to present-day social and technological changes and to encourage as many students as possible to study at Paris-Sorbonne while preparing for their future careers. We incites its students to think freely, to construct their own judgment so that they can become responsible and inventive citizens who can promote dignity and a culture of peace.",
+      "slogan": "The best risk is the one that we do not take",
+      "nb_student": 14000,
+      "nb_student_campus": 1000,
+      "logo_url": "ParisLouisXIVUniversity_Logo.png",
+      "address": {
+        "street_number": "59",
+        "street_name": "Rue de Cotrelle",
+        "city": "Paris",
+        "zip_code": "75005",
+        "country": "France"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "01/10/2017",
+          "end_date": "02/22/2018",
+          "deadline_date": "07/15/2017",
+          "break_desc": "2 weeks winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "03/10/2018",
+          "end_date": "07/02/2018",
+          "deadline_date": "12/15/2017",
+          "break_desc": "2 month 20 days summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "ParisLouisXIVUniversity_Housing_Cover.png",
+          "name": "Louis XIV House",
+          "title": "Live royaly",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Paris Louis XIVUniversity - Louis XIV House",
+          "description": "A tradional renessance housing with 70 rooms",
+          "pictures": [
+            {
+              "url": "ParisLouisXIVUniversity_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "ParisLouisXIVUniversity_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "ParisLouisXIVUniversity_Housing_03.png",
+              "title": "2 minutes away from the renaissance parc"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "ParisLouisXIVUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "ParisLouisXIVUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "ParisLouisXIVUniversity_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "ParisLouisXIVUniversity_Housing2_Cover.jpg",
+          "name": "Berlioz Block",
+          "title": "The place to hang around",
+          "position_desc": "5 kilometers away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A 4 building block",
+          "pictures": [
+            {
+              "url": "ParisLouisXIVUniversity_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "ParisLouisXIVUniversity_Housing2_02.jpg",
+              "title": "Available reception connected to the school"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "ParisLouisXIVUniversity_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "ParisLouisXIVUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "ParisLouisXIVUniversity_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "ParisLouisXIVUniversity-1.png",
+            "title": "Live within the traditions"
+          },
+          {
+            "url": "ParisLouisXIVUniversity-2.png",
+            "title": "A pleasant athmosphere to be immerged"
+          },
+          {
+            "url": "ParisLouisXIVUniversity-3.png",
+            "title": "Rich in philosophical thoughts"
+          },
+          {
+            "url": "ParisLouisXIVUniversity-4.jpg",
+            "title": "A home outside of home"
+          },
+          {
+            "url": "ParisLouisXIVUniversity-5.png",
+            "title": "Where studying and living equals one"
+          }
+        ]
+    },
+    {
+      "id": 9,
+      "name": "Sydney School of Applied Arts",
+      "lat": -33.86882,
+      "lng": 151.209296,
+      "description": "Sydney School of Applied Arts was established as a College in 1976 of Advanced Education and enrolled its first students when it took over responsibility for design diploma courses previously conducted by the Department of Technical and Further Education. A visual arts program was offered by SCA the following year. Today we are proud to represent one of the country's elite school in the art field and we encourage young high school graduates that have the potential and the passion for creation to share their art with us and allow us to take it to the next step: a career!",
+      "slogan": "Your heart is where it comes from",
+      "nb_student": 19000,
+      "nb_student_campus": 10000,
+      "logo_url": "SydneySchoolOfAppliedArts_Logo.png",
+      "address": {
+        "street_number": "559",
+        "street_name": "McConnaught Square",
+        "city": "Sydney",
+        "zip_code": "2166",
+        "country": "Australia"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "02/10/2017",
+          "end_date": "06/29/2017",
+          "deadline_date": "12/15/2016",
+          "break_desc": "2 weeks winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "07/10/2017",
+          "end_date": "12/12/2017",
+          "deadline_date": "05/10/2017",
+          "break_desc": ""
+        }
+      ],
+      "housing": [
+        {
+          "url": "SydneySchoolOfAppliedArts_Housing_Cover.png",
+          "name": "Pennington Dormitory",
+          "title": "Enjoy the campus facilities",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Pennington dormitory",
+          "description": "A 2 stories building 70 rooms and open rooftop",
+          "pictures": [
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing_01.png",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing_03.jpg",
+              "title": "A chill athmosphere"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_03.jpg"
+                },
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "SydneySchoolOfAppliedArts_Housing2_Cover.jpg",
+          "name": "Darlington Dormitory",
+          "title": "The cool place to be",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "100+ rooms with common space and cafeteria",
+          "pictures": [
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing2_02.png",
+              "title": "Keep yourself healthy"
+            },
+            {
+              "url": "SydneySchoolOfAppliedArts_Housing2_03.jpg",
+              "title": "Exchange with other students"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_03.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_02.jpg"
+                },
+                {
+                  "url": "SydneySchoolOfAppliedArts_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "SydneySchoolOfAppliedArts-1.png",
+            "title": "A nice landscape"
+          },
+          {
+            "url": "SydneySchoolOfAppliedArts-2.png",
+            "title": "A pleasant athmosphere to relax"
+          },
+          {
+            "url": "SydneySchoolOfAppliedArts-3.png",
+            "title": "In the middle of the colorful Sydney"
+          },
+          {
+            "url": "SydneySchoolOfAppliedArts-4.png",
+            "title": "A place to hang out"
+          }
+        ]
+    },
+    {
+      "id": 10,
+      "name": "Universidade Carioca Do Rio de Janeiro",
+      "lat": -22.906847,
+      "lng": -43.172896,
+      "description": "Highly regarded as one of the best University in the whole South America, Universidade Carioca do Rio de Janeiro was founded in 1934, regrouping already existing schools in the state of Rio de Janeiro, such as the Faculdade de Direito do Largo de São Francisco (Law), the Polytechnic School (Engineering) and the Escola Superior de Agricultura Luiz de Queiroz (Agriculture). The university has subsequently created new departments, becoming one of the largest institutions of higher education in Latin America, with approximately 90,000 enrolled students. Currently, it has eleven campuses, four of them in the city of Rio. The remaining campuses are in the cities of Bauru, Lorena, Piracicaba, Pirassununga, Ribeirão Preto and two in São Carlos.",
+      "slogan": "Be the change that you want to see",
+      "nb_student": 40000,
+      "nb_student_campus": 25000,
+      "logo_url": "UniversidadeCariocaDoRioDeJaneiro_Logo.png",
+      "address": {
+        "street_number": "4995",
+        "street_name": "Avenida do Cantagalo",
+        "city": "Rio do Janeiro",
+        "zip_code": "28950-000",
+        "country": "Brazil"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "03/10/2017",
+          "end_date": "07/09/2017",
+          "deadline_date": "01/11/2017",
+          "break_desc": "1 month carnival break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "09/08/2017",
+          "end_date": "01/20/2018",
+          "deadline_date": "08/15/2017",
+          "break_desc": "1 month 25 days winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "UniversidadeCariocaDoRioDeJaneiro_Housing_Cover.jpg",
+          "name": "Campi do Corcovado",
+          "title": "",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Campi do Corcovado",
+          "description": "Many apartments with open fields",
+          "pictures": [
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing_01.png",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing_02.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing_03.png",
+              "title": "A place of gatherings"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_01.jpg"
+                },
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "UniversidadeCariocaDoRioDeJaneiro_Housing2_Cover.png",
+          "name": "Campi do Maracana",
+          "title": "The place to hang around",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing2_02.jpg",
+              "title": "Sports facilities"
+            },
+            {
+              "url": "UniversidadeCariocaDoRioDeJaneiro_Housing2_03.jpg",
+              "title": "Grand Hall"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_01.jpg"
+                },
+                {
+                  "url": "UniversidadeCariocaDoRioDeJaneiro_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "UniversidadeCariocaDoRioDeJaneiro-1.png",
+            "title": "A beautiful environment"
+          },
+          {
+            "url": "UniversidadeCariocaDoRioDeJaneiro-2.png",
+            "title": "A huge campus with more than 10 faculties"
+          },
+          {
+            "url": "UniversidadeCariocaDoRioDeJaneiro-3.png",
+            "title": "In of the most beautiful city in the world"
+          },
+          {
+            "url": "UniversidadeCariocaDoRioDeJaneiro-4.jpg",
+            "title": "A home outside of home"
+          },
+          {
+            "url": "UniversidadeCariocaDoRioDeJaneiro-5.jpg",
+            "title": "Where studying and living equals one"
+          }
+        ]
+    },
+    {
+      "id": 11,
+      "name": "Universite Internationale de Quebec City",
+      "lat": 46.813878,
+      "lng": -71.207981,
+      "description": "As an institution, the university was first founded in 1878, which is the reason why it has such a historical background in terms of architecture and life style.",
+      "slogan": "Let's create a future together",
+      "nb_student": 30000,
+      "nb_student_campus": 14550,
+      "logo_url": "UniversiteInternationaleDeQuebecCity_Logo.png",
+      "address": {
+        "street_number": "9621",
+        "street_name": "Long Avenue",
+        "city": "Quebec City",
+        "zip_code": "G1W",
+        "country": "Canada"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "01/10/2017",
+          "end_date": "02/22/2018",
+          "deadline_date": "07/15/2017",
+          "break_desc": "2 weeks winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "03/10/2018",
+          "end_date": "07/02/2018",
+          "deadline_date": "12/15/2017",
+          "break_desc": "2 month 20 days summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "UniversiteInternationaleDeQuebecCity_Housing1_Cover.jpg",
+          "name": "Maison international Trudeau",
+          "title": "A home away from home",
+          "position_desc": "By bus, 10 minutes away from the main campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "45 rue de Langley, Quebec City, Canada",
+          "description": "Apartment with common kitchen and living room",
+          "pictures": [
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing_03.jpg",
+              "title": "With an entrance to Central Park"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_01.jpg"
+                },
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "UniversiteInternationaleDeQuebecCity_Housing2_Cover.jpg",
+          "name": "Campus International",
+          "title": "The place to hang around",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Universite Internationale De Quebec City - Campus International",
+          "description": "A block of 5 buildings with common garden",
+          "pictures": [
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing2_02.jpg",
+              "title": "A home outside of home"
+            },
+            {
+              "url": "UniversiteInternationaleDeQuebecCity_Housing2_03.jpg",
+              "title": "Resident-exclusive facilities"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_02.jpg"
+                },
+                {
+                  "url": "UniversiteInternationaleDeQuebecCity_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "UniversiteInternationaleDeQuebecCity-1.jpg",
+            "title": "Rich in tradidions"
+          },
+          {
+            "url": "UniversiteInternationaleDeQuebecCity-2.jpg",
+            "title": "A pleasant athmosphere to study"
+          },
+          {
+            "url": "UniversiteInternationaleDeQuebecCity-3.jpg",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "UniversiteInternationaleDeQuebecCity-4.jpg",
+            "title": "Connected to modernity"
+          }
+        ]
+    },
+    {
+      "id": 12,
+      "name": "Gainsville College of Applied Science ",
+      "lat": 29.651634,
+      "lng": -82.324826,
+      "description": "We believe success can only happen when we expand opportunity and demand excellence. We believe if there’s a better way, we should do it. We believe innovation comes from the meeting of diverse viewpoints. And when more people unleash their full potential, anything is possible.",
+      "slogan": "Ideas ignite here — led by students, nurtured by the faculty and powered by philanthropy",
+      "nb_student": 45000,
+      "nb_student_campus": 30000,
+      "logo_url": ".png",
+      "address": {
+        "street_number": "55888",
+        "street_name": "Lexington Street",
+        "city": "Gainsville ",
+        "zip_code": "32607",
+        "country": "Florida, United States"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "01/09/2017",
+          "end_date": "02/22/2018",
+          "deadline_date": "07/15/2017",
+          "break_desc": "2 weeks winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "03/10/2018",
+          "end_date": "07/02/2018",
+          "deadline_date": "12/15/2017",
+          "break_desc": "2 month 20 days summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "GainsvilleCollegeOfAppliedScience_Housing_Cover.jpg",
+          "name": "Carlton Mayer Campus",
+          "title": "",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Carlton Mayer Campus",
+          "description": "A newly renovated building with 115 rooms",
+          "pictures": [
+            {
+              "url": "GainsvilleCollegeOfAppliedScience_Housing_01.jpg",
+              "title": "A nice common garden"
+            },
+            {
+              "url": "GainsvilleCollegeOfAppliedScience_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "GainsvilleCollegeOfAppliedScience_Housing_03.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "GainsvilleCollegeOfAppliedScience_Housing_04.jpg",
+              "title": "Basket-ball playground"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_02.png"
+                },
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "GainsvilleCollegeOfAppliedScience_Housing2_Cover.jpg",
+          "name": "Westminster Mansion",
+          "title": "A well preserved construction",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A mansion with 150 rooms",
+          "pictures": [
+            {
+              "url": "GainsvilleCollegeOfAppliedSciences_Housing2_01.jpg",
+              "title": "Enjoy a calm athmosphere"
+            },
+            {
+              "url": "GainsvilleCollegeOfAppliedSciences_Housing2_02.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "GainsvilleCollegeOfAppliedSciences_Housing2_03.png",
+              "title": "A home away of home"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_03.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_02.png"
+                },
+                {
+                  "url": "GainsvilleCollegeOfAppliedSciences_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "GainsvilleCollegeOfAppliedScience-1.jpg",
+            "title": "State of the art facility"
+          },
+          {
+            "url": "GainsvilleCollegeOfAppliedScience-2.jpg",
+            "title": "A pleasant athmosphere to relax"
+          },
+          {
+            "url": "GainsvilleCollegeOfAppliedScience-3.jpg",
+            "title": "In the middle of colorful surroundings"
+          },
+          {
+            "url": "GainsvilleCollegeOfAppliedScience-4.jpg",
+            "title": "With easy access to the Opera of Gainsville"
+          },
+          {
+            "url": "GainsvilleCollegeOfAppliedScience-5.jpg",
+            "title": "Where success is achieved"
+          }
+        ]
+    },
+    {
+      "id": 13,
+      "name": "Kobe School of Business and Development",
+      "lat": 34.690083,
+      "lng": 135.195511,
+      "description": "The origins of the Kobe School of Business and Development go back to Kobe Commercial High School, founded in 1965. It began to have a class under the title of “Business and Development” in 1986. The school upgraded in 1989 and what is is today. Starting from being one of the very first school of business administration in Japan, it has now one of the most successful job placement rate in the country. The stone monument erected in the front yard of the main building in Kokusai campus commemorates this history with the inscription, “Our country’s study of business administration began here.",
+      "slogan": "1st dream big, then thrive",
+      "nb_student": 32000,
+      "nb_student_campus": 21589,
+      "logo_url": ".png",
+      "address": {
+        "street_number": "87",
+        "street_name": "1-1 Rokkodaicho, Nada Ward, Hyogo Prefecture ",
+        "city": "Kobe",
+        "zip_code": "657-0013",
+        "country": "Japan"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "04/02/2017",
+          "end_date": "07/07/2017",
+          "deadline_date": "03/15/2017",
+          "break_desc": "3 weeks summer break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "09/28/2017",
+          "end_date": "02/15/2018",
+          "deadline_date": "10/12/2017",
+          "break_desc": "1 months 1/2 winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "KobeSchoolOfBusinessAndDevelopment_Housing_Cover.jpg",
+          "name": "Masahiro Ryo",
+          "title": "",
+          "position_desc": "500 meters away from the campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "1-1 Rokkodaicho, Nada Ward, Kobe, Hyogo Prefecture ",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing_02.jpg",
+              "title": "A wonderful place of gatherings"
+            },
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing_03.jpg",
+              "title": "Outside patio"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_03.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_01.jpg"
+                },
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "KobeSchoolOfBusinessAndDevelopment_Housing2_Cover.jpg",
+          "name": "Nakagawa residence",
+          "title": "The place to hang around",
+          "position_desc": "Connected to the main campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Kobe School Of Business And Development",
+          "description": "A co-ed 2 stories building 50 rooms",
+          "pictures": [
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing2_01.jpg",
+              "title": "Front view"
+            },
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing2_02.jpg",
+              "title": "Yoyoji park"
+            },
+            {
+              "url": "KobeSchoolOfBusinessAndDevelopment_Housing2_03.jpg",
+              "title": "Second floor indoor balcony"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_03.jpg"
+                },
+                {
+                  "url": "KobeSchoolOfBusinessAndDevelopment_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "KobeSchoolOfBusinessAndDevelopment-1.jpg",
+            "title": "The main building"
+          },
+          {
+            "url": "KobeSchoolOfBusinessAndDevelopment-2.jpg",
+            "title": "Faculty of business"
+          },
+          {
+            "url": "KobeSchoolOfBusinessAndDevelopment-3.jpg",
+            "title": "Main hall"
+          },
+          {
+            "url": "KobeSchoolOfBusinessAndDevelopment-4.jpg",
+            "title": "Library"
+          }
+        ]
+    },
+    {
+      "id": 14,
+      "name": "King Al-Jawa Islamic University",
+      "lat": 21.281371,
+      "lng": 39.249333,
+      "description": "King Al-Jawa Islamic University is proudly one of the oldest and most inovative yet respectful of its traditions amongst Saudi Schoolsl. It was founded in 1948 as the by King Abdulaziz, and was originally an affiliate college of the University of London which supervised its academic programmes and awarded degrees. It gained full university status in 1961, and now has nearly 40,000 students. The original emphasis was on the liberal arts, social sciences, basic science, agriculture, and medicine, but (partly as the result of a national educational reform programme) the curriculum was expanded to provide more technology-based and vocational courses and postgraduate training.",
+      "slogan": "Educate and share",
+      "nb_student": 27000,
+      "nb_student_campus": 12647,
+      "logo_url": "KingAlJawaIslamicUniversity_Logo.jpg",
+      "address": {
+        "street_number": "",
+        "street_name": "King Khalid Rd, King Al-Jawa University Road ",
+        "city": "Riyadh ",
+        "zip_code": "12372",
+        "country": "Saudi Arabia"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "06/02/2017",
+          "end_date": "11/05/2017",
+          "deadline_date": "03/15/2017",
+          "break_desc": "1 month winter break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "01/06/2018",
+          "end_date": "05/02/2018",
+          "deadline_date": "10/12/2017",
+          "break_desc": "1 months 1/2 summer break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "KingAlJawaIslamicUniversity_Housing_Cover.jpg",
+          "name": "Jama Abdullah complex",
+          "title": "A place for everyone",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "King Al Jawa Islamic University - Jama Abdullah complex",
+          "description": "A state of the art complex with 100 rooms",
+          "pictures": [
+            {
+              "url": "KingAlJawaIslamicUniversity_Housing_01.jpg",
+              "title": "Student friendly dormitory"
+            },
+            {
+              "url": "KingAlJawaIslamicUniversity_Housing_02.jpg",
+              "title": "A peaceful place of gatherings"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "KingAlJawaIslamicUniversity_Housing2_Cover.jpg",
+          "name": "Suliman Mohamadine campus",
+          "title": "The place to hang around",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "",
+          "description": "A set of apartments with private and shared rooms",
+          "pictures": [
+            {
+              "url": "KingAlJawaIslamicUniversity_Housing2_01.jpg",
+              "title": "Enjoy a delicate athmosphere"
+            },
+            {
+              "url": "KingAlJawaIslamicUniversity_Housing2_02.jpg",
+              "title": "A global village"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_01.jpg"
+                },
+                {
+                  "url": "KingAlJawaIslamicUniversity_Room_03.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "KingAlJawaIslamicUniversity-1.jpg",
+            "title": ""
+          },
+          {
+            "url": "KingAlJawaIslamicUniversity-2.jpg",
+            "title": "A pleasant athmosphere to study"
+          },
+          {
+            "url": "KingAlJawaIslamicUniversity-3.jpg",
+            "title": "In the middle of colorful city of Riyadh"
+          },
+          {
+            "url": "KingAlJawaIslamicUniversity-4.jpg",
+            "title": "Merge with a new culture"
+          },
+          {
+            "url": "KingAlJawaIslamicUniversity-5.jpg",
+            "title": "Where studying and living equals one"
+          }
+        ]
+    },
+    {
+      "id": 15,
+      "name": "Saint Petersbourg Youth Dedicated College",
+      "lat": 60.083681,
+      "lng": 30.421143,
+      "description": "We believe students are the heart of SPC! All SPC resources, decisions, and efforts are aligned to transform students’ lives to empower them to finish what they start! We promote academic excellence through interactive, innovative, and inquiry-centered teaching and learning. We commit to a culture where excellent service is expected and delivered by all SPC employees. We foster a learning community in which the values, goals, and learning styles of all students and members of the college community are recognized and supported.",
+      "slogan": "Building a bright future for our youth",
+      "nb_student": 16500,
+      "nb_student_campus": 7632,
+      "logo_url": "SaintPetersburgYouthDedicatedCollege_Logo.jpg",
+      "address": {
+        "street_number": "",
+        "street_name": "Университетская наб., 7/9, Санкт-Петербург",
+        "city": "г. Санкт-Петербург",
+        "zip_code": "199034",
+        "country": "Russia"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "08/01/2017",
+          "end_date": "01/10/2017",
+          "deadline_date": "06/14/2017",
+          "break_desc": "3 weeks Christmas break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "02/25/2018",
+          "end_date": "06/19/2018",
+          "deadline_date": "08/15/2017",
+          "break_desc": "1 month 20 days winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "SaintPetersburgYouthDedicatedCollege_Housing_Cover.jpg",
+          "name": "Staline city house",
+          "title": "Live the traditions",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Staline city house",
+          "description": "Dormitory with single and multi-bedrooms",
+          "pictures": [
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing_01.jpg",
+              "title": "Patio"
+            },
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing_02.jpg",
+              "title": "Main reception"
+            },
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing_03.jpg",
+              "title": ""
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_01.jpg"
+                },
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "SaintPetersburgYouthDedicatedCollege_Housing2_Cover.jpg",
+          "name": "Krakov Hall",
+          "title": "A place to enjoy",
+          "position_desc": "Located 10 mintues away in local tramway",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "ul. Lesnaya d. 5, kv. 176. g. MOSKVA",
+          "description": "Complex with different apartments",
+          "pictures": [
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing2_01.jpg",
+              "title": "Main hall"
+            },
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing2_02.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "SaintPetersburgYouthDedicatedCollege_Housing2_03.jpg",
+              "title": "Grand Park"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_01.jpg"
+                },
+                {
+                  "url": "SaintPetersburgYouthDedicatedCollege_Room_02.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "SaintPetersburgYouthDedicatedCollege-1.jpg",
+            "title": ""
+          },
+          {
+            "url": "SaintPetersburgYouthDedicatedCollege-2.jpg",
+            "title": "The city of St Petersburg"
+          },
+          {
+            "url": "SaintPetersburgYouthDedicatedCollege-3.jpg",
+            "title": "The auditorium"
+          },
+          {
+            "url": "SaintPetersburgYouthDedicatedCollege-4.jpg",
+            "title": "Embrace a new life style"
+          }
+        ]
+    },
+    {
+      "id": 16,
+      "name": "Shangai Imperial University",
+      "lat": 31.230416,
+      "lng": 121.473701,
+      "description": "Shanghai Imperial University (SIU), as one of the higher education institutions which enjoy a long history and a world-renowned reputation in China, is a key university directly under the administration of the Ministry of Education (MOE) of the People's Republic of China and co-constructed by MOE and Shanghai Municipal Government. Through 120 years' unremitting efforts, SJTU has become a comprehensive, research-oriented, and internationalized top university in China.",
+      "slogan": "What is happening today is what will become tomorrow",
+      "nb_student": 35000,
+      "nb_student_campus": 22741,
+      "logo_url": "ShanghaiImperialUniversity_Logo.jpg",
+      "address": {
+        "street_number": "",
+        "street_name": "Chen Zhing Rua Qiu BLDG",
+        "city": "Shanghai",
+        "zip_code": "200240",
+        "country": "China"
+      },
+      "diplomas": [
+        {
+          "id": 1,
+          "name": "Backelor in Human Ressource Management",
+          "duration": "4 years",
+          "price": "87,000 $",
+          "grade": "Master's degree",
+          "speciality": "Medecine",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bachelor in Industrial",
+          "duration": "5 years",
+          "price": "5,230 $",
+          "grade": "Master's degree",
+          "speciality": "Industry",
+          "description": "Industrial Design Centre (IDC) is the second oldest design school in India, established in 1969 by the Government of India at the campus of the Indian Institute of Technology Bombay. It offers the following academic programs: an integrated Bachelor of Design degree (B Des) program and an interdisciplinary Master of Design program in Industrial Design.",
+          "years": [
+            {
+              "year": 1,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 2,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 3,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            },
+            {
+              "year": 4,
+              "classes": [
+                "Business ethics",
+                "Principle of Mgt",
+                "Principle of Finance",
+                "Statistics"
+              ]
+            }
+          ],
+          "requirements": [
+            {
+              "name": "TOEFL",
+              "mandatory_document" : true
+            }
+          ]
+        }
+      ],
+      "terms": [
+        {
+          "type": "Fall",
+          "start_date": "04/02/2017",
+          "end_date": "07/07/2017",
+          "deadline_date": "03/15/2017",
+          "break_desc": "3 weeks summer break"
+        },
+        {
+          "type": "Spring",
+          "start_date": "09/28/2017",
+          "end_date": "02/15/2018",
+          "deadline_date": "10/12/2017",
+          "break_desc": "1 months 1/2 winter break"
+        }
+      ],
+      "housing": [
+        {
+          "url": "ShanghaiImperialUniversity_Housing_Cover.jpg",
+          "name": "Whang Zhou city",
+          "title": "The best school campus environment",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Shangai Imperial University",
+          "description": "Dormitory with single and multi-bedrooms",
+          "pictures": [
+            {
+              "url": "ShanghaiImperialUniversity_Housing_01.jpg",
+              "title": "Inside corridor"
+            },
+            {
+              "url": "ShanghaiImperialUniversity_Housing_02.jpg",
+              "title": "Cafeteria"
+            },
+            {
+              "url": "ShanghaiImperialUniversity_Housing_03.jpg",
+              "title": ""
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "ShanghaiImperialUniversity_Room_01.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "ShanghaiImperialUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "ShanghaiImperialUniversity_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "ShanghaiImperialUniversity_Housing2_Cover.jpg",
+          "name": "Zhang Yi global village",
+          "title": "Main entrance",
+          "position_desc": "Located on campus",
+          "simple_room_size": 9,
+          "double_room_size": 18,
+          "address": "Shangai Imperial University",
+          "description": "Complex with different apartments",
+          "pictures": [
+            {
+              "url": "ShanghaiImperialUniversity_Housing2_01.jpg",
+              "title": "Window view"
+            },
+            {
+              "url": "ShanghaiImperialUniversity_Housing2_02.jpg",
+              "title": "Patio"
+            },
+            {
+              "url": "ShanghaiImperialUniversity_Housing2_03.jpg",
+              "title": "2nd Patio"
+            }
+          ],
+          "room_types": [
+            {
+              "type": "Double",
+              "price": 2000,
+              "size": 13,
+              "pictures": [
+                {
+                  "url": "ShanghaiImperialUniversity_Room_02.jpg"
+                }
+              ]
+            },
+            {
+              "type": "Simple",
+              "price": 1300,
+              "size": 8,
+              "pictures": [
+                {
+                  "url": "ShanghaiImperialUniversity_Room_02.jpg"
+                },
+                {
+                  "url": "ShanghaiImperialUniversity_Room_01.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "pictures": [
+          {
+            "url": "ShanghaiImperialUniversity-1.jpg",
+            "title": "Main gate"
+          },
+          {
+            "url": "ShanghaiImperialUniversity-2.jpg",
+            "title": "Faculty of Education"
+          },
+          {
+            "url": "ShanghaiImperialUniversity-3.jpg",
+            "title": "Sport complex center"
+          },
+          {
+            "url": "ShanghaiImperialUniversity-4.jpg",
+            "title": "Embrace a new life style"
+          },
+          {
+            "url": "ShanghaiImperialUniversity-5.jpg",
+            "title": "Library"
+          }
+        ]
+    }
+  ]
+}

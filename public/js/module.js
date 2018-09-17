@@ -1,0 +1,43 @@
+(function () {
+    'use strict';
+
+    var app = angular.module('app',
+        [
+            'ngAnimate',
+            'ngAria',
+            'ngTouch',
+            'ngSanitize',
+            'ngCookies',
+            //'ngRoute',
+            'ui.router',
+            'pascalprecht.translate',
+            'rzModule',
+            'slickCarousel',
+            'satellizer',
+            'ui.bootstrap',
+            'angularMoment',
+            'LocalStorageModule',
+            'angular.filter',
+            'leaflet-directive',
+            'fancyboxplus',
+            'app.header',
+            'app.map',
+            'app.profile',
+            'app.profile.home',
+            'app.profile.messages',
+            'app.viewStudentProfile',
+            'app.studentProfile',
+            'app.studentSetting',
+            'app.studentTrack',
+            'app.housingList',
+            'app.housing',
+            'app.programList',
+            'app.program',
+            'app.application',
+            //'app.chat-rooms',
+            //'app.chat-room',
+            'app.chat',
+            'app.schoolFrontpage',
+        ])
+
+})();
